@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" assembly="Babel.Services.Persistence" namespace="Babel.Services.Domain">
+  <class name="Profile">
+    <id name="ID">
+      <generator class="guid" />
+    </id>
+    <property name="Username" not-null="true" />
+    <property name="Password" not-null="true" />
+    <property name="Name" />
+    <property name="Surname" />
+    <property name="Email" not-null="true" />
+    <property name="DateOfBirth" />
+    <component name="Address" class="Address">
+      <property name="Street" type="String" column="Street" not-null="false" />
+      <property name="City" type="String" column="City" not-null="false" />
+      <property name="PostalCode" type="String" column="PostalCode" not-null="false" />
+    </component>  
+    <property name="Gender" />
+    <property name="Description" />
+    <property name="Picture" />
+    <property name="PictureUploadedOn" />
+    <property name="CreatedOn" />
+    <property name="UpdatedOn" />
+    <bag name="Contacts" table="ProfileContacts" lazy="true" cascade="save-update">
+      <key column="ProfileID" />
+      <many-to-many class="Profile" column="ID" />
+    </bag>
+  </class>
+</hibernate-mapping>
