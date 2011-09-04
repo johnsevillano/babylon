@@ -1,0 +1,53 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{F1F9A236-443B-448C-A09E-283ABB4F0CCF}"
+	ProjectSection(SolutionItems) = preProject
+		BabelServices.vsmdi = BabelServices.vsmdi
+		LocalTestRun.testrunconfig = LocalTestRun.testrunconfig
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Babel.Services.Persistence", "Babel.Services.Persistence\Babel.Services.Persistence.csproj", "{4557ED77-5DA2-43D2-9482-F4C64EBD1D0C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Babel.Services.Application", "Babel.Services.Application\Babel.Services.Application.csproj", "{1506CF9C-ACF9-4B47-A31A-D5697BD59DFC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Babel.Services.UnitTests", "Babel.Services.UnitTests\Babel.Services.UnitTests.csproj", "{18EAFAAF-A440-4C53-8863-3376ADECC4BD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Babel.Services.Library", "Babel.Services.Library\Babel.Services.Library.csproj", "{051C2A55-9A9B-4F63-ABAB-0AE3A945DBBA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Babel.Services.TestClient", "Babel.Services.TestClient\Babel.Services.TestClient.csproj", "{CA2744CE-8F82-4A0E-8479-FE3877624B7F}"
+EndProject
+Global
+	GlobalSection(TestCaseManagementSettings) = postSolution
+		CategoryFile = BabelServices.vsmdi
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{4557ED77-5DA2-43D2-9482-F4C64EBD1D0C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4557ED77-5DA2-43D2-9482-F4C64EBD1D0C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4557ED77-5DA2-43D2-9482-F4C64EBD1D0C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4557ED77-5DA2-43D2-9482-F4C64EBD1D0C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1506CF9C-ACF9-4B47-A31A-D5697BD59DFC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1506CF9C-ACF9-4B47-A31A-D5697BD59DFC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1506CF9C-ACF9-4B47-A31A-D5697BD59DFC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1506CF9C-ACF9-4B47-A31A-D5697BD59DFC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{18EAFAAF-A440-4C53-8863-3376ADECC4BD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{18EAFAAF-A440-4C53-8863-3376ADECC4BD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{18EAFAAF-A440-4C53-8863-3376ADECC4BD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{18EAFAAF-A440-4C53-8863-3376ADECC4BD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{051C2A55-9A9B-4F63-ABAB-0AE3A945DBBA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{051C2A55-9A9B-4F63-ABAB-0AE3A945DBBA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{051C2A55-9A9B-4F63-ABAB-0AE3A945DBBA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{051C2A55-9A9B-4F63-ABAB-0AE3A945DBBA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CA2744CE-8F82-4A0E-8479-FE3877624B7F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CA2744CE-8F82-4A0E-8479-FE3877624B7F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CA2744CE-8F82-4A0E-8479-FE3877624B7F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CA2744CE-8F82-4A0E-8479-FE3877624B7F}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
