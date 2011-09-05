@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="e0e164e2-8aab-487a-b5c4-fe26a020c46a" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings>
+      <CollectionMapping TypeName="System.Collections.Generic.List`1" Category="List" />
+    </CollectionMappings>
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://vistavm/Babel.Services/ProfileService.svc?wsdl" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="ProfileService.xsd" MetadataType="Schema" ID="1d9c79a7-7502-456f-a3fc-93c6cf691274" SourceId="1" SourceUrl="http://vistavm/Babel.Services/ProfileService.svc?xsd=xsd2" />
+    <MetadataFile FileName="ProfileService1.xsd" MetadataType="Schema" ID="1fc8c335-e60c-4cde-9e01-9a2e1e751a8f" SourceId="1" SourceUrl="http://vistavm/Babel.Services/ProfileService.svc?xsd=xsd3" />
+    <MetadataFile FileName="ProfileService2.xsd" MetadataType="Schema" ID="d5233ac6-7801-438d-b628-24ba9f847970" SourceId="1" SourceUrl="http://vistavm/Babel.Services/ProfileService.svc?xsd=xsd0" />
+    <MetadataFile FileName="ProfileService3.xsd" MetadataType="Schema" ID="d70034d4-cb9e-47ad-b121-7e4f9902e875" SourceId="1" SourceUrl="http://vistavm/Babel.Services/ProfileService.svc?xsd=xsd1" />
+    <MetadataFile FileName="ProfileService4.xsd" MetadataType="Schema" ID="0c2fd523-059a-4f28-a162-16a8333bc3ab" SourceId="1" SourceUrl="http://vistavm/Babel.Services/ProfileService.svc?xsd=xsd4" />
+    <MetadataFile FileName="ProfileService5.xsd" MetadataType="Schema" ID="7c367026-e29d-4162-93e2-1bbd5d3087e2" SourceId="1" SourceUrl="http://vistavm/Babel.Services/ProfileService.svc?xsd=xsd5" />
+    <MetadataFile FileName="ProfileService.wsdl" MetadataType="Wsdl" ID="d57b594a-9827-419b-b243-dbc71414ed32" SourceId="1" SourceUrl="http://vistavm/Babel.Services/ProfileService.svc?wsdl" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

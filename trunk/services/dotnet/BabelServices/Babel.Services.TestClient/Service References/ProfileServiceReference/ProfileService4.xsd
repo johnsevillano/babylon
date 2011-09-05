@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/Babel.Services.Filters" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/Babel.Services.Filters" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://vistavm/Babel.Services/ProfileService.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/Babel.Services.Common" />
+  <xs:complexType name="ProfileFilter">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="AgeAbove" type="xs:int" />
+      <xs:element minOccurs="0" name="AgeBelow" type="xs:int" />
+      <xs:element minOccurs="0" name="City" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Email" nillable="true" type="xs:string" />
+      <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/Babel.Services.Common" minOccurs="0" name="Gender" type="q1:Gender" />
+      <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Street" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Surname" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Username" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ProfileFilter" nillable="true" type="tns:ProfileFilter" />
+</xs:schema>
