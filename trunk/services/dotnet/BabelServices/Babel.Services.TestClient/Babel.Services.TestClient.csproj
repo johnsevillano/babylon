@@ -51,42 +51,12 @@
   <ItemGroup>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Service References\ProfileServiceReference\Reference.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </Compile>
   </ItemGroup>
   <ItemGroup>
     <WCFMetadata Include="Service References\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />
-    <None Include="Service References\ProfileServiceReference\ProfileService.wsdl" />
-    <None Include="Service References\ProfileServiceReference\ProfileService.xsd" />
-    <None Include="Service References\ProfileServiceReference\ProfileService1.xsd" />
-    <None Include="Service References\ProfileServiceReference\ProfileService2.xsd" />
-    <None Include="Service References\ProfileServiceReference\ProfileService3.xsd" />
-    <None Include="Service References\ProfileServiceReference\ProfileService4.xsd" />
-    <None Include="Service References\ProfileServiceReference\ProfileService5.xsd" />
-  </ItemGroup>
-  <ItemGroup>
-    <WCFMetadataStorage Include="Service References\ProfileServiceReference\" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Service References\ProfileServiceReference\configuration91.svcinfo" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Service References\ProfileServiceReference\configuration.svcinfo" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Service References\ProfileServiceReference\Babel.Services.TestClient.ProfileServiceReference.Profile.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Service References\ProfileServiceReference\Reference.svcmap">
-      <Generator>WCF Proxy Generator</Generator>
-      <LastGenOutput>Reference.cs</LastGenOutput>
-    </None>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
