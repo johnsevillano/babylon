@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="63d49ef8-1dc2-4cf9-95d2-34e5986ee3c6" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings>
+      <CollectionMapping TypeName="System.Collections.Generic.List`1" Category="List" />
+    </CollectionMappings>
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:8080/Babel.Services/ProfileService.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="ProfileService.disco" MetadataType="Disco" ID="bc634168-7b56-49cf-aae9-9812422887ec" SourceId="1" SourceUrl="http://devbox:8080/Babel.Services/ProfileService.svc?disco" />
+    <MetadataFile FileName="ProfileService.wsdl" MetadataType="Wsdl" ID="f3b5d1c0-9e3e-4044-a036-3f54de0490d1" SourceId="1" SourceUrl="http://devbox:8080/Babel.Services/ProfileService.svc?wsdl" />
+    <MetadataFile FileName="ProfileService.xsd" MetadataType="Schema" ID="96a61ac4-19e1-43fa-9d96-4a8ad5ab6c11" SourceId="1" SourceUrl="http://devbox:8080/Babel.Services/ProfileService.svc?xsd=xsd0" />
+    <MetadataFile FileName="ProfileService1.xsd" MetadataType="Schema" ID="643ab603-7da1-4028-b567-c0304a5e4160" SourceId="1" SourceUrl="http://devbox:8080/Babel.Services/ProfileService.svc?xsd=xsd1" />
+    <MetadataFile FileName="ProfileService2.xsd" MetadataType="Schema" ID="1e0ad589-395e-413a-a091-85a30f69c195" SourceId="1" SourceUrl="http://devbox:8080/Babel.Services/ProfileService.svc?xsd=xsd2" />
+    <MetadataFile FileName="ProfileService3.xsd" MetadataType="Schema" ID="f29d3475-7c72-4507-ab86-23dad7954faf" SourceId="1" SourceUrl="http://devbox:8080/Babel.Services/ProfileService.svc?xsd=xsd3" />
+    <MetadataFile FileName="ProfileService4.xsd" MetadataType="Schema" ID="39ec5d61-d1e8-4381-bfb4-f1e18e550ec3" SourceId="1" SourceUrl="http://devbox:8080/Babel.Services/ProfileService.svc?xsd=xsd4" />
+    <MetadataFile FileName="ProfileService5.xsd" MetadataType="Schema" ID="513c577a-116f-49cf-b8f5-a3057bdba94a" SourceId="1" SourceUrl="http://devbox:8080/Babel.Services/ProfileService.svc?xsd=xsd5" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>
