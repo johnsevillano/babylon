@@ -16,6 +16,9 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Babel.Services.Library", "Babel.Services.Library\Babel.Services.Library.csproj", "{051C2A55-9A9B-4F63-ABAB-0AE3A945DBBA}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Babel.Services.TestClient", "Babel.Services.TestClient\Babel.Services.TestClient.csproj", "{CA2744CE-8F82-4A0E-8479-FE3877624B7F}"
+	ProjectSection(ProjectDependencies) = postProject
+		{1506CF9C-ACF9-4B47-A31A-D5697BD59DFC} = {1506CF9C-ACF9-4B47-A31A-D5697BD59DFC}
+	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "External Libraries", "External Libraries", "{4A9331E1-6EE5-4765-B65A-A565E345BDBF}"
 EndProject
