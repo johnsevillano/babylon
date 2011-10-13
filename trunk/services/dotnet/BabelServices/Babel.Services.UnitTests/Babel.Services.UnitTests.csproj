@@ -36,24 +36,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="antlr.runtime">
-      <HintPath>..\ExternalLibraries\NHibernate\LazyLoading\Spring\antlr.runtime.dll</HintPath>
-    </Reference>
-    <Reference Include="Castle.Core">
-      <HintPath>..\ExternalLibraries\NHibernate\LazyLoading\Castle\Castle.Core.dll</HintPath>
-    </Reference>
-    <Reference Include="Castle.DynamicProxy2">
-      <HintPath>..\ExternalLibraries\NHibernate\LazyLoading\Castle\Castle.DynamicProxy2.dll</HintPath>
-    </Reference>
-    <Reference Include="log4net">
-      <HintPath>..\ExternalLibraries\NHibernate\Required\log4net.dll</HintPath>
-    </Reference>
     <Reference Include="Microsoft.VisualStudio.QualityTools.UnitTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
     <Reference Include="NHibernate">
-      <HintPath>..\ExternalLibraries\NHibernate\Required\NHibernate.dll</HintPath>
-    </Reference>
-    <Reference Include="NHibernate.ByteCode.Castle">
-      <HintPath>..\ExternalLibraries\NHibernate\LazyLoading\Castle\NHibernate.ByteCode.Castle.dll</HintPath>
+      <HintPath>..\ExternalLibraries\NHibernate\NHibernate.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core">

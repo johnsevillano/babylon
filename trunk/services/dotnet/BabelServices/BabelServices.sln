@@ -23,52 +23,15 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "External Libraries", "External Libraries", "{4A9331E1-6EE5-4765-B65A-A565E345BDBF}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "NHibernate", "NHibernate", "{5C3EA941-E6B9-456C-B886-CE140120ADAC}"
-EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Required", "Required", "{71C7731B-4547-45A7-B4D2-2BE2BFAC3B59}"
 	ProjectSection(SolutionItems) = preProject
-		ExternalLibraries\NHibernate\Required\Antlr3.Runtime.dll = ExternalLibraries\NHibernate\Required\Antlr3.Runtime.dll
-		ExternalLibraries\NHibernate\Required\Iesi.Collections.dll = ExternalLibraries\NHibernate\Required\Iesi.Collections.dll
-		ExternalLibraries\NHibernate\Required\Iesi.Collections.xml = ExternalLibraries\NHibernate\Required\Iesi.Collections.xml
-		ExternalLibraries\NHibernate\Required\log4net.dll = ExternalLibraries\NHibernate\Required\log4net.dll
-		ExternalLibraries\NHibernate\Required\log4net.license.txt = ExternalLibraries\NHibernate\Required\log4net.license.txt
-		ExternalLibraries\NHibernate\Required\log4net.xml = ExternalLibraries\NHibernate\Required\log4net.xml
-		ExternalLibraries\NHibernate\Required\nhibernate-configuration.xsd = ExternalLibraries\NHibernate\Required\nhibernate-configuration.xsd
-		ExternalLibraries\NHibernate\Required\nhibernate-mapping.xsd = ExternalLibraries\NHibernate\Required\nhibernate-mapping.xsd
-		ExternalLibraries\NHibernate\Required\NHibernate.dll = ExternalLibraries\NHibernate\Required\NHibernate.dll
-		ExternalLibraries\NHibernate\Required\NHibernate.xml = ExternalLibraries\NHibernate\Required\NHibernate.xml
-	EndProjectSection
-EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "LazyLoading", "LazyLoading", "{A99657C1-13A0-4B09-AC7E-04E4A11A9CCE}"
-EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Castle", "Castle", "{B8516CEA-00EC-49F3-928B-4D3509B156D6}"
-	ProjectSection(SolutionItems) = preProject
-		ExternalLibraries\NHibernate\LazyLoading\Castle\Castle.Core.dll = ExternalLibraries\NHibernate\LazyLoading\Castle\Castle.Core.dll
-		ExternalLibraries\NHibernate\LazyLoading\Castle\Castle.Core.xml = ExternalLibraries\NHibernate\LazyLoading\Castle\Castle.Core.xml
-		ExternalLibraries\NHibernate\LazyLoading\Castle\Castle.DynamicProxy.license.txt = ExternalLibraries\NHibernate\LazyLoading\Castle\Castle.DynamicProxy.license.txt
-		ExternalLibraries\NHibernate\LazyLoading\Castle\Castle.DynamicProxy2.dll = ExternalLibraries\NHibernate\LazyLoading\Castle\Castle.DynamicProxy2.dll
-		ExternalLibraries\NHibernate\LazyLoading\Castle\Castle.DynamicProxy2.xml = ExternalLibraries\NHibernate\LazyLoading\Castle\Castle.DynamicProxy2.xml
-		ExternalLibraries\NHibernate\LazyLoading\Castle\NHibernate.ByteCode.Castle.dll = ExternalLibraries\NHibernate\LazyLoading\Castle\NHibernate.ByteCode.Castle.dll
-		ExternalLibraries\NHibernate\LazyLoading\Castle\NHibernate.ByteCode.Castle.xml = ExternalLibraries\NHibernate\LazyLoading\Castle\NHibernate.ByteCode.Castle.xml
-	EndProjectSection
-EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "LinFu", "LinFu", "{1D8A057F-5E98-4B7A-B874-4C6BCD6ADE56}"
-	ProjectSection(SolutionItems) = preProject
-		ExternalLibraries\NHibernate\LazyLoading\LinFu\LinFu.DynamicProxy.dll = ExternalLibraries\NHibernate\LazyLoading\LinFu\LinFu.DynamicProxy.dll
-		ExternalLibraries\NHibernate\LazyLoading\LinFu\LinFu.License.txt = ExternalLibraries\NHibernate\LazyLoading\LinFu\LinFu.License.txt
-		ExternalLibraries\NHibernate\LazyLoading\LinFu\NHibernate.ByteCode.LinFu.dll = ExternalLibraries\NHibernate\LazyLoading\LinFu\NHibernate.ByteCode.LinFu.dll
-		ExternalLibraries\NHibernate\LazyLoading\LinFu\NHibernate.ByteCode.LinFu.xml = ExternalLibraries\NHibernate\LazyLoading\LinFu\NHibernate.ByteCode.LinFu.xml
-	EndProjectSection
-EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Spring", "Spring", "{B082CEA8-094D-44B7-AC81-FBDCCA010F4B}"
-	ProjectSection(SolutionItems) = preProject
-		ExternalLibraries\NHibernate\LazyLoading\Spring\antlr.runtime.dll = ExternalLibraries\NHibernate\LazyLoading\Spring\antlr.runtime.dll
-		ExternalLibraries\NHibernate\LazyLoading\Spring\Common.Logging.dll = ExternalLibraries\NHibernate\LazyLoading\Spring\Common.Logging.dll
-		ExternalLibraries\NHibernate\LazyLoading\Spring\NHibernate.ByteCode.Spring.dll = ExternalLibraries\NHibernate\LazyLoading\Spring\NHibernate.ByteCode.Spring.dll
-		ExternalLibraries\NHibernate\LazyLoading\Spring\NHibernate.ByteCode.Spring.xml = ExternalLibraries\NHibernate\LazyLoading\Spring\NHibernate.ByteCode.Spring.xml
-		ExternalLibraries\NHibernate\LazyLoading\Spring\Spring.Aop.dll = ExternalLibraries\NHibernate\LazyLoading\Spring\Spring.Aop.dll
-		ExternalLibraries\NHibernate\LazyLoading\Spring\Spring.Aop.xml = ExternalLibraries\NHibernate\LazyLoading\Spring\Spring.Aop.xml
-		ExternalLibraries\NHibernate\LazyLoading\Spring\Spring.Core.dll = ExternalLibraries\NHibernate\LazyLoading\Spring\Spring.Core.dll
-		ExternalLibraries\NHibernate\LazyLoading\Spring\Spring.Core.xml = ExternalLibraries\NHibernate\LazyLoading\Spring\Spring.Core.xml
+		ExternalLibraries\NHibernate\Iesi.Collections.dll = ExternalLibraries\NHibernate\Iesi.Collections.dll
+		ExternalLibraries\NHibernate\Iesi.Collections.pdb = ExternalLibraries\NHibernate\Iesi.Collections.pdb
+		ExternalLibraries\NHibernate\Iesi.Collections.xml = ExternalLibraries\NHibernate\Iesi.Collections.xml
+		ExternalLibraries\NHibernate\nhibernate-configuration.xsd = ExternalLibraries\NHibernate\nhibernate-configuration.xsd
+		ExternalLibraries\NHibernate\nhibernate-mapping.xsd = ExternalLibraries\NHibernate\nhibernate-mapping.xsd
+		ExternalLibraries\NHibernate\NHibernate.dll = ExternalLibraries\NHibernate\NHibernate.dll
+		ExternalLibraries\NHibernate\NHibernate.pdb = ExternalLibraries\NHibernate\NHibernate.pdb
+		ExternalLibraries\NHibernate\NHibernate.xml = ExternalLibraries\NHibernate\NHibernate.xml
 	EndProjectSection
 EndProject
 Global
@@ -106,10 +69,5 @@ Global
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{5C3EA941-E6B9-456C-B886-CE140120ADAC} = {4A9331E1-6EE5-4765-B65A-A565E345BDBF}
-		{71C7731B-4547-45A7-B4D2-2BE2BFAC3B59} = {5C3EA941-E6B9-456C-B886-CE140120ADAC}
-		{A99657C1-13A0-4B09-AC7E-04E4A11A9CCE} = {5C3EA941-E6B9-456C-B886-CE140120ADAC}
-		{B8516CEA-00EC-49F3-928B-4D3509B156D6} = {A99657C1-13A0-4B09-AC7E-04E4A11A9CCE}
-		{1D8A057F-5E98-4B7A-B874-4C6BCD6ADE56} = {A99657C1-13A0-4B09-AC7E-04E4A11A9CCE}
-		{B082CEA8-094D-44B7-AC81-FBDCCA010F4B} = {A99657C1-13A0-4B09-AC7E-04E4A11A9CCE}
 	EndGlobalSection
 EndGlobal
