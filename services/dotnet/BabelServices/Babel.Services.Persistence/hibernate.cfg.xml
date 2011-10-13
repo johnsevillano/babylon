@@ -5,7 +5,9 @@
     <property name="dialect">NHibernate.Dialect.MsSql2008Dialect</property>
     <property name="connection.driver_class">NHibernate.Driver.SqlClientDriver</property>
     <property name="connection.connection_string">Data Source=DEVBOX\SQLEXPRESS;Initial Catalog=Babel;User ID=babeladmin;Password=babel4All</property>
-    <property name="proxyfactory.factory_class">NHibernate.ByteCode.Castle.ProxyFactoryFactory, NHibernate.ByteCode.Castle</property>
     <property name="show_sql">true</property>
+    <property name="command_timeout">160</property>
+    <property name="adonet.batch_size">10</property>
+    <property name="query.substitutions">true 1, false 0, yes 'Y', no 'N'</property>
   </session-factory>
 </hibernate-configuration>
