@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="Babylon.Services.Model">
+  <class name="Message" table="MESSAGE">
+      <id name="id" column="ID">
+          <generator class="guid"/>
+      </id>
+      <property name="sender" column="SENDER"/>
+      <set name="recipients" table="MESSAGE_RECIPIENT">
+          <key column="MESSAGE_ID" not-null="true"/>
+          <element column="RECIPIENT_ID" type="string" not-null="true"/>
+      </set>
+      <property name="subject" column="SUBJECT"/>
+      <property name="body" column="BODY"/>
+      <property name="sentOn" column="SENT_ON"/>
+      <set name="attachments" table="MESSAGE_ATTACHMENT" order-by="NAME asc">
+          <key column="MESSAGE_ID" not-null="true"/>
+          <composite-element class="Attachment">
+              <property name="name" column="NAME" not-null="true"/>
+              <property name="link" column="LINK" not-null="true"/>
+          </composite-element>
+      </set>
+  </class>
+</hibernate-mapping>
