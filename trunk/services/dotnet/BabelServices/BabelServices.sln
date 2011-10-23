@@ -20,20 +20,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Babel.Services.TestClient",
 		{1506CF9C-ACF9-4B47-A31A-D5697BD59DFC} = {1506CF9C-ACF9-4B47-A31A-D5697BD59DFC}
 	EndProjectSection
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "External Libraries", "External Libraries", "{4A9331E1-6EE5-4765-B65A-A565E345BDBF}"
-EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "NHibernate", "NHibernate", "{5C3EA941-E6B9-456C-B886-CE140120ADAC}"
-	ProjectSection(SolutionItems) = preProject
-		ExternalLibraries\NHibernate\Iesi.Collections.dll = ExternalLibraries\NHibernate\Iesi.Collections.dll
-		ExternalLibraries\NHibernate\Iesi.Collections.pdb = ExternalLibraries\NHibernate\Iesi.Collections.pdb
-		ExternalLibraries\NHibernate\Iesi.Collections.xml = ExternalLibraries\NHibernate\Iesi.Collections.xml
-		ExternalLibraries\NHibernate\nhibernate-configuration.xsd = ExternalLibraries\NHibernate\nhibernate-configuration.xsd
-		ExternalLibraries\NHibernate\nhibernate-mapping.xsd = ExternalLibraries\NHibernate\nhibernate-mapping.xsd
-		ExternalLibraries\NHibernate\NHibernate.dll = ExternalLibraries\NHibernate\NHibernate.dll
-		ExternalLibraries\NHibernate\NHibernate.pdb = ExternalLibraries\NHibernate\NHibernate.pdb
-		ExternalLibraries\NHibernate\NHibernate.xml = ExternalLibraries\NHibernate\NHibernate.xml
-	EndProjectSection
-EndProject
 Global
 	GlobalSection(TestCaseManagementSettings) = postSolution
 		CategoryFile = BabelServices.vsmdi
@@ -66,8 +52,5 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
-	EndGlobalSection
-	GlobalSection(NestedProjects) = preSolution
-		{5C3EA941-E6B9-456C-B886-CE140120ADAC} = {4A9331E1-6EE5-4765-B65A-A565E345BDBF}
 	EndGlobalSection
 EndGlobal
