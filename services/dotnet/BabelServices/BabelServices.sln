@@ -11,14 +11,14 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Babel.Services.Persistence"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Babel.Services.Application", "Babel.Services.Application\Babel.Services.Application.csproj", "{1506CF9C-ACF9-4B47-A31A-D5697BD59DFC}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Babel.Services.UnitTests", "Babel.Services.UnitTests\Babel.Services.UnitTests.csproj", "{18EAFAAF-A440-4C53-8863-3376ADECC4BD}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Babel.Services.Library", "Babel.Services.Library\Babel.Services.Library.csproj", "{051C2A55-9A9B-4F63-ABAB-0AE3A945DBBA}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Babel.Services.TestClient", "Babel.Services.TestClient\Babel.Services.TestClient.csproj", "{CA2744CE-8F82-4A0E-8479-FE3877624B7F}"
 	ProjectSection(ProjectDependencies) = postProject
 		{1506CF9C-ACF9-4B47-A31A-D5697BD59DFC} = {1506CF9C-ACF9-4B47-A31A-D5697BD59DFC}
 	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Babel.Services.Tests", "Babel.Services.Tests\Babel.Services.Tests.csproj", "{30D947A6-5001-40CB-A21E-F7CE25F2AA97}"
 EndProject
 Global
 	GlobalSection(TestCaseManagementSettings) = postSolution
@@ -37,10 +37,6 @@ Global
 		{1506CF9C-ACF9-4B47-A31A-D5697BD59DFC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1506CF9C-ACF9-4B47-A31A-D5697BD59DFC}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1506CF9C-ACF9-4B47-A31A-D5697BD59DFC}.Release|Any CPU.Build.0 = Release|Any CPU
-		{18EAFAAF-A440-4C53-8863-3376ADECC4BD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{18EAFAAF-A440-4C53-8863-3376ADECC4BD}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{18EAFAAF-A440-4C53-8863-3376ADECC4BD}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{18EAFAAF-A440-4C53-8863-3376ADECC4BD}.Release|Any CPU.Build.0 = Release|Any CPU
 		{051C2A55-9A9B-4F63-ABAB-0AE3A945DBBA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{051C2A55-9A9B-4F63-ABAB-0AE3A945DBBA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{051C2A55-9A9B-4F63-ABAB-0AE3A945DBBA}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -49,6 +45,10 @@ Global
 		{CA2744CE-8F82-4A0E-8479-FE3877624B7F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{CA2744CE-8F82-4A0E-8479-FE3877624B7F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{CA2744CE-8F82-4A0E-8479-FE3877624B7F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{30D947A6-5001-40CB-A21E-F7CE25F2AA97}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{30D947A6-5001-40CB-A21E-F7CE25F2AA97}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{30D947A6-5001-40CB-A21E-F7CE25F2AA97}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{30D947A6-5001-40CB-A21E-F7CE25F2AA97}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
