@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="Babylon.Services.Model">
+  <class name="NewsItem" table="NEWS_ITEM">
+      <id name="id" column="ID">
+          <generator class="guid"/>
+      </id>
+      <property name="title" column="TITLE"/>
+      <property name="body" column="BODY"/>
+      <property name="reportedOn" column="REPORTED_ON"/>
+      <property name="reportedBy" column="REPORTED_BY"/>
+  </class>
+</hibernate-mapping>
