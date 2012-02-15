@@ -4,9 +4,9 @@
   <session-factory>
     <property name="hibernate.dialect">org.hibernate.dialect.MySQLDialect</property>
     <property name="hibernate.connection.driver_class">com.mysql.jdbc.Driver</property>
-    <property name="hibernate.connection.url">jdbc:mysql://localhost:3306/Babylon</property>
+    <property name="hibernate.connection.url">jdbc:mysql://192.168.1.32:3306/Babylon</property>
     <property name="hibernate.connection.username">guille</property>
-    <property name="hibernate.connection.password">wETA9War53</property>
+    <property name="hibernate.connection.password">morpheus</property>
     <property name="hibernate.show_sql">true</property>
     <property name="hibernate.current_session_context_class">thread</property>
     <mapping resource="Babylon/Services/Mappings/Message.hbm.xml"/>
