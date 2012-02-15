@@ -31,30 +31,31 @@ public class NewsService {
      * Web service operation
      */
     @WebMethod(operationName = "CreateNewsItem")
-    public String CreateNewsItem(
+    public NewsItem CreateNewsItem(
             @WebParam(name = "title") String title,
             @WebParam(name = "body") String body,
             @WebParam(name = "reportedBy") String reportedBy)
     {
         NewsItem newsItem = new NewsItem();
 
-        newsItem.setId("000000");
+        newsItem.setId("00000000-0000-0000-0000-000000000000");
         newsItem.setTitle(title);
         newsItem.setBody(body);
         newsItem.setReportedBy(reportedBy);
 
-        return newsItem.getId();
+        return newsItem;
     }
 
     /**
      * Web service operation
      */
     @WebMethod(operationName = "ReportNewsItem")
-    @Oneway
-    public void ReportNewsItem(@WebParam(name = "newsItem") NewsItem newsItem)
+    public String ReportNewsItem(@WebParam(name = "newsItem") NewsItem newsItem)
     {
         newsItem.setReportedOn(new Date(System.currentTimeMillis()));
         getRepository().add(newsItem);
+
+        return newsItem.getId();
     }
 
     /**

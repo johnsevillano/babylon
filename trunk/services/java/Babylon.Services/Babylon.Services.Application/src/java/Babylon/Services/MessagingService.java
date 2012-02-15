@@ -33,7 +33,7 @@ public class MessagingService {
      * Web service operation
      */
     @WebMethod(operationName = "CreateMessage")
-    public String createMessage(
+    public Message createMessage(
             @WebParam(name = "sender") String sender,
             @WebParam(name = "recipients") Set<String> recipients,
             @WebParam(name = "subject") String subject,
@@ -42,13 +42,13 @@ public class MessagingService {
         // create new message
         Message message = new Message();
 
-        message.setId("000000");
+        message.setId("00000000-0000-0000-0000-000000000000");
         message.setSender(sender);
         message.setRecipients(recipients);
         message.setSubject(subject);
         message.setBody(body);
 
-        return message.getId();
+        return message;
     }
 
     /**
@@ -56,11 +56,12 @@ public class MessagingService {
      * @param message
      */
     @WebMethod(operationName = "SendMessage")
-    @Oneway
-    public void sendMessage(@WebParam(name = "message") Message message)
+    public String sendMessage(@WebParam(name = "message") Message message)
     {
         message.setSentOn(new Date(System.currentTimeMillis()));
         getRepository().add(message);
+
+        return message.getId();
     }
 
     /**
@@ -71,7 +72,7 @@ public class MessagingService {
     @Oneway
     public void modifyMessage(@WebParam(name = "message") Message message)
     {
-       getRepository().update(message);
+        getRepository().update(message);
     }
 
     /**
