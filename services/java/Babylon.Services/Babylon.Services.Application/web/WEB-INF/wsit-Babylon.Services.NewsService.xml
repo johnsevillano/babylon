@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+ <definitions 
+ xmlns="http://schemas.xmlsoap.org/wsdl/" 
+ xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" 
+ xmlns:xsd="http://www.w3.org/2001/XMLSchema" 
+ xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" name="NewsServiceService" targetNamespace="http://Services.Babylon/" xmlns:tns="http://Services.Babylon/" xmlns:wsp="http://www.w3.org/ns/ws-policy" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:fi="http://java.sun.com/xml/ns/wsit/2006/09/policy/fastinfoset/service" xmlns:tcp="http://java.sun.com/xml/ns/wsit/2006/09/policy/soaptcp/service" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata"
+ >
+    <message name="CreateNewsItem"/>
+    <message name="CreateNewsItemResponse"/>
+    <message name="ReportNewsItem"/>
+    <message name="ReportNewsItemResponse"/>
+    <message name="GetLatestNews"/>
+    <message name="GetLatestNewsResponse"/>
+    <message name="GetNewsItem"/>
+    <message name="GetNewsItemResponse"/>
+    <message name="ModifyNewsItem"/>
+    <message name="ModifyNewsItemResponse"/>
+    <message name="DeleteNewsItem"/>
+    <message name="DeleteNewsItemResponse"/>
+    <message name="SearchNews"/>
+    <message name="SearchNewsResponse"/>
+    <portType name="NewsService">
+        <operation name="CreateNewsItem">
+            <input message="tns:CreateNewsItem"/>
+            <output message="tns:CreateNewsItemResponse"/>
+        </operation>
+        <operation name="ReportNewsItem">
+            <input message="tns:ReportNewsItem"/>
+            <output message="tns:ReportNewsItemResponse"/>
+        </operation>
+        <operation name="GetLatestNews">
+            <input message="tns:GetLatestNews"/>
+            <output message="tns:GetLatestNewsResponse"/>
+        </operation>
+        <operation name="GetNewsItem">
+            <input message="tns:GetNewsItem"/>
+            <output message="tns:GetNewsItemResponse"/>
+        </operation>
+        <operation name="ModifyNewsItem">
+            <input message="tns:ModifyNewsItem"/>
+            <output message="tns:ModifyNewsItemResponse"/>
+        </operation>
+        <operation name="DeleteNewsItem">
+            <input message="tns:DeleteNewsItem"/>
+            <output message="tns:DeleteNewsItemResponse"/>
+        </operation>
+        <operation name="SearchNews">
+            <input message="tns:SearchNews"/>
+            <output message="tns:SearchNewsResponse"/>
+        </operation>
+    </portType>
+    <binding name="NewsServicePortBinding" type="tns:NewsService">
+        <wsp:PolicyReference URI="#NewsServicePortBindingPolicy"/>
+        <operation name="CreateNewsItem">
+            <input/>
+            <output/>
+        </operation>
+        <operation name="ReportNewsItem">
+            <input/>
+            <output/>
+        </operation>
+        <operation name="GetLatestNews">
+            <input/>
+            <output/>
+        </operation>
+        <operation name="GetNewsItem">
+            <input/>
+            <output/>
+        </operation>
+        <operation name="ModifyNewsItem">
+            <input/>
+            <output/>
+        </operation>
+        <operation name="DeleteNewsItem">
+            <input/>
+            <output/>
+        </operation>
+        <operation name="SearchNews">
+            <input/>
+            <output/>
+        </operation>
+    </binding>
+    <service name="NewsServiceService">
+        <port name="NewsServicePort" binding="tns:NewsServicePortBinding"/>
+    </service>
+    <wsp:Policy wsu:Id="NewsServicePortBindingPolicy">
+        <wsp:ExactlyOne>
+            <wsp:All>
+                <wsam:Addressing wsp:Optional="true"/>
+            </wsp:All>
+        </wsp:ExactlyOne>
+    </wsp:Policy>
+</definitions>
+
+
