@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<axis2 xmlns="http://www.netbeans.org/ns/axis2/1">
+    <service name="ProfileServiceProxy">
+        <service-class>Babylon.Services.ProfileServiceProxy</service-class>
+        <generate-wsdl targetNamespace="http://Services/Babylon/" schemaNamespace="http://Services/Babylon/xsd"/>
+    </service>
+    <service name="GroupServiceProxy">
+        <service-class>Babylon.Services.GroupServiceProxy</service-class>
+        <generate-wsdl targetNamespace="http://Services/Babylon/" schemaNamespace="http://Services/Babylon/xsd"/>
+    </service>
+</axis2>
