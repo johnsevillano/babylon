@@ -15,6 +15,7 @@ import javax.jws.Oneway;
 import javax.jws.WebMethod;
 import javax.jws.WebParam;
 import javax.jws.WebService;
+import javax.xml.ws.BindingType;
 
 
 /**
@@ -22,6 +23,7 @@ import javax.jws.WebService;
  * @author guille
  */
 @WebService()
+@BindingType("http://java.sun.com/xml/ns/jaxws/2003/05/soap/bindings/HTTP/")
 public class MessageService {
 
     private IMessageRepository repository;
