@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<endpoints version="2.0" xmlns="http://java.sun.com/xml/ns/jax-ws/ri/runtime">
+  <endpoint implementation="Babylon.Services.Metro.MessageService" name="MessageService" url-pattern="/MessageService"/>
+  <endpoint implementation="Babylon.Services.Metro.NewsService" name="NewsService" url-pattern="/NewsService"/>
+</endpoints>
