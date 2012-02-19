@@ -13,7 +13,7 @@ public class Attachment {
     
     private String name;
     private String link;
-    private byte[] bytes;
+    private byte[] content;
     
     /**
      * Get the value of name
@@ -56,17 +56,17 @@ public class Attachment {
      *
      * @return the value of Bytes
      */
-    public byte[] getBytes() {
-        return bytes;
+    public byte[] getContent() {
+        return content;
     }
-
+    
     /**
      * Set the value of Bytes
      *
      * @param Bytes new value of Bytes
      */
-    public void setBytes(byte[] Bytes) {
-        this.bytes = Bytes;
+    public void loadContent(byte[] content) {
+        this.content = content;
     }
     
 }
