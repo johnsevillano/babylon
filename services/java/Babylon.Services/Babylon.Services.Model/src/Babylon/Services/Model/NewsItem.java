@@ -5,6 +5,7 @@
 
 package Babylon.Services.Model;
 
+import java.awt.Image;
 import java.util.Date;
 
 /**
@@ -18,7 +19,7 @@ public class NewsItem {
     private String body;
     private Date reportedOn;
     private String reportedBy;
-    private byte[] picture;
+    private Image picture;
 
     /**
      * Get the value of id
@@ -115,7 +116,7 @@ public class NewsItem {
      *
      * @return the value of picture
      */
-    public byte[] getPicture() {
+    public Image getPicture() {
         return picture;
     }
 
@@ -124,7 +125,7 @@ public class NewsItem {
      *
      * @param picture new value of picture
      */
-    public void setPicture(byte[] picture) {
+    public void setPhoto(Image picture) {
         this.picture = picture;
     }
 
