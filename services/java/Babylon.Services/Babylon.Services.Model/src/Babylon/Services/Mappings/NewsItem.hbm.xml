@@ -9,5 +9,6 @@
       <property name="body" column="BODY"/>
       <property name="reportedOn" column="REPORTED_ON"/>
       <property name="reportedBy" column="REPORTED_BY"/>
+      <property name="picture" column="PICTURE" type="binary" length="16777216"/>
   </class>
 </hibernate-mapping>
