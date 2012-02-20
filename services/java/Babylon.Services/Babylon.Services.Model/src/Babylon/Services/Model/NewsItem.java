@@ -19,7 +19,7 @@ public class NewsItem {
     private String body;
     private Date reportedOn;
     private String reportedBy;
-    private Image picture;
+    private byte[] picture;
 
     /**
      * Get the value of id
@@ -116,7 +116,7 @@ public class NewsItem {
      *
      * @return the value of picture
      */
-    public Image getPicture() {
+    public byte[] getPicture() {
         return picture;
     }
 
@@ -125,7 +125,7 @@ public class NewsItem {
      *
      * @param picture new value of picture
      */
-    public void setPhoto(Image picture) {
+    public void setPicture(byte[] picture) {
         this.picture = picture;
     }
 
