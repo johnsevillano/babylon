@@ -86,7 +86,7 @@ public class MessageRepositoryTest {
         Attachment attachment = new Attachment();
         attachment.setName("Attachment 3");
         attachment.setLink("www.microsoft.com");
-        attachment.loadContent("www.microsoft.com".getBytes());
+        attachment.setContent("www.microsoft.com".getBytes());
         attachments.add(attachment);
 
         Message message = new Message();
@@ -263,7 +263,7 @@ public class MessageRepositoryTest {
         Attachment attachment1 = new Attachment();
         attachment1.setName("Attachment 1");
         attachment1.setLink("http://www.google.es");
-        attachment1.loadContent("google.es".getBytes());
+        attachment1.setContent("google.es".getBytes());
         attachments.add(attachment1);
 
         Message message1 = new Message();
@@ -282,7 +282,7 @@ public class MessageRepositoryTest {
         Attachment attachment2 = new Attachment();
         attachment2.setName("Attachment 2");
         attachment2.setLink("http:\\www.google.co.uk");
-        attachment2.loadContent("google.co.uk".getBytes());
+        attachment2.setContent("google.co.uk".getBytes());
         attachments.add(attachment2);
 
         Message message2 = new Message();

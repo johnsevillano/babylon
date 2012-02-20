@@ -65,7 +65,7 @@ public class Attachment {
      *
      * @param Bytes new value of Bytes
      */
-    public void loadContent(byte[] content) {
+    public void setContent(byte[] content) {
         this.content = content;
     }
     
