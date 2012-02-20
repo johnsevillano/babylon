@@ -71,6 +71,7 @@ public class NewsRepositoryTest {
         item.setBody("Body 4");
         item.setReportedBy("reporter4");
         item.setReportedOn(new Date(System.currentTimeMillis()));
+        item.setPicture("Texto para pasar a binario".getBytes());
 
         // Persist news item
         NewsRepository repository = new NewsRepository();
@@ -114,6 +115,7 @@ public class NewsRepositoryTest {
         item.setBody("updated body");
         item.setReportedBy("updated reporter");
         item.setReportedOn(new Date(System.currentTimeMillis()));
+        item.setPicture("Texto para pasar a binario".getBytes());
 
         NewsRepository repository = new NewsRepository();
         repository.update(item);
@@ -205,6 +207,7 @@ public class NewsRepositoryTest {
         newsItem1.setBody("This is the body of the news item 1.");
         newsItem1.setReportedBy("reporter1");
         newsItem1.setReportedOn(new Date(System.currentTimeMillis()));
+        newsItem1.setPicture("Texto para pasar a binario".getBytes());
 
         // create transiente news item 2
         NewsItem newsItem2 = new NewsItem();
@@ -212,6 +215,7 @@ public class NewsRepositoryTest {
         newsItem2.setBody("This is the body of the news item 2.");
         newsItem2.setReportedBy("reporter2");
         newsItem2.setReportedOn(new Date(System.currentTimeMillis()));
+        newsItem2.setPicture("Texto para pasar a binario".getBytes());
 
         // create transiente news item 3
         NewsItem newsItem3 = new NewsItem();
@@ -219,6 +223,7 @@ public class NewsRepositoryTest {
         newsItem3.setBody("This is the body of the news item 3.");
         newsItem3.setReportedBy("reporter2");
         newsItem3.setReportedOn(new Date(System.currentTimeMillis()));
+        newsItem3.setPicture("Texto para pasar a binario".getBytes());
 
         // open new persistence context
         Session session = HibernateUtil.getSessionFactory().openSession();
