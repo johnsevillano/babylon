@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<definitions xmlns:wsp="http://www.w3.org/ns/ws-policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:tns="http://Metro.Services.Babylon/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:wsp1_2="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" name="NewsServiceService" targetNamespace="http://Metro.Services.Babylon/" xmlns="http://schemas.xmlsoap.org/wsdl/">
+  <wsp:Policy wsu:Id="NewsServicePortBindingPolicy">
+    <wsam:Addressing wsp:Optional="true" />
+  </wsp:Policy>
+  <wsp:Policy wsu:Id="NewsServicePortBinding_MTOM_Policy-NewsServicePortBinding_MTOM_Policy">
+    <ns1:OptimizedMimeSerialization xmlns:ns1="http://schemas.xmlsoap.org/ws/2004/09/policy/optimizedmimeserialization" wsp:Optional="true" />
+  </wsp:Policy>
+  <types>
+    <xsd:schema>
+      <xsd:import schemaLocation="http://ubuntubox:8080/Babylon.Services.Metro/NewsService?xsd=1" namespace="http://Metro.Services.Babylon/" />
+    </xsd:schema>
+  </types>
+  <message name="CreateNewsItem">
+    <part name="parameters" element="tns:CreateNewsItem" />
+  </message>
+  <message name="CreateNewsItemResponse">
+    <part name="parameters" element="tns:CreateNewsItemResponse" />
+  </message>
+  <message name="ReportNewsItem">
+    <part name="parameters" element="tns:ReportNewsItem" />
+  </message>
+  <message name="ReportNewsItemResponse">
+    <part name="parameters" element="tns:ReportNewsItemResponse" />
+  </message>
+  <message name="GetLatestNews">
+    <part name="parameters" element="tns:GetLatestNews" />
+  </message>
+  <message name="GetLatestNewsResponse">
+    <part name="parameters" element="tns:GetLatestNewsResponse" />
+  </message>
+  <message name="GetNewsItem">
+    <part name="parameters" element="tns:GetNewsItem" />
+  </message>
+  <message name="GetNewsItemResponse">
+    <part name="parameters" element="tns:GetNewsItemResponse" />
+  </message>
+  <message name="ModifyNewsItem">
+    <part name="parameters" element="tns:ModifyNewsItem" />
+  </message>
+  <message name="DeleteNewsItem">
+    <part name="parameters" element="tns:DeleteNewsItem" />
+  </message>
+  <message name="SearchNews">
+    <part name="parameters" element="tns:SearchNews" />
+  </message>
+  <message name="SearchNewsResponse">
+    <part name="parameters" element="tns:SearchNewsResponse" />
+  </message>
+  <portType name="NewsService">
+    <operation name="CreateNewsItem">
+      <input wsam:Action="http://Metro.Services.Babylon/NewsService/CreateNewsItemRequest" message="tns:CreateNewsItem" />
+      <output wsam:Action="http://Metro.Services.Babylon/NewsService/CreateNewsItemResponse" message="tns:CreateNewsItemResponse" />
+    </operation>
+    <operation name="ReportNewsItem">
+      <input wsam:Action="http://Metro.Services.Babylon/NewsService/ReportNewsItemRequest" message="tns:ReportNewsItem" />
+      <output wsam:Action="http://Metro.Services.Babylon/NewsService/ReportNewsItemResponse" message="tns:ReportNewsItemResponse" />
+    </operation>
+    <operation name="GetLatestNews">
+      <input wsam:Action="http://Metro.Services.Babylon/NewsService/GetLatestNewsRequest" message="tns:GetLatestNews" />
+      <output wsam:Action="http://Metro.Services.Babylon/NewsService/GetLatestNewsResponse" message="tns:GetLatestNewsResponse" />
+    </operation>
+    <operation name="GetNewsItem">
+      <input wsam:Action="http://Metro.Services.Babylon/NewsService/GetNewsItemRequest" message="tns:GetNewsItem" />
+      <output wsam:Action="http://Metro.Services.Babylon/NewsService/GetNewsItemResponse" message="tns:GetNewsItemResponse" />
+    </operation>
+    <operation name="ModifyNewsItem">
+      <input wsam:Action="http://Metro.Services.Babylon/NewsService/ModifyNewsItem" message="tns:ModifyNewsItem" />
+    </operation>
+    <operation name="DeleteNewsItem">
+      <input wsam:Action="http://Metro.Services.Babylon/NewsService/DeleteNewsItem" message="tns:DeleteNewsItem" />
+    </operation>
+    <operation name="SearchNews">
+      <input wsam:Action="http://Metro.Services.Babylon/NewsService/SearchNewsRequest" message="tns:SearchNews" />
+      <output wsam:Action="http://Metro.Services.Babylon/NewsService/SearchNewsResponse" message="tns:SearchNewsResponse" />
+    </operation>
+  </portType>
+  <binding name="NewsServicePortBinding" type="tns:NewsService">
+    <wsp:PolicyReference URI="#NewsServicePortBinding_MTOM_Policy-NewsServicePortBinding_MTOM_Policy" />
+    <wsp:PolicyReference URI="#NewsServicePortBindingPolicy" />
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <operation name="CreateNewsItem">
+      <soap12:operation soapAction="" />
+      <input>
+        <soap12:body use="literal" />
+      </input>
+      <output>
+        <soap12:body use="literal" />
+      </output>
+    </operation>
+    <operation name="ReportNewsItem">
+      <soap12:operation soapAction="" />
+      <input>
+        <soap12:body use="literal" />
+      </input>
+      <output>
+        <soap12:body use="literal" />
+      </output>
+    </operation>
+    <operation name="GetLatestNews">
+      <soap12:operation soapAction="" />
+      <input>
+        <soap12:body use="literal" />
+      </input>
+      <output>
+        <soap12:body use="literal" />
+      </output>
+    </operation>
+    <operation name="GetNewsItem">
+      <soap12:operation soapAction="" />
+      <input>
+        <soap12:body use="literal" />
+      </input>
+      <output>
+        <soap12:body use="literal" />
+      </output>
+    </operation>
+    <operation name="ModifyNewsItem">
+      <soap12:operation soapAction="" />
+      <input>
+        <soap12:body use="literal" />
+      </input>
+    </operation>
+    <operation name="DeleteNewsItem">
+      <soap12:operation soapAction="" />
+      <input>
+        <soap12:body use="literal" />
+      </input>
+    </operation>
+    <operation name="SearchNews">
+      <soap12:operation soapAction="" />
+      <input>
+        <soap12:body use="literal" />
+      </input>
+      <output>
+        <soap12:body use="literal" />
+      </output>
+    </operation>
+  </binding>
+  <service name="NewsServiceService">
+    <port name="NewsServicePort" binding="tns:NewsServicePortBinding">
+      <soap12:address location="http://ubuntubox:8080/Babylon.Services.Metro/NewsService" />
+    </port>
+  </service>
+</definitions>
