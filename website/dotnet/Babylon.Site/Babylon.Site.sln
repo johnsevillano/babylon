@@ -5,6 +5,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Babylon.Services.Tests", "B
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Babylon.Site", "Babylon.Site\Babylon.Site.csproj", "{933F6526-326C-4FB4-9C97-3432F64D9847}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Babylon.Services.References", "Babylon.Services.References\Babylon.Services.References.csproj", "{98A21CD8-05E4-400E-8F1E-51AB8600B4A6}"
+EndProject
 Global
 	GlobalSection(SubversionScc) = preSolution
 		Svn-Managed = True
@@ -39,6 +41,16 @@ Global
 		{933F6526-326C-4FB4-9C97-3432F64D9847}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
 		{933F6526-326C-4FB4-9C97-3432F64D9847}.Release|Mixed Platforms.Build.0 = Release|Any CPU
 		{933F6526-326C-4FB4-9C97-3432F64D9847}.Release|x86.ActiveCfg = Release|Any CPU
+		{98A21CD8-05E4-400E-8F1E-51AB8600B4A6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{98A21CD8-05E4-400E-8F1E-51AB8600B4A6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{98A21CD8-05E4-400E-8F1E-51AB8600B4A6}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{98A21CD8-05E4-400E-8F1E-51AB8600B4A6}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{98A21CD8-05E4-400E-8F1E-51AB8600B4A6}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{98A21CD8-05E4-400E-8F1E-51AB8600B4A6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{98A21CD8-05E4-400E-8F1E-51AB8600B4A6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{98A21CD8-05E4-400E-8F1E-51AB8600B4A6}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{98A21CD8-05E4-400E-8F1E-51AB8600B4A6}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{98A21CD8-05E4-400E-8F1E-51AB8600B4A6}.Release|x86.ActiveCfg = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

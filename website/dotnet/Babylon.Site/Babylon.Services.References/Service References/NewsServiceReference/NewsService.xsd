@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://Metro.Services.Babylon/" targetNamespace="http://Metro.Services.Babylon/" version="1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="CreateNewsItem" type="tns:CreateNewsItem" />
+  <xs:element name="CreateNewsItemResponse" type="tns:CreateNewsItemResponse" />
+  <xs:element name="DeleteNewsItem" type="tns:DeleteNewsItem" />
+  <xs:element name="GetLatestNews" type="tns:GetLatestNews" />
+  <xs:element name="GetLatestNewsResponse" type="tns:GetLatestNewsResponse" />
+  <xs:element name="GetNewsItem" type="tns:GetNewsItem" />
+  <xs:element name="GetNewsItemResponse" type="tns:GetNewsItemResponse" />
+  <xs:element name="ModifyNewsItem" type="tns:ModifyNewsItem" />
+  <xs:element name="ReportNewsItem" type="tns:ReportNewsItem" />
+  <xs:element name="ReportNewsItemResponse" type="tns:ReportNewsItemResponse" />
+  <xs:element name="SearchNews" type="tns:SearchNews" />
+  <xs:element name="SearchNewsResponse" type="tns:SearchNewsResponse" />
+  <xs:complexType name="GetLatestNews">
+    <xs:sequence>
+      <xs:element name="count" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="GetLatestNewsResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:newsItem" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="newsItem">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="body" type="xs:string" />
+      <xs:element minOccurs="0" name="id" type="xs:string" />
+      <xs:element minOccurs="0" name="picture" type="xs:base64Binary" />
+      <xs:element minOccurs="0" name="reportedBy" type="xs:string" />
+      <xs:element minOccurs="0" name="reportedOn" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="title" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="ModifyNewsItem">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="item" type="tns:newsItem" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="GetNewsItem">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="id" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="GetNewsItemResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:newsItem" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="DeleteNewsItem">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="id" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="ReportNewsItem">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="newsItem" type="tns:newsItem" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="ReportNewsItemResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="SearchNews">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="filter" type="tns:newsItemFilter" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="newsItemFilter">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="body" type="xs:string" />
+      <xs:element minOccurs="0" name="reportedAfter" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="reportedBefore" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="reportedBy" type="xs:string" />
+      <xs:element minOccurs="0" name="title" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="SearchNewsResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:newsItem" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="CreateNewsItem">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="title" type="xs:string" />
+      <xs:element minOccurs="0" name="body" type="xs:string" />
+      <xs:element minOccurs="0" name="reportedBy" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="CreateNewsItemResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:newsItem" />
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>
