@@ -15,6 +15,7 @@ import javax.jws.WebMethod;
 import javax.jws.WebParam;
 import javax.jws.WebService;
 import javax.xml.ws.BindingType;
+import javax.xml.ws.soap.MTOM;
 
 
 /**
@@ -22,6 +23,7 @@ import javax.xml.ws.BindingType;
  * @author guille
  */
 @WebService()
+@MTOM(enabled=true, threshold=0)
 @BindingType("http://java.sun.com/xml/ns/jaxws/2003/05/soap/bindings/HTTP/")
 public class NewsService {
 
