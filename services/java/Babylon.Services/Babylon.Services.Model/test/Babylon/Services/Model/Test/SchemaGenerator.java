@@ -5,15 +5,9 @@
 
 package Babylon.Services.Model.Test;
 
-import org.junit.After;
-import org.junit.AfterClass;
-import org.junit.Before;
-import org.junit.BeforeClass;
-import org.junit.Test;
-import static org.junit.Assert.*;
-
-import org.hibernate.tool.hbm2ddl.SchemaExport;
 import org.hibernate.cfg.Configuration;
+import org.hibernate.tool.hbm2ddl.SchemaExport;
+import org.junit.*;
 
 
 /**

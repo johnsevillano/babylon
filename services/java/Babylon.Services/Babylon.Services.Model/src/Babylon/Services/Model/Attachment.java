@@ -14,6 +14,7 @@ public class Attachment {
     private String name;
     private String link;
     private byte[] content;
+    private Long contentSize;
     
     /**
      * Get the value of name
@@ -34,39 +35,57 @@ public class Attachment {
     }
 
     /**
-     * Get the value of Link
+     * Get the value of link
      *
-     * @return the value of Link
+     * @return the value of link
      */
     public String getLink() {
         return link;
     }
 
     /**
-     * Set the value of Link
+     * Set the value of link
      *
-     * @param Link new value of Link
+     * @param Link new value of link
      */
     public void setLink(String link) {
         this.link = link;
     }
 
     /**
-     * Get the value of Bytes
+     * Get the value of content
      *
-     * @return the value of Bytes
+     * @return the value of content
      */
     public byte[] getContent() {
         return content;
     }
     
     /**
-     * Set the value of Bytes
+     * Set the value of content
      *
-     * @param Bytes new value of Bytes
+     * @param Bytes new value of content
      */
     public void setContent(byte[] content) {
         this.content = content;
+    }
+    
+    /**
+     * Get the value of contentSize
+     * 
+     * @return 
+     */
+    public Long getContentSize() {
+        return contentSize;
+    }
+    
+    /**
+     * Set the value of contentSize
+     * 
+     * @param contentSize new value of contentSize
+     */
+    public void setContentSize(Long contentSize) {
+        this.contentSize = contentSize;
     }
     
 }

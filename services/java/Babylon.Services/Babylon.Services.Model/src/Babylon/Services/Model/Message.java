@@ -23,6 +23,7 @@ public class Message {
     private String body;
     private Date sentOn;
     private Set<Attachment> attachments = new HashSet<Attachment>();
+    private Boolean deleted;
 
     /**
      * Get the value of id
@@ -130,6 +131,24 @@ public class Message {
      */
     public void setSentOn(Date sentOn) {
         this.sentOn = sentOn;
+    }
+    
+    /**
+     * Get the value of deleted
+     * 
+     * @return 
+     */
+    public Boolean getDeleted() {
+        return deleted;
+    }
+    
+    /**
+     * Set the value of deleted
+     * 
+     * @param deleted 
+     */
+    public void setDeleted(Boolean deleted) {
+        this.deleted = deleted;
     }
 
     /**
