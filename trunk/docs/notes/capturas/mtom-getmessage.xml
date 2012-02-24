@@ -1,0 +1,88 @@
+REQUEST
+=======
+
+POST http://localhost:8084/Babylon.Services.Metro/MessageService HTTP/1.1
+Accept-Encoding: gzip,deflate
+Content-Type: multipart/related; type="application/xop+xml"; start="<rootpart@soapui.org>"; start-info="application/soap+xml"; action="http://Metro.Services.Babylon/MessageService/GetMessageRequest"; boundary="----=_Part_11_11943756.1329997104389"
+MIME-Version: 1.0
+User-Agent: Jakarta Commons-HttpClient/3.1
+Host: ubuntubox:8080
+Content-Length: 860
+
+
+------=_Part_11_11943756.1329997104389
+Content-Type: application/xop+xml; charset=UTF-8; type="application/soap+xml; action=\"GetMessage\""
+Content-Transfer-Encoding: 8bit
+Content-ID: <rootpart@soapui.org>
+
+<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope" xmlns:met="http://Metro.Services.Babylon/">
+   <soap:Header xmlns:wsa="http://www.w3.org/2005/08/addressing">
+      <wsa:Action>http://Metro.Services.Babylon/MessageService/GetMessageRequest</wsa:Action>
+      <wsa:MessageID>uuid:4a75ba71-17aa-43dc-9f9a-4b8ce96cd9bd</wsa:MessageID>
+      <wsa:To>http://localhost:8084/Babylon.Services.Metro/MessageService</wsa:To>
+   </soap:Header>
+   <soap:Body>
+      <met:GetMessage>
+         <id>0783f2f8-5e11-11e1-b23e-08002708b83c</id>
+      </met:GetMessage>
+   </soap:Body>
+</soap:Envelope>
+------=_Part_11_11943756.1329997104389--
+
+
+
+
+
+RESPONSE
+========
+
+HTTP/1.1 200 OK
+Server: Apache-Coyote/1.1
+Content-Type: multipart/related;start="<rootpart*822b7479-0572-4b2a-9129-7f4e04964652@example.jaxws.sun.com>";type="application/xop+xml";boundary="uuid:822b7479-0572-4b2a-9129-7f4e04964652";start-info="application/soap+xml"
+Transfer-Encoding: chunked
+Date: Thu, 23 Feb 2012 11:38:24 GMT
+
+--uuid:822b7479-0572-4b2a-9129-7f4e04964652
+Content-Id: <rootpart*822b7479-0572-4b2a-9129-7f4e04964652@example.jaxws.sun.com>
+Content-Type: application/xop+xml;charset=utf-8;type="application/soap+xml"
+Content-Transfer-Encoding: binary
+
+<?xml version='1.0' encoding='UTF-8'?>
+   <soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope">
+      <soap:Header xmlns:wsa="http://www.w3.org/2005/08/addressing">
+	 <wsa:To>http://www.w3.org/2005/08/addressing/anonymous</wsa:To>
+	 <wsa:Action>http://Metro.Services.Babylon/MessageService/GetMessageResponse</wsa:Action>
+	 <wsa:MessageID>uuid:c9c823e2-af27-4fd3-bb92-c5f8af068896</wsa:MessageID>
+	 <wsa:RelatesTo>uuid:4a75ba71-17aa-43dc-9f9a-4b8ce96cd9bd</wsa:RelatesTo>
+      </soap:Header>
+      <soap:Body>
+	 <met:GetMessageResponse xmlns:met="http://Metro.Services.Babylon/">
+	    <return>
+	       <attachments>
+		  <content>
+		     <xop:Include xmlns:xop="http://www.w3.org/2004/08/xop/include"
+			href="cid:dc5571f6-ba31-4a43-92b2-fc419b4acbef@example.jaxws.sun.com"/>
+		  </content>
+		  <link>http://www.whatever.com</link>
+		  <name>Foto BMW</name>
+	       </attachments>
+	       <body>Os paso unas fotos de coches...</body>
+	       <id>0783f2f8-5e11-11e1-b23e-08002708b83c</id>
+	       <recipients>b6564583-fbaf-4079-a885-bd9bb47d1565</recipients>
+	       <recipients>ad380695-eb58-4471-b922-29a05b574b3a</recipients>
+	       <sender>f4bbdf9f-bddf-4304-a28a-0c84088a0bc1</sender>
+	       <sentOn>2012-02-23T12:25:03+01:00</sentOn>
+	       <subject>Asunto del mensaje con adjuntos</subject>
+	    </return>
+	 </met:GetMessageResponse>
+      </soap:Body>
+   </soap:Envelope>
+
+--uuid:822b7479-0572-4b2a-9129-7f4e04964652
+Content-Id: <dc5571f6-ba31-4a43-92b2-fc419b4acbef@example.jaxws.sun.com>
+Content-Type: application/octet-stream
+Content-Transfer-Encoding: binary
+
+// BINARY DATA
+
+

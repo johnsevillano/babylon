@@ -1,0 +1,91 @@
+REQUEST
+
+
+POST http://ubuntubox:8080/Babylon.Services.Metro/MessageService HTTP/1.1
+Accept-Encoding: gzip,deflate
+Content-Type: multipart/related; type="application/xop+xml"; start="<rootpart@soapui.org>"; start-info="application/soap+xml"; action="http://Metro.Services.Babylon/MessageService/SendMessageRequest"; boundary="----=_Part_3_3906690.1330085537116"
+MIME-Version: 1.0
+User-Agent: Jakarta Commons-HttpClient/3.1
+Host: ubuntubox:8080
+Content-Length: 374861
+
+
+------=_Part_3_3906690.1330085537116
+Content-Type: application/xop+xml; charset=UTF-8; type="application/soap+xml; action=\"SendMessage\""
+Content-Transfer-Encoding: 8bit
+Content-ID: <rootpart@soapui.org>
+
+<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope" xmlns:met="http://Metro.Services.Babylon/">
+   <soap:Header xmlns:wsa="http://www.w3.org/2005/08/addressing">
+      <wsa:Action>http://Metro.Services.Babylon/MessageService/SendMessageRequest</wsa:Action>
+      <wsa:MessageID>uuid:729dbb33-1327-4eac-9096-df933c652df3</wsa:MessageID>
+      <wsa:To>http://ubuntubox:8080/Babylon.Services.Metro/MessageService</wsa:To>
+   </soap:Header>
+   <soap:Body>
+      <met:SendMessage>
+         <!--Optional:-->
+         <message>
+            <!--Zero or more repetitions:-->
+            <attachments>
+               <!--Optional:-->
+               <content><inc:Include href="cid:1311103120231" xmlns:inc="http://www.w3.org/2004/08/xop/include"/></content>
+               <!--Optional:-->
+               <link>http://www.babylon.com/pictures/pic1.jpg</link>
+               <!--Optional:-->
+               <name>Foto 1</name>
+            </attachments>
+            <!--Optional:-->
+            <body>Cuerpo del mensaje con datos binarios.</body>
+            <!--Optional:-->
+            <id>?</id>
+            <!--Zero or more repetitions:-->
+            <recipients>ddaabd86-232d-42ee-b0db-10bbe615cb8a</recipients>
+            <!--Optional:-->
+            <sender>261e0e70-3e85-44f0-976e-50823ce10832</sender>
+            <!--Optional:-->
+            <sentOn/>
+            <!--Optional:-->
+            <subject>Mensaje con datos binarios</subject>
+         </message>
+      </met:SendMessage>
+   </soap:Body>
+</soap:Envelope>
+------=_Part_3_3906690.1330085537116
+Content-Type: application/octet-stream; name=DSC00062.JPG
+Content-Transfer-Encoding: binary
+Content-ID: <1311103120231>
+Content-Disposition: attachment; name="DSC00062.JPG"; filename="DSC00062.JPG"
+
+// BINARY DATA
+
+
+
+RESPONSE
+
+HTTP/1.1 200 OK
+Server: Apache-Coyote/1.1
+Content-Type: multipart/related;start="<rootpart*43814641-2183-45ab-a206-6d73ca10313e@example.jaxws.sun.com>";type="application/xop+xml";boundary="uuid:43814641-2183-45ab-a206-6d73ca10313e";start-info="application/soap+xml"
+Transfer-Encoding: chunked
+Date: Fri, 24 Feb 2012 12:12:17 GMT
+
+--uuid:43814641-2183-45ab-a206-6d73ca10313e
+Content-Id: <rootpart*43814641-2183-45ab-a206-6d73ca10313e@example.jaxws.sun.com>
+Content-Type: application/xop+xml;charset=utf-8;type="application/soap+xml"
+Content-Transfer-Encoding: binary
+
+<?xml version='1.0' encoding='UTF-8'?>
+<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope">
+   <soap:Header xmlns:wsa="http://www.w3.org/2005/08/addressing">
+      <wsa:To>http://www.w3.org/2005/08/addressing/anonymous</wsa:To>
+      <wsa:Action xmlns="http://www.w3.org/2005/08/addressing">http://Metro.Services.Babylon/MessageService/SendMessageResponse</wsa:Action>
+      <wsa:MessageID xmlns="http://www.w3.org/2005/08/addressing">uuid:6224e5ab-8008-418c-bed9-fe09d97139e6</wsa:MessageID>
+      <wsa:RelatesTo xmlns="http://www.w3.org/2005/08/addressing">uuid:729dbb33-1327-4eac-9096-df933c652df3</wsa:RelatesTo>
+   </soap:Header>
+   <soap:Body>
+      <met:SendMessageResponse xmlns:met="http://Metro.Services.Babylon/">
+	 <return>cb30b05e-5ee0-11e1-8070-08002708b83c</return>
+      </met:SendMessageResponse>
+   </soap:Body>
+</S:Envelope>
+--uuid:43814641-2183-45ab-a206-6d73ca10313e--
+

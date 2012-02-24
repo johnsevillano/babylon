@@ -1,0 +1,68 @@
+WSDL SCHEMA DEFINITION FOR ATTACHMENT
+
+
+<xs:complexType name="attachment">
+   <xs:sequence>
+      <xs:element name="content" type="xs:base64Binary" minOccurs="0"/>
+      <xs:element name="link" type="xs:string" minOccurs="0"/>
+      <xs:element name="name" type="xs:string" minOccurs="0"/>
+   </xs:sequence>
+</xs:complexType>
+
+
+
+SOAP REQUEST
+
+
+<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope" xmlns:met="http://Metro.Services.Babylon/">
+   <soap:Header xmlns:wsa="http://www.w3.org/2005/08/addressing">
+      <wsa:Action>http://Metro.Services.Babylon/MessageService/GetSentMessagesRequest</wsa:Action>
+      <wsa:MessageID>uuid:e874e94c-db34-49f4-a7c6-e62ffc013437</wsa:MessageID>
+      <wsa:To>http://localhost:8084/Babylon.Services.Metro/MessageService</wsa:To>
+   </soap:Header>
+   <soap:Body>
+      <met:GetSentMessages>
+         <!--Optional:-->
+         <sender>f4bbdf9f-bddf-4304-a28a-0c84088a0bc1</sender>
+      </met:GetSentMessages>
+   </soap:Body>
+</soap:Envelope>
+
+
+
+
+SOAP RESPONSE
+
+
+<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope">
+   <soap:Header xmlns:wsa="http://www.w3.org/2005/08/addressing">
+      <wsa:To >http://www.w3.org/2005/08/addressing/anonymous</wsa:To>
+      <wsa:Action xmlns="http://www.w3.org/2005/08/addressing">http://Metro.Services.Babylon/MessageService/GetSentMessagesResponse</wsa:Action>
+      <wsa:MessageID xmlns="http://www.w3.org/2005/08/addressing">uuid:3b3dc9df-594b-43ba-82d9-0eb2a01de3e4</wsa:MessageID>
+      <wsa:RelatesTo xmlns="http://www.w3.org/2005/08/addressing">uuid:bd43fc25-98a4-4984-95ca-ef4ad50ac79f</wsa:RelatesTo>
+   </soap:Header>
+   <soap:Body>
+      <met:GetSentMessagesResponse xmlns:met="http://Metro.Services.Babylon/">
+         <return>
+            <attachments>
+               <content>/9j/4AAQSkZJRgABAQEASABIAAD/4SGWR...</content>
+               <link>http://www.yomismo.com</link>
+               <name>Foto coche 1</name>
+            </attachments>
+            <attachments>
+               <content>/9j/4AAQSkZJRgABAQEASABIAAD/4SMER...</content>
+               <link>http://www.tumismo.com</link>
+               <name>Foto coche 2</name>
+            </attachments>
+            <body>Cuerpo del mensaje con adjuntos</body>
+            <id>f57de938-5e01-11e1-b23e-08002708b83c</id>
+            <recipients>b6564583-fbaf-4079-a885-bd9bb47d1565</recipients>
+            <recipients>ad380695-eb58-4471-b922-29a05b574b3a</recipients>
+            <sender>f4bbdf9f-bddf-4304-a28a-0c84088a0bc1</sender>
+            <sentOn>2012-02-23T10:37:02+01:00</sentOn>
+            <subject>Asunto del mensaje con adjuntos</subject>
+         </return>
+      </met:GetSentMessagesResponse>
+   </soap:Body>
+</soap:Envelope>
+
