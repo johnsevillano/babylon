@@ -10,5 +10,9 @@
       <property name="reportedOn" column="REPORTED_ON"/>
       <property name="reportedBy" column="REPORTED_BY"/>
       <property name="picture" column="PICTURE" type="binary" length="16777216"/>
+      <property name="pictureSize" column="PICTURE_SIZE"/>
+      <property name="pictureScale" column="PICTURE_SCALE"/>
+      <property name="reviews" column="REVIEWS"/>
+      <property name="rating" column="RATING"/>
   </class>
 </hibernate-mapping>

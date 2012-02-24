@@ -13,12 +13,14 @@
       <property name="subject" column="SUBJECT"/>
       <property name="body" column="BODY"/>
       <property name="sentOn" column="SENT_ON"/>
+      <property name="deleted" column="DELETED"/>
       <set name="attachments" table="MESSAGE_ATTACHMENT" order-by="NAME asc" lazy="false">
           <key column="MESSAGE_ID" not-null="true"/>
           <composite-element class="Attachment">
               <property name="name" column="NAME" not-null="true"/>
               <property name="link" column="LINK" not-null="true"/>
               <property name="content" column="CONTENT" type="binary" length="16777216"/>
+              <property name="contentSize" column="CONTENT_SIZE"/>
           </composite-element>
       </set>
   </class>
