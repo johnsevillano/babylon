@@ -11,7 +11,7 @@ using Babel.Services.Filters;
 
 namespace Babel.Services
 {
-    [ServiceContract(Namespace = "http://media.services.babel.com")]
+    [ServiceContract(Name="MediaService", Namespace="http://babylon.com/services")]
     public interface IMediaService
     {
         [OperationContract]

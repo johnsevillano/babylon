@@ -8,7 +8,7 @@ using Babel.Services.Filters;
 
 namespace Babel.Services
 {
-    [ServiceContract(Namespace = "http://group.services.babel.com")]
+    [ServiceContract(Name="GroupService", Namespace="http://babylon.com/services")]
     public interface IGroupService
     {
         [OperationContract]

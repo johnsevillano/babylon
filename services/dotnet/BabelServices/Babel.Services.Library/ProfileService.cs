@@ -9,7 +9,7 @@ using Babel.Services.Filters;
 
 namespace Babel.Services
 {
-    [ServiceBehavior(Namespace = "http://profile.services.babel.com")]
+    [ServiceBehavior(Namespace = "http://babylon.com/services")]
     public class ProfileService : IProfileService
     {
         private IProfileRepository _repository;
