@@ -1,0 +1,696 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:soapui-project name="MediaService" resourceRoot="" soapui-version="4.0.1" xmlns:con="http://eviware.com/soapui/config"><con:settings/><con:interface xsi:type="con:WsdlInterface" wsaVersion="NONE" name="BasicHttpBinding_IMediaService" type="wsdl" bindingName="{http://media.services.babel.com}BasicHttpBinding_IMediaService" soapVersion="1_1" anonymous="optional" definition="http://devbox:8080/Babel.Services/MediaService.svc?wsdl" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:settings/><con:definitionCache/><con:endpoints><con:endpoint>http://devbox:8080/Babel.Services/MediaService.svc/basic</con:endpoint></con:endpoints><con:operation isOneWay="false" action="http://media.services.babel.com/IMediaService/CreateMediaItem" name="CreateMediaItem" bindingOperationName="CreateMediaItem" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://devbox:8080/Babel.Services/MediaService.svc/basic</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:med="http://media.services.babel.com">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <med:CreateMediaItem>
+         <!--Optional:-->
+         <med:name>?</med:name>
+         <!--Optional:-->
+         <med:title>?</med:title>
+         <!--Optional:-->
+         <med:type>?</med:type>
+         <!--Optional:-->
+         <med:format>?</med:format>
+         <!--Optional:-->
+         <med:alt>?</med:alt>
+      </med:CreateMediaItem>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://media.services.babel.com/IMediaService/CreateMediaItem"/></con:call></con:operation><con:operation isOneWay="false" action="http://media.services.babel.com/IMediaService/DeleteMediaItem" name="DeleteMediaItem" bindingOperationName="DeleteMediaItem" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://devbox:8080/Babel.Services/MediaService.svc/basic</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:med="http://media.services.babel.com">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <med:DeleteMediaItem>
+         <!--Optional:-->
+         <med:id>?</med:id>
+      </med:DeleteMediaItem>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://media.services.babel.com/IMediaService/DeleteMediaItem"/></con:call></con:operation><con:operation isOneWay="false" action="http://media.services.babel.com/IMediaService/DownloadMediaItem" name="DownloadMediaItem" bindingOperationName="DownloadMediaItem" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://devbox:8080/Babel.Services/MediaService.svc/basic</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:med="http://media.services.babel.com">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <med:DownloadMediaItem>
+         <!--Optional:-->
+         <med:id>?</med:id>
+      </med:DownloadMediaItem>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://media.services.babel.com/IMediaService/DownloadMediaItem"/></con:call></con:operation><con:operation isOneWay="false" action="http://media.services.babel.com/IMediaService/GetAllMediaItems" name="GetAllMediaItems" bindingOperationName="GetAllMediaItems" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://devbox:8080/Babel.Services/MediaService.svc/basic</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:med="http://media.services.babel.com">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <med:GetAllMediaItems/>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://media.services.babel.com/IMediaService/GetAllMediaItems"/></con:call></con:operation><con:operation isOneWay="false" action="http://media.services.babel.com/IMediaService/GetMediaItem" name="GetMediaItem" bindingOperationName="GetMediaItem" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://devbox:8080/Babel.Services/MediaService.svc/basic</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:med="http://media.services.babel.com">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <med:GetMediaItem>
+         <!--Optional:-->
+         <med:id>?</med:id>
+      </med:GetMediaItem>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://media.services.babel.com/IMediaService/GetMediaItem"/></con:call></con:operation><con:operation isOneWay="false" action="http://media.services.babel.com/IMediaService/GetProfileMediaItems" name="GetProfileMediaItems" bindingOperationName="GetProfileMediaItems" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://devbox:8080/Babel.Services/MediaService.svc/basic</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:med="http://media.services.babel.com">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <med:GetProfileMediaItems>
+         <!--Optional:-->
+         <med:profileID>?</med:profileID>
+      </med:GetProfileMediaItems>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://media.services.babel.com/IMediaService/GetProfileMediaItems"/></con:call></con:operation><con:operation isOneWay="false" action="http://media.services.babel.com/IMediaService/ModifyMediaItem" name="ModifyMediaItem" bindingOperationName="ModifyMediaItem" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://devbox:8080/Babel.Services/MediaService.svc/basic</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:med="http://media.services.babel.com" xmlns:bab="http://schemas.datacontract.org/2004/07/Babel.Services.Domain">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <med:ModifyMediaItem>
+         <!--Optional:-->
+         <med:item>
+            <!--Optional:-->
+            <bab:AlternativeText>?</bab:AlternativeText>
+            <!--Optional:-->
+            <bab:Format>?</bab:Format>
+            <!--Optional:-->
+            <bab:ID>?</bab:ID>
+            <!--Optional:-->
+            <bab:Name>?</bab:Name>
+            <!--Optional:-->
+            <bab:Title>?</bab:Title>
+            <!--Optional:-->
+            <bab:Type>?</bab:Type>
+            <!--Optional:-->
+            <bab:UploadedOn>?</bab:UploadedOn>
+         </med:item>
+      </med:ModifyMediaItem>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://media.services.babel.com/IMediaService/ModifyMediaItem"/></con:call></con:operation><con:operation isOneWay="false" action="http://media.services.babel.com/IMediaService/SearchMediaItems" name="SearchMediaItems" bindingOperationName="SearchMediaItems" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://devbox:8080/Babel.Services/MediaService.svc/basic</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:med="http://media.services.babel.com">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <med:SearchMediaItems>
+         <!--Optional:-->
+         <med:filter/>
+      </med:SearchMediaItems>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://media.services.babel.com/IMediaService/SearchMediaItems"/></con:call></con:operation><con:operation isOneWay="false" action="http://media.services.babel.com/IMediaService/UploadMediaItem" name="UploadMediaItem" bindingOperationName="UploadMediaItem" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://devbox:8080/Babel.Services/MediaService.svc/basic</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:med="http://media.services.babel.com">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <med:UploadMediaItem>
+         <!--Optional:-->
+         <med:id>?</med:id>
+         <!--Optional:-->
+         <med:base64>?</med:base64>
+      </med:UploadMediaItem>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://media.services.babel.com/IMediaService/UploadMediaItem"/></con:call></con:operation></con:interface><con:interface xsi:type="con:WsdlInterface" wsaVersion="200508" name="WSHttpBinding_IMediaService" type="wsdl" bindingName="{http://media.services.babel.com}WSHttpBinding_IMediaService" soapVersion="1_2" anonymous="optional" definition="http://devbox:8080/Babel.Services/MediaService.svc?wsdl" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:settings/><con:definitionCache type="TEXT" rootPart="http://devbox:8080/Babel.Services/MediaService.svc?wsdl"><con:part><con:url>http://devbox:8080/Babel.Services/MediaService.svc?wsdl</con:url><con:content><![CDATA[<wsdl:definitions name="MediaService" targetNamespace="http://media.services.babel.com" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:tns="http://media.services.babel.com" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata">
+  <wsp:Policy wsu:Id="WSHttpBinding_IMediaService_policy">
+    <wsp:ExactlyOne>
+      <wsp:All>
+        <wsaw:UsingAddressing/>
+      </wsp:All>
+    </wsp:ExactlyOne>
+  </wsp:Policy>
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://media.services.babel.com/Imports">
+      <xsd:import schemaLocation="http://devbox:8080/Babel.Services/MediaService.svc?xsd=xsd0" namespace="http://media.services.babel.com"/>
+      <xsd:import schemaLocation="http://devbox:8080/Babel.Services/MediaService.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/"/>
+      <xsd:import schemaLocation="http://devbox:8080/Babel.Services/MediaService.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/Babel.Services.Common"/>
+      <xsd:import schemaLocation="http://devbox:8080/Babel.Services/MediaService.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/Babel.Services.Domain"/>
+      <xsd:import schemaLocation="http://devbox:8080/Babel.Services/MediaService.svc?xsd=xsd4" namespace="http://schemas.datacontract.org/2004/07/Babel.Services.Filters"/>
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IMediaService_CreateMediaItem_InputMessage">
+    <wsdl:part name="parameters" element="tns:CreateMediaItem"/>
+  </wsdl:message>
+  <wsdl:message name="IMediaService_CreateMediaItem_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CreateMediaItemResponse"/>
+  </wsdl:message>
+  <wsdl:message name="IMediaService_UploadMediaItem_InputMessage">
+    <wsdl:part name="parameters" element="tns:UploadMediaItem"/>
+  </wsdl:message>
+  <wsdl:message name="IMediaService_UploadMediaItem_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UploadMediaItemResponse"/>
+  </wsdl:message>
+  <wsdl:message name="IMediaService_DownloadMediaItem_InputMessage">
+    <wsdl:part name="parameters" element="tns:DownloadMediaItem"/>
+  </wsdl:message>
+  <wsdl:message name="IMediaService_DownloadMediaItem_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DownloadMediaItemResponse"/>
+  </wsdl:message>
+  <wsdl:message name="IMediaService_GetMediaItem_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetMediaItem"/>
+  </wsdl:message>
+  <wsdl:message name="IMediaService_GetMediaItem_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetMediaItemResponse"/>
+  </wsdl:message>
+  <wsdl:message name="IMediaService_GetAllMediaItems_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllMediaItems"/>
+  </wsdl:message>
+  <wsdl:message name="IMediaService_GetAllMediaItems_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllMediaItemsResponse"/>
+  </wsdl:message>
+  <wsdl:message name="IMediaService_GetProfileMediaItems_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetProfileMediaItems"/>
+  </wsdl:message>
+  <wsdl:message name="IMediaService_GetProfileMediaItems_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetProfileMediaItemsResponse"/>
+  </wsdl:message>
+  <wsdl:message name="IMediaService_ModifyMediaItem_InputMessage">
+    <wsdl:part name="parameters" element="tns:ModifyMediaItem"/>
+  </wsdl:message>
+  <wsdl:message name="IMediaService_ModifyMediaItem_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ModifyMediaItemResponse"/>
+  </wsdl:message>
+  <wsdl:message name="IMediaService_DeleteMediaItem_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteMediaItem"/>
+  </wsdl:message>
+  <wsdl:message name="IMediaService_DeleteMediaItem_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteMediaItemResponse"/>
+  </wsdl:message>
+  <wsdl:message name="IMediaService_SearchMediaItems_InputMessage">
+    <wsdl:part name="parameters" element="tns:SearchMediaItems"/>
+  </wsdl:message>
+  <wsdl:message name="IMediaService_SearchMediaItems_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SearchMediaItemsResponse"/>
+  </wsdl:message>
+  <wsdl:portType name="IMediaService">
+    <wsdl:operation name="CreateMediaItem">
+      <wsdl:input wsaw:Action="http://media.services.babel.com/IMediaService/CreateMediaItem" message="tns:IMediaService_CreateMediaItem_InputMessage"/>
+      <wsdl:output wsaw:Action="http://media.services.babel.com/IMediaService/CreateMediaItemResponse" message="tns:IMediaService_CreateMediaItem_OutputMessage"/>
+    </wsdl:operation>
+    <wsdl:operation name="UploadMediaItem">
+      <wsdl:input wsaw:Action="http://media.services.babel.com/IMediaService/UploadMediaItem" message="tns:IMediaService_UploadMediaItem_InputMessage"/>
+      <wsdl:output wsaw:Action="http://media.services.babel.com/IMediaService/UploadMediaItemResponse" message="tns:IMediaService_UploadMediaItem_OutputMessage"/>
+    </wsdl:operation>
+    <wsdl:operation name="DownloadMediaItem">
+      <wsdl:input wsaw:Action="http://media.services.babel.com/IMediaService/DownloadMediaItem" message="tns:IMediaService_DownloadMediaItem_InputMessage"/>
+      <wsdl:output wsaw:Action="http://media.services.babel.com/IMediaService/DownloadMediaItemResponse" message="tns:IMediaService_DownloadMediaItem_OutputMessage"/>
+    </wsdl:operation>
+    <wsdl:operation name="GetMediaItem">
+      <wsdl:input wsaw:Action="http://media.services.babel.com/IMediaService/GetMediaItem" message="tns:IMediaService_GetMediaItem_InputMessage"/>
+      <wsdl:output wsaw:Action="http://media.services.babel.com/IMediaService/GetMediaItemResponse" message="tns:IMediaService_GetMediaItem_OutputMessage"/>
+    </wsdl:operation>
+    <wsdl:operation name="GetAllMediaItems">
+      <wsdl:input wsaw:Action="http://media.services.babel.com/IMediaService/GetAllMediaItems" message="tns:IMediaService_GetAllMediaItems_InputMessage"/>
+      <wsdl:output wsaw:Action="http://media.services.babel.com/IMediaService/GetAllMediaItemsResponse" message="tns:IMediaService_GetAllMediaItems_OutputMessage"/>
+    </wsdl:operation>
+    <wsdl:operation name="GetProfileMediaItems">
+      <wsdl:input wsaw:Action="http://media.services.babel.com/IMediaService/GetProfileMediaItems" message="tns:IMediaService_GetProfileMediaItems_InputMessage"/>
+      <wsdl:output wsaw:Action="http://media.services.babel.com/IMediaService/GetProfileMediaItemsResponse" message="tns:IMediaService_GetProfileMediaItems_OutputMessage"/>
+    </wsdl:operation>
+    <wsdl:operation name="ModifyMediaItem">
+      <wsdl:input wsaw:Action="http://media.services.babel.com/IMediaService/ModifyMediaItem" message="tns:IMediaService_ModifyMediaItem_InputMessage"/>
+      <wsdl:output wsaw:Action="http://media.services.babel.com/IMediaService/ModifyMediaItemResponse" message="tns:IMediaService_ModifyMediaItem_OutputMessage"/>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteMediaItem">
+      <wsdl:input wsaw:Action="http://media.services.babel.com/IMediaService/DeleteMediaItem" message="tns:IMediaService_DeleteMediaItem_InputMessage"/>
+      <wsdl:output wsaw:Action="http://media.services.babel.com/IMediaService/DeleteMediaItemResponse" message="tns:IMediaService_DeleteMediaItem_OutputMessage"/>
+    </wsdl:operation>
+    <wsdl:operation name="SearchMediaItems">
+      <wsdl:input wsaw:Action="http://media.services.babel.com/IMediaService/SearchMediaItems" message="tns:IMediaService_SearchMediaItems_InputMessage"/>
+      <wsdl:output wsaw:Action="http://media.services.babel.com/IMediaService/SearchMediaItemsResponse" message="tns:IMediaService_SearchMediaItems_OutputMessage"/>
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="WSHttpBinding_IMediaService" type="tns:IMediaService">
+    <wsp:PolicyReference URI="#WSHttpBinding_IMediaService_policy"/>
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http"/>
+    <wsdl:operation name="CreateMediaItem">
+      <soap12:operation soapAction="http://media.services.babel.com/IMediaService/CreateMediaItem" style="document"/>
+      <wsdl:input>
+        <soap12:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UploadMediaItem">
+      <soap12:operation soapAction="http://media.services.babel.com/IMediaService/UploadMediaItem" style="document"/>
+      <wsdl:input>
+        <soap12:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DownloadMediaItem">
+      <soap12:operation soapAction="http://media.services.babel.com/IMediaService/DownloadMediaItem" style="document"/>
+      <wsdl:input>
+        <soap12:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetMediaItem">
+      <soap12:operation soapAction="http://media.services.babel.com/IMediaService/GetMediaItem" style="document"/>
+      <wsdl:input>
+        <soap12:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAllMediaItems">
+      <soap12:operation soapAction="http://media.services.babel.com/IMediaService/GetAllMediaItems" style="document"/>
+      <wsdl:input>
+        <soap12:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetProfileMediaItems">
+      <soap12:operation soapAction="http://media.services.babel.com/IMediaService/GetProfileMediaItems" style="document"/>
+      <wsdl:input>
+        <soap12:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ModifyMediaItem">
+      <soap12:operation soapAction="http://media.services.babel.com/IMediaService/ModifyMediaItem" style="document"/>
+      <wsdl:input>
+        <soap12:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteMediaItem">
+      <soap12:operation soapAction="http://media.services.babel.com/IMediaService/DeleteMediaItem" style="document"/>
+      <wsdl:input>
+        <soap12:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SearchMediaItems">
+      <soap12:operation soapAction="http://media.services.babel.com/IMediaService/SearchMediaItems" style="document"/>
+      <wsdl:input>
+        <soap12:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="BasicHttpBinding_IMediaService" type="tns:IMediaService">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http"/>
+    <wsdl:operation name="CreateMediaItem">
+      <soap:operation soapAction="http://media.services.babel.com/IMediaService/CreateMediaItem" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UploadMediaItem">
+      <soap:operation soapAction="http://media.services.babel.com/IMediaService/UploadMediaItem" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DownloadMediaItem">
+      <soap:operation soapAction="http://media.services.babel.com/IMediaService/DownloadMediaItem" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetMediaItem">
+      <soap:operation soapAction="http://media.services.babel.com/IMediaService/GetMediaItem" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAllMediaItems">
+      <soap:operation soapAction="http://media.services.babel.com/IMediaService/GetAllMediaItems" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetProfileMediaItems">
+      <soap:operation soapAction="http://media.services.babel.com/IMediaService/GetProfileMediaItems" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ModifyMediaItem">
+      <soap:operation soapAction="http://media.services.babel.com/IMediaService/ModifyMediaItem" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteMediaItem">
+      <soap:operation soapAction="http://media.services.babel.com/IMediaService/DeleteMediaItem" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SearchMediaItems">
+      <soap:operation soapAction="http://media.services.babel.com/IMediaService/SearchMediaItems" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="MediaService">
+    <wsdl:port name="WSHttpBinding_IMediaService" binding="tns:WSHttpBinding_IMediaService">
+      <soap12:address location="http://devbox:8080/Babel.Services/MediaService.svc"/>
+      <wsa10:EndpointReference>
+        <wsa10:Address>http://devbox:8080/Babel.Services/MediaService.svc</wsa10:Address>
+      </wsa10:EndpointReference>
+    </wsdl:port>
+    <wsdl:port name="BasicHttpBinding_IMediaService" binding="tns:BasicHttpBinding_IMediaService">
+      <soap:address location="http://devbox:8080/Babel.Services/MediaService.svc/basic"/>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>]]></con:content><con:type>http://schemas.xmlsoap.org/wsdl/</con:type></con:part><con:part><con:url>http://devbox:8080/Babel.Services/MediaService.svc?xsd=xsd0</con:url><con:content><![CDATA[<xs:schema elementFormDefault="qualified" targetNamespace="http://media.services.babel.com" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://media.services.babel.com">
+  <xs:import schemaLocation="http://devbox:8080/Babel.Services/MediaService.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/Babel.Services.Common"/>
+  <xs:import schemaLocation="http://devbox:8080/Babel.Services/MediaService.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/"/>
+  <xs:import schemaLocation="http://devbox:8080/Babel.Services/MediaService.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/Babel.Services.Domain"/>
+  <xs:import schemaLocation="http://devbox:8080/Babel.Services/MediaService.svc?xsd=xsd4" namespace="http://schemas.datacontract.org/2004/07/Babel.Services.Filters"/>
+  <xs:element name="CreateMediaItem">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="name" nillable="true" type="xs:string"/>
+        <xs:element minOccurs="0" name="title" nillable="true" type="xs:string"/>
+        <xs:element minOccurs="0" name="type" type="q1:MediaType" xmlns:q1="http://schemas.datacontract.org/2004/07/Babel.Services.Common"/>
+        <xs:element minOccurs="0" name="format" type="q2:MediaFormat" xmlns:q2="http://schemas.datacontract.org/2004/07/Babel.Services.Common"/>
+        <xs:element minOccurs="0" name="alt" nillable="true" type="xs:string"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CreateMediaItemResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="CreateMediaItemResult" type="q3:guid" xmlns:q3="http://schemas.microsoft.com/2003/10/Serialization/"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UploadMediaItem">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="id" type="q4:guid" xmlns:q4="http://schemas.microsoft.com/2003/10/Serialization/"/>
+        <xs:element minOccurs="0" name="base64" nillable="true" type="xs:string"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UploadMediaItemResponse">
+    <xs:complexType>
+      <xs:sequence/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DownloadMediaItem">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="id" type="q5:guid" xmlns:q5="http://schemas.microsoft.com/2003/10/Serialization/"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DownloadMediaItemResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="DownloadMediaItemResult" nillable="true" type="xs:string"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetMediaItem">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="id" type="q6:guid" xmlns:q6="http://schemas.microsoft.com/2003/10/Serialization/"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetMediaItemResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetMediaItemResult" nillable="true" type="q7:MediaItem" xmlns:q7="http://schemas.datacontract.org/2004/07/Babel.Services.Domain"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAllMediaItems">
+    <xs:complexType>
+      <xs:sequence/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAllMediaItemsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetAllMediaItemsResult" nillable="true" type="q8:ArrayOfMediaItem" xmlns:q8="http://schemas.datacontract.org/2004/07/Babel.Services.Domain"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetProfileMediaItems">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="profileID" type="q9:guid" xmlns:q9="http://schemas.microsoft.com/2003/10/Serialization/"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetProfileMediaItemsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetProfileMediaItemsResult" nillable="true" type="q10:ArrayOfMediaItem" xmlns:q10="http://schemas.datacontract.org/2004/07/Babel.Services.Domain"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ModifyMediaItem">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="item" nillable="true" type="q11:MediaItem" xmlns:q11="http://schemas.datacontract.org/2004/07/Babel.Services.Domain"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ModifyMediaItemResponse">
+    <xs:complexType>
+      <xs:sequence/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DeleteMediaItem">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="id" type="q12:guid" xmlns:q12="http://schemas.microsoft.com/2003/10/Serialization/"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DeleteMediaItemResponse">
+    <xs:complexType>
+      <xs:sequence/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SearchMediaItems">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="filter" nillable="true" type="q13:MediaItemFilter" xmlns:q13="http://schemas.datacontract.org/2004/07/Babel.Services.Filters"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SearchMediaItemsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="SearchMediaItemsResult" nillable="true" type="q14:ArrayOfMediaItem" xmlns:q14="http://schemas.datacontract.org/2004/07/Babel.Services.Domain"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part><con:part><con:url>http://devbox:8080/Babel.Services/MediaService.svc?xsd=xsd2</con:url><con:content><![CDATA[<xs:schema elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/Babel.Services.Common" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://schemas.datacontract.org/2004/07/Babel.Services.Common">
+  <xs:simpleType name="MediaType">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Image"/>
+      <xs:enumeration value="Audio"/>
+      <xs:enumeration value="Video"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="MediaType" nillable="true" type="tns:MediaType"/>
+  <xs:simpleType name="MediaFormat">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="JPG"/>
+      <xs:enumeration value="BMP"/>
+      <xs:enumeration value="PNG"/>
+      <xs:enumeration value="WMA"/>
+      <xs:enumeration value="MP3"/>
+      <xs:enumeration value="OGG"/>
+      <xs:enumeration value="WMV"/>
+      <xs:enumeration value="MPG"/>
+      <xs:enumeration value="AVI"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="MediaFormat" nillable="true" type="tns:MediaFormat"/>
+</xs:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part><con:part><con:url>http://devbox:8080/Babel.Services/MediaService.svc?xsd=xsd1</con:url><con:content><![CDATA[<xs:schema attributeFormDefault="qualified" elementFormDefault="qualified" targetNamespace="http://schemas.microsoft.com/2003/10/Serialization/" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://schemas.microsoft.com/2003/10/Serialization/">
+  <xs:element name="anyType" nillable="true" type="xs:anyType"/>
+  <xs:element name="anyURI" nillable="true" type="xs:anyURI"/>
+  <xs:element name="base64Binary" nillable="true" type="xs:base64Binary"/>
+  <xs:element name="boolean" nillable="true" type="xs:boolean"/>
+  <xs:element name="byte" nillable="true" type="xs:byte"/>
+  <xs:element name="dateTime" nillable="true" type="xs:dateTime"/>
+  <xs:element name="decimal" nillable="true" type="xs:decimal"/>
+  <xs:element name="double" nillable="true" type="xs:double"/>
+  <xs:element name="float" nillable="true" type="xs:float"/>
+  <xs:element name="int" nillable="true" type="xs:int"/>
+  <xs:element name="long" nillable="true" type="xs:long"/>
+  <xs:element name="QName" nillable="true" type="xs:QName"/>
+  <xs:element name="short" nillable="true" type="xs:short"/>
+  <xs:element name="string" nillable="true" type="xs:string"/>
+  <xs:element name="unsignedByte" nillable="true" type="xs:unsignedByte"/>
+  <xs:element name="unsignedInt" nillable="true" type="xs:unsignedInt"/>
+  <xs:element name="unsignedLong" nillable="true" type="xs:unsignedLong"/>
+  <xs:element name="unsignedShort" nillable="true" type="xs:unsignedShort"/>
+  <xs:element name="char" nillable="true" type="tns:char"/>
+  <xs:simpleType name="char">
+    <xs:restriction base="xs:int"/>
+  </xs:simpleType>
+  <xs:element name="duration" nillable="true" type="tns:duration"/>
+  <xs:simpleType name="duration">
+    <xs:restriction base="xs:duration">
+      <xs:pattern value="\-?P(\d*D)?(T(\d*H)?(\d*M)?(\d*(\.\d*)?S)?)?"/>
+      <xs:minInclusive value="-P10675199DT2H48M5.4775808S"/>
+      <xs:maxInclusive value="P10675199DT2H48M5.4775807S"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="guid" nillable="true" type="tns:guid"/>
+  <xs:simpleType name="guid">
+    <xs:restriction base="xs:string">
+      <xs:pattern value="[\da-fA-F]{8}-[\da-fA-F]{4}-[\da-fA-F]{4}-[\da-fA-F]{4}-[\da-fA-F]{12}"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:attribute name="FactoryType" type="xs:QName"/>
+  <xs:attribute name="Id" type="xs:ID"/>
+  <xs:attribute name="Ref" type="xs:IDREF"/>
+</xs:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part><con:part><con:url>http://devbox:8080/Babel.Services/MediaService.svc?xsd=xsd3</con:url><con:content><![CDATA[<xs:schema elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/Babel.Services.Domain" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:ser="http://schemas.microsoft.com/2003/10/Serialization/" xmlns:tns="http://schemas.datacontract.org/2004/07/Babel.Services.Domain">
+  <xs:import schemaLocation="http://devbox:8080/Babel.Services/MediaService.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/Babel.Services.Common"/>
+  <xs:import schemaLocation="http://devbox:8080/Babel.Services/MediaService.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/"/>
+  <xs:complexType name="MediaItem">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="AlternativeText" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="Format" type="q1:MediaFormat" xmlns:q1="http://schemas.datacontract.org/2004/07/Babel.Services.Common"/>
+      <xs:element minOccurs="0" name="ID" type="ser:guid"/>
+      <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="Title" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="Type" type="q2:MediaType" xmlns:q2="http://schemas.datacontract.org/2004/07/Babel.Services.Common"/>
+      <xs:element minOccurs="0" name="UploadedOn" type="xs:dateTime"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="MediaItem" nillable="true" type="tns:MediaItem"/>
+  <xs:complexType name="ArrayOfMediaItem">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="MediaItem" nillable="true" type="tns:MediaItem"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfMediaItem" nillable="true" type="tns:ArrayOfMediaItem"/>
+</xs:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part><con:part><con:url>http://devbox:8080/Babel.Services/MediaService.svc?xsd=xsd4</con:url><con:content><![CDATA[<xs:schema elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/Babel.Services.Filters" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://schemas.datacontract.org/2004/07/Babel.Services.Filters">
+  <xs:complexType name="MediaItemFilter">
+    <xs:sequence/>
+  </xs:complexType>
+  <xs:element name="MediaItemFilter" nillable="true" type="tns:MediaItemFilter"/>
+</xs:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part></con:definitionCache><con:endpoints><con:endpoint>http://devbox:8080/Babel.Services/MediaService.svc</con:endpoint></con:endpoints><con:operation isOneWay="false" action="http://media.services.babel.com/IMediaService/CreateMediaItem" name="CreateMediaItem" bindingOperationName="CreateMediaItem" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call name="Request 1" useWsAddressing="true"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://devbox:8080/Babel.Services/MediaService.svc</con:endpoint><con:request><![CDATA[<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope" xmlns:med="http://media.services.babel.com">
+   <soap:Header/>
+   <soap:Body>
+      <med:CreateMediaItem>
+         <!--Optional:-->
+         <med:name>?</med:name>
+         <!--Optional:-->
+         <med:title>?</med:title>
+         <!--Optional:-->
+         <med:type>?</med:type>
+         <!--Optional:-->
+         <med:format>?</med:format>
+         <!--Optional:-->
+         <med:alt>?</med:alt>
+      </med:CreateMediaItem>
+   </soap:Body>
+</soap:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://media.services.babel.com/IMediaService/CreateMediaItem"/></con:call></con:operation><con:operation isOneWay="false" action="http://media.services.babel.com/IMediaService/DeleteMediaItem" name="DeleteMediaItem" bindingOperationName="DeleteMediaItem" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call name="Request 1" useWsAddressing="true"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://devbox:8080/Babel.Services/MediaService.svc</con:endpoint><con:request><![CDATA[<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope" xmlns:med="http://media.services.babel.com">
+   <soap:Header/>
+   <soap:Body>
+      <med:DeleteMediaItem>
+         <!--Optional:-->
+         <med:id>?</med:id>
+      </med:DeleteMediaItem>
+   </soap:Body>
+</soap:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://media.services.babel.com/IMediaService/DeleteMediaItem"/></con:call></con:operation><con:operation isOneWay="false" action="http://media.services.babel.com/IMediaService/DownloadMediaItem" name="DownloadMediaItem" bindingOperationName="DownloadMediaItem" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call name="Request 1" useWsAddressing="true"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://devbox:8080/Babel.Services/MediaService.svc</con:endpoint><con:request><![CDATA[<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope" xmlns:med="http://media.services.babel.com">
+   <soap:Header/>
+   <soap:Body>
+      <med:DownloadMediaItem>
+         <!--Optional:-->
+         <med:id>?</med:id>
+      </med:DownloadMediaItem>
+   </soap:Body>
+</soap:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://media.services.babel.com/IMediaService/DownloadMediaItem"/></con:call></con:operation><con:operation isOneWay="false" action="http://media.services.babel.com/IMediaService/GetAllMediaItems" name="GetAllMediaItems" bindingOperationName="GetAllMediaItems" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call name="Request 1" useWsAddressing="true"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://devbox:8080/Babel.Services/MediaService.svc</con:endpoint><con:request><![CDATA[<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope" xmlns:med="http://media.services.babel.com">
+   <soap:Header/>
+   <soap:Body>
+      <med:GetAllMediaItems/>
+   </soap:Body>
+</soap:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://media.services.babel.com/IMediaService/GetAllMediaItems"/></con:call></con:operation><con:operation isOneWay="false" action="http://media.services.babel.com/IMediaService/GetMediaItem" name="GetMediaItem" bindingOperationName="GetMediaItem" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call name="Request 1" useWsAddressing="true"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://devbox:8080/Babel.Services/MediaService.svc</con:endpoint><con:request><![CDATA[<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope" xmlns:med="http://media.services.babel.com">
+   <soap:Header/>
+   <soap:Body>
+      <med:GetMediaItem>
+         <!--Optional:-->
+         <med:id>?</med:id>
+      </med:GetMediaItem>
+   </soap:Body>
+</soap:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://media.services.babel.com/IMediaService/GetMediaItem"/></con:call></con:operation><con:operation isOneWay="false" action="http://media.services.babel.com/IMediaService/GetProfileMediaItems" name="GetProfileMediaItems" bindingOperationName="GetProfileMediaItems" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call name="Request 1" useWsAddressing="true"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://devbox:8080/Babel.Services/MediaService.svc</con:endpoint><con:request><![CDATA[<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope" xmlns:med="http://media.services.babel.com">
+   <soap:Header/>
+   <soap:Body>
+      <med:GetProfileMediaItems>
+         <!--Optional:-->
+         <med:profileID>?</med:profileID>
+      </med:GetProfileMediaItems>
+   </soap:Body>
+</soap:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://media.services.babel.com/IMediaService/GetProfileMediaItems"/></con:call></con:operation><con:operation isOneWay="false" action="http://media.services.babel.com/IMediaService/ModifyMediaItem" name="ModifyMediaItem" bindingOperationName="ModifyMediaItem" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call name="Request 1" useWsAddressing="true"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://devbox:8080/Babel.Services/MediaService.svc</con:endpoint><con:request><![CDATA[<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope" xmlns:med="http://media.services.babel.com" xmlns:bab="http://schemas.datacontract.org/2004/07/Babel.Services.Domain">
+   <soap:Header/>
+   <soap:Body>
+      <med:ModifyMediaItem>
+         <!--Optional:-->
+         <med:item>
+            <!--Optional:-->
+            <bab:AlternativeText>?</bab:AlternativeText>
+            <!--Optional:-->
+            <bab:Format>?</bab:Format>
+            <!--Optional:-->
+            <bab:ID>?</bab:ID>
+            <!--Optional:-->
+            <bab:Name>?</bab:Name>
+            <!--Optional:-->
+            <bab:Title>?</bab:Title>
+            <!--Optional:-->
+            <bab:Type>?</bab:Type>
+            <!--Optional:-->
+            <bab:UploadedOn>?</bab:UploadedOn>
+         </med:item>
+      </med:ModifyMediaItem>
+   </soap:Body>
+</soap:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://media.services.babel.com/IMediaService/ModifyMediaItem"/></con:call></con:operation><con:operation isOneWay="false" action="http://media.services.babel.com/IMediaService/SearchMediaItems" name="SearchMediaItems" bindingOperationName="SearchMediaItems" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call name="Request 1" useWsAddressing="true"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://devbox:8080/Babel.Services/MediaService.svc</con:endpoint><con:request><![CDATA[<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope" xmlns:med="http://media.services.babel.com">
+   <soap:Header/>
+   <soap:Body>
+      <med:SearchMediaItems>
+         <!--Optional:-->
+         <med:filter/>
+      </med:SearchMediaItems>
+   </soap:Body>
+</soap:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://media.services.babel.com/IMediaService/SearchMediaItems"/></con:call></con:operation><con:operation isOneWay="false" action="http://media.services.babel.com/IMediaService/UploadMediaItem" name="UploadMediaItem" bindingOperationName="UploadMediaItem" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call name="Request 1" useWsAddressing="true"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://devbox:8080/Babel.Services/MediaService.svc</con:endpoint><con:request><![CDATA[<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope" xmlns:med="http://media.services.babel.com">
+   <soap:Header/>
+   <soap:Body>
+      <med:UploadMediaItem>
+         <!--Optional:-->
+         <med:id>?</med:id>
+         <!--Optional:-->
+         <med:base64>?</med:base64>
+      </med:UploadMediaItem>
+   </soap:Body>
+</soap:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://media.services.babel.com/IMediaService/UploadMediaItem"/></con:call></con:operation></con:interface><con:properties/><con:wssContainer/></con:soapui-project>
