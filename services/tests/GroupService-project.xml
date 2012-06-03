@@ -1,0 +1,946 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:soapui-project name="GroupService" resourceRoot="" soapui-version="4.0.1" xmlns:con="http://eviware.com/soapui/config"><con:settings/><con:interface xsi:type="con:WsdlInterface" wsaVersion="NONE" name="BasicHttpBinding_IGroupService" type="wsdl" bindingName="{http://group.services.babel.com}BasicHttpBinding_IGroupService" soapVersion="1_1" anonymous="optional" definition="http://devbox:8080/Babel.Services/GroupService.svc?wsdl" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:settings/><con:definitionCache/><con:endpoints><con:endpoint>http://devbox:8080/Babel.Services/GroupService.svc/basic</con:endpoint></con:endpoints><con:operation isOneWay="false" action="http://group.services.babel.com/IGroupService/AddGroup" name="AddGroup" bindingOperationName="AddGroup" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://devbox:8080/Babel.Services/GroupService.svc/basic</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:gro="http://group.services.babel.com" xmlns:bab="http://schemas.datacontract.org/2004/07/Babel.Services.Domain">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <gro:AddGroup>
+         <!--Optional:-->
+         <gro:group>
+            <!--Optional:-->
+            <bab:CreatedOn>?</bab:CreatedOn>
+            <!--Optional:-->
+            <bab:Description>?</bab:Description>
+            <!--Optional:-->
+            <bab:ID>?</bab:ID>
+            <!--Optional:-->
+            <bab:Interests>?</bab:Interests>
+            <!--Optional:-->
+            <bab:Name>?</bab:Name>
+            <!--Optional:-->
+            <bab:UpdatedOn>?</bab:UpdatedOn>
+         </gro:group>
+      </gro:AddGroup>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://group.services.babel.com/IGroupService/AddGroup"/></con:call></con:operation><con:operation isOneWay="false" action="http://group.services.babel.com/IGroupService/AddMember" name="AddMember" bindingOperationName="AddMember" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://devbox:8080/Babel.Services/GroupService.svc/basic</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:gro="http://group.services.babel.com">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <gro:AddMember>
+         <!--Optional:-->
+         <gro:id>?</gro:id>
+         <!--Optional:-->
+         <gro:memberID>?</gro:memberID>
+      </gro:AddMember>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://group.services.babel.com/IGroupService/AddMember"/></con:call></con:operation><con:operation isOneWay="false" action="http://group.services.babel.com/IGroupService/AddMembers" name="AddMembers" bindingOperationName="AddMembers" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://devbox:8080/Babel.Services/GroupService.svc/basic</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:gro="http://group.services.babel.com" xmlns:arr="http://schemas.microsoft.com/2003/10/Serialization/Arrays">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <gro:AddMembers>
+         <!--Optional:-->
+         <gro:id>?</gro:id>
+         <!--Optional:-->
+         <gro:memberIDs>
+            <!--Zero or more repetitions:-->
+            <arr:guid>?</arr:guid>
+         </gro:memberIDs>
+      </gro:AddMembers>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://group.services.babel.com/IGroupService/AddMembers"/></con:call></con:operation><con:operation isOneWay="false" action="http://group.services.babel.com/IGroupService/CreateGroup" name="CreateGroup" bindingOperationName="CreateGroup" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://devbox:8080/Babel.Services/GroupService.svc/basic</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:gro="http://group.services.babel.com">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <gro:CreateGroup>
+         <!--Optional:-->
+         <gro:name>?</gro:name>
+         <!--Optional:-->
+         <gro:description>?</gro:description>
+         <!--Optional:-->
+         <gro:interests>?</gro:interests>
+      </gro:CreateGroup>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://group.services.babel.com/IGroupService/CreateGroup"/></con:call></con:operation><con:operation isOneWay="false" action="http://group.services.babel.com/IGroupService/DeleteGroup" name="DeleteGroup" bindingOperationName="DeleteGroup" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://devbox:8080/Babel.Services/GroupService.svc/basic</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:gro="http://group.services.babel.com">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <gro:DeleteGroup>
+         <!--Optional:-->
+         <gro:id>?</gro:id>
+      </gro:DeleteGroup>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://group.services.babel.com/IGroupService/DeleteGroup"/></con:call></con:operation><con:operation isOneWay="false" action="http://group.services.babel.com/IGroupService/GetAllGroups" name="GetAllGroups" bindingOperationName="GetAllGroups" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://devbox:8080/Babel.Services/GroupService.svc/basic</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:gro="http://group.services.babel.com">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <gro:GetAllGroups/>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://group.services.babel.com/IGroupService/GetAllGroups"/></con:call></con:operation><con:operation isOneWay="false" action="http://group.services.babel.com/IGroupService/GetGroup" name="GetGroup" bindingOperationName="GetGroup" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://devbox:8080/Babel.Services/GroupService.svc/basic</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:gro="http://group.services.babel.com">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <gro:GetGroup>
+         <!--Optional:-->
+         <gro:id>?</gro:id>
+      </gro:GetGroup>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://group.services.babel.com/IGroupService/GetGroup"/></con:call></con:operation><con:operation isOneWay="false" action="http://group.services.babel.com/IGroupService/GetMembers" name="GetMembers" bindingOperationName="GetMembers" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://devbox:8080/Babel.Services/GroupService.svc/basic</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:gro="http://group.services.babel.com">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <gro:GetMembers>
+         <!--Optional:-->
+         <gro:id>?</gro:id>
+      </gro:GetMembers>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://group.services.babel.com/IGroupService/GetMembers"/></con:call></con:operation><con:operation isOneWay="false" action="http://group.services.babel.com/IGroupService/ModifyGroup" name="ModifyGroup" bindingOperationName="ModifyGroup" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://devbox:8080/Babel.Services/GroupService.svc/basic</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:gro="http://group.services.babel.com" xmlns:bab="http://schemas.datacontract.org/2004/07/Babel.Services.Domain">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <gro:ModifyGroup>
+         <!--Optional:-->
+         <gro:group>
+            <!--Optional:-->
+            <bab:CreatedOn>?</bab:CreatedOn>
+            <!--Optional:-->
+            <bab:Description>?</bab:Description>
+            <!--Optional:-->
+            <bab:ID>?</bab:ID>
+            <!--Optional:-->
+            <bab:Interests>?</bab:Interests>
+            <!--Optional:-->
+            <bab:Name>?</bab:Name>
+            <!--Optional:-->
+            <bab:UpdatedOn>?</bab:UpdatedOn>
+         </gro:group>
+      </gro:ModifyGroup>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://group.services.babel.com/IGroupService/ModifyGroup"/></con:call></con:operation><con:operation isOneWay="false" action="http://group.services.babel.com/IGroupService/RemoveAllMembers" name="RemoveAllMembers" bindingOperationName="RemoveAllMembers" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://devbox:8080/Babel.Services/GroupService.svc/basic</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:gro="http://group.services.babel.com">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <gro:RemoveAllMembers>
+         <!--Optional:-->
+         <gro:id>?</gro:id>
+      </gro:RemoveAllMembers>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://group.services.babel.com/IGroupService/RemoveAllMembers"/></con:call></con:operation><con:operation isOneWay="false" action="http://group.services.babel.com/IGroupService/RemoveMember" name="RemoveMember" bindingOperationName="RemoveMember" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://devbox:8080/Babel.Services/GroupService.svc/basic</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:gro="http://group.services.babel.com">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <gro:RemoveMember>
+         <!--Optional:-->
+         <gro:id>?</gro:id>
+         <!--Optional:-->
+         <gro:memberID>?</gro:memberID>
+      </gro:RemoveMember>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://group.services.babel.com/IGroupService/RemoveMember"/></con:call></con:operation><con:operation isOneWay="false" action="http://group.services.babel.com/IGroupService/SearchGroups" name="SearchGroups" bindingOperationName="SearchGroups" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://devbox:8080/Babel.Services/GroupService.svc/basic</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:gro="http://group.services.babel.com" xmlns:bab="http://schemas.datacontract.org/2004/07/Babel.Services.Filters">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <gro:SearchGroups>
+         <!--Optional:-->
+         <gro:filter>
+            <!--Optional:-->
+            <bab:CreatedAfter>?</bab:CreatedAfter>
+            <!--Optional:-->
+            <bab:CreatedBefore>?</bab:CreatedBefore>
+            <!--Optional:-->
+            <bab:Description>?</bab:Description>
+            <!--Optional:-->
+            <bab:Interests>?</bab:Interests>
+            <!--Optional:-->
+            <bab:Name>?</bab:Name>
+         </gro:filter>
+      </gro:SearchGroups>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://group.services.babel.com/IGroupService/SearchGroups"/></con:call></con:operation></con:interface><con:interface xsi:type="con:WsdlInterface" wsaVersion="200508" name="WSHttpBinding_IGroupService" type="wsdl" bindingName="{http://group.services.babel.com}WSHttpBinding_IGroupService" soapVersion="1_2" anonymous="optional" definition="http://devbox:8080/Babel.Services/GroupService.svc?wsdl" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:settings/><con:definitionCache type="TEXT" rootPart="http://devbox:8080/Babel.Services/GroupService.svc?wsdl"><con:part><con:url>http://devbox:8080/Babel.Services/GroupService.svc?wsdl</con:url><con:content><![CDATA[<wsdl:definitions name="GroupService" targetNamespace="http://group.services.babel.com" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:tns="http://group.services.babel.com" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata">
+  <wsp:Policy wsu:Id="WSHttpBinding_IGroupService_policy">
+    <wsp:ExactlyOne>
+      <wsp:All>
+        <wsaw:UsingAddressing/>
+      </wsp:All>
+    </wsp:ExactlyOne>
+  </wsp:Policy>
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://group.services.babel.com/Imports">
+      <xsd:import schemaLocation="http://devbox:8080/Babel.Services/GroupService.svc?xsd=xsd0" namespace="http://group.services.babel.com"/>
+      <xsd:import schemaLocation="http://devbox:8080/Babel.Services/GroupService.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/"/>
+      <xsd:import schemaLocation="http://devbox:8080/Babel.Services/GroupService.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/Babel.Services.Domain"/>
+      <xsd:import schemaLocation="http://devbox:8080/Babel.Services/GroupService.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/Babel.Services.Filters"/>
+      <xsd:import schemaLocation="http://devbox:8080/Babel.Services/GroupService.svc?xsd=xsd4" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays"/>
+      <xsd:import schemaLocation="http://devbox:8080/Babel.Services/GroupService.svc?xsd=xsd5" namespace="http://schemas.datacontract.org/2004/07/Babel.Services.Common"/>
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IGroupService_AddGroup_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddGroup"/>
+  </wsdl:message>
+  <wsdl:message name="IGroupService_AddGroup_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddGroupResponse"/>
+  </wsdl:message>
+  <wsdl:message name="IGroupService_CreateGroup_InputMessage">
+    <wsdl:part name="parameters" element="tns:CreateGroup"/>
+  </wsdl:message>
+  <wsdl:message name="IGroupService_CreateGroup_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CreateGroupResponse"/>
+  </wsdl:message>
+  <wsdl:message name="IGroupService_GetGroup_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetGroup"/>
+  </wsdl:message>
+  <wsdl:message name="IGroupService_GetGroup_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetGroupResponse"/>
+  </wsdl:message>
+  <wsdl:message name="IGroupService_GetAllGroups_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllGroups"/>
+  </wsdl:message>
+  <wsdl:message name="IGroupService_GetAllGroups_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllGroupsResponse"/>
+  </wsdl:message>
+  <wsdl:message name="IGroupService_ModifyGroup_InputMessage">
+    <wsdl:part name="parameters" element="tns:ModifyGroup"/>
+  </wsdl:message>
+  <wsdl:message name="IGroupService_ModifyGroup_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ModifyGroupResponse"/>
+  </wsdl:message>
+  <wsdl:message name="IGroupService_DeleteGroup_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteGroup"/>
+  </wsdl:message>
+  <wsdl:message name="IGroupService_DeleteGroup_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteGroupResponse"/>
+  </wsdl:message>
+  <wsdl:message name="IGroupService_SearchGroups_InputMessage">
+    <wsdl:part name="parameters" element="tns:SearchGroups"/>
+  </wsdl:message>
+  <wsdl:message name="IGroupService_SearchGroups_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SearchGroupsResponse"/>
+  </wsdl:message>
+  <wsdl:message name="IGroupService_AddMember_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddMember"/>
+  </wsdl:message>
+  <wsdl:message name="IGroupService_AddMember_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddMemberResponse"/>
+  </wsdl:message>
+  <wsdl:message name="IGroupService_AddMembers_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddMembers"/>
+  </wsdl:message>
+  <wsdl:message name="IGroupService_AddMembers_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddMembersResponse"/>
+  </wsdl:message>
+  <wsdl:message name="IGroupService_GetMembers_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetMembers"/>
+  </wsdl:message>
+  <wsdl:message name="IGroupService_GetMembers_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetMembersResponse"/>
+  </wsdl:message>
+  <wsdl:message name="IGroupService_RemoveMember_InputMessage">
+    <wsdl:part name="parameters" element="tns:RemoveMember"/>
+  </wsdl:message>
+  <wsdl:message name="IGroupService_RemoveMember_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RemoveMemberResponse"/>
+  </wsdl:message>
+  <wsdl:message name="IGroupService_RemoveAllMembers_InputMessage">
+    <wsdl:part name="parameters" element="tns:RemoveAllMembers"/>
+  </wsdl:message>
+  <wsdl:message name="IGroupService_RemoveAllMembers_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RemoveAllMembersResponse"/>
+  </wsdl:message>
+  <wsdl:portType name="IGroupService">
+    <wsdl:operation name="AddGroup">
+      <wsdl:input wsaw:Action="http://group.services.babel.com/IGroupService/AddGroup" message="tns:IGroupService_AddGroup_InputMessage"/>
+      <wsdl:output wsaw:Action="http://group.services.babel.com/IGroupService/AddGroupResponse" message="tns:IGroupService_AddGroup_OutputMessage"/>
+    </wsdl:operation>
+    <wsdl:operation name="CreateGroup">
+      <wsdl:input wsaw:Action="http://group.services.babel.com/IGroupService/CreateGroup" message="tns:IGroupService_CreateGroup_InputMessage"/>
+      <wsdl:output wsaw:Action="http://group.services.babel.com/IGroupService/CreateGroupResponse" message="tns:IGroupService_CreateGroup_OutputMessage"/>
+    </wsdl:operation>
+    <wsdl:operation name="GetGroup">
+      <wsdl:input wsaw:Action="http://group.services.babel.com/IGroupService/GetGroup" message="tns:IGroupService_GetGroup_InputMessage"/>
+      <wsdl:output wsaw:Action="http://group.services.babel.com/IGroupService/GetGroupResponse" message="tns:IGroupService_GetGroup_OutputMessage"/>
+    </wsdl:operation>
+    <wsdl:operation name="GetAllGroups">
+      <wsdl:input wsaw:Action="http://group.services.babel.com/IGroupService/GetAllGroups" message="tns:IGroupService_GetAllGroups_InputMessage"/>
+      <wsdl:output wsaw:Action="http://group.services.babel.com/IGroupService/GetAllGroupsResponse" message="tns:IGroupService_GetAllGroups_OutputMessage"/>
+    </wsdl:operation>
+    <wsdl:operation name="ModifyGroup">
+      <wsdl:input wsaw:Action="http://group.services.babel.com/IGroupService/ModifyGroup" message="tns:IGroupService_ModifyGroup_InputMessage"/>
+      <wsdl:output wsaw:Action="http://group.services.babel.com/IGroupService/ModifyGroupResponse" message="tns:IGroupService_ModifyGroup_OutputMessage"/>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteGroup">
+      <wsdl:input wsaw:Action="http://group.services.babel.com/IGroupService/DeleteGroup" message="tns:IGroupService_DeleteGroup_InputMessage"/>
+      <wsdl:output wsaw:Action="http://group.services.babel.com/IGroupService/DeleteGroupResponse" message="tns:IGroupService_DeleteGroup_OutputMessage"/>
+    </wsdl:operation>
+    <wsdl:operation name="SearchGroups">
+      <wsdl:input wsaw:Action="http://group.services.babel.com/IGroupService/SearchGroups" message="tns:IGroupService_SearchGroups_InputMessage"/>
+      <wsdl:output wsaw:Action="http://group.services.babel.com/IGroupService/SearchGroupsResponse" message="tns:IGroupService_SearchGroups_OutputMessage"/>
+    </wsdl:operation>
+    <wsdl:operation name="AddMember">
+      <wsdl:input wsaw:Action="http://group.services.babel.com/IGroupService/AddMember" message="tns:IGroupService_AddMember_InputMessage"/>
+      <wsdl:output wsaw:Action="http://group.services.babel.com/IGroupService/AddMemberResponse" message="tns:IGroupService_AddMember_OutputMessage"/>
+    </wsdl:operation>
+    <wsdl:operation name="AddMembers">
+      <wsdl:input wsaw:Action="http://group.services.babel.com/IGroupService/AddMembers" message="tns:IGroupService_AddMembers_InputMessage"/>
+      <wsdl:output wsaw:Action="http://group.services.babel.com/IGroupService/AddMembersResponse" message="tns:IGroupService_AddMembers_OutputMessage"/>
+    </wsdl:operation>
+    <wsdl:operation name="GetMembers">
+      <wsdl:input wsaw:Action="http://group.services.babel.com/IGroupService/GetMembers" message="tns:IGroupService_GetMembers_InputMessage"/>
+      <wsdl:output wsaw:Action="http://group.services.babel.com/IGroupService/GetMembersResponse" message="tns:IGroupService_GetMembers_OutputMessage"/>
+    </wsdl:operation>
+    <wsdl:operation name="RemoveMember">
+      <wsdl:input wsaw:Action="http://group.services.babel.com/IGroupService/RemoveMember" message="tns:IGroupService_RemoveMember_InputMessage"/>
+      <wsdl:output wsaw:Action="http://group.services.babel.com/IGroupService/RemoveMemberResponse" message="tns:IGroupService_RemoveMember_OutputMessage"/>
+    </wsdl:operation>
+    <wsdl:operation name="RemoveAllMembers">
+      <wsdl:input wsaw:Action="http://group.services.babel.com/IGroupService/RemoveAllMembers" message="tns:IGroupService_RemoveAllMembers_InputMessage"/>
+      <wsdl:output wsaw:Action="http://group.services.babel.com/IGroupService/RemoveAllMembersResponse" message="tns:IGroupService_RemoveAllMembers_OutputMessage"/>
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="WSHttpBinding_IGroupService" type="tns:IGroupService">
+    <wsp:PolicyReference URI="#WSHttpBinding_IGroupService_policy"/>
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http"/>
+    <wsdl:operation name="AddGroup">
+      <soap12:operation soapAction="http://group.services.babel.com/IGroupService/AddGroup" style="document"/>
+      <wsdl:input>
+        <soap12:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreateGroup">
+      <soap12:operation soapAction="http://group.services.babel.com/IGroupService/CreateGroup" style="document"/>
+      <wsdl:input>
+        <soap12:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetGroup">
+      <soap12:operation soapAction="http://group.services.babel.com/IGroupService/GetGroup" style="document"/>
+      <wsdl:input>
+        <soap12:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAllGroups">
+      <soap12:operation soapAction="http://group.services.babel.com/IGroupService/GetAllGroups" style="document"/>
+      <wsdl:input>
+        <soap12:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ModifyGroup">
+      <soap12:operation soapAction="http://group.services.babel.com/IGroupService/ModifyGroup" style="document"/>
+      <wsdl:input>
+        <soap12:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteGroup">
+      <soap12:operation soapAction="http://group.services.babel.com/IGroupService/DeleteGroup" style="document"/>
+      <wsdl:input>
+        <soap12:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SearchGroups">
+      <soap12:operation soapAction="http://group.services.babel.com/IGroupService/SearchGroups" style="document"/>
+      <wsdl:input>
+        <soap12:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddMember">
+      <soap12:operation soapAction="http://group.services.babel.com/IGroupService/AddMember" style="document"/>
+      <wsdl:input>
+        <soap12:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddMembers">
+      <soap12:operation soapAction="http://group.services.babel.com/IGroupService/AddMembers" style="document"/>
+      <wsdl:input>
+        <soap12:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetMembers">
+      <soap12:operation soapAction="http://group.services.babel.com/IGroupService/GetMembers" style="document"/>
+      <wsdl:input>
+        <soap12:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RemoveMember">
+      <soap12:operation soapAction="http://group.services.babel.com/IGroupService/RemoveMember" style="document"/>
+      <wsdl:input>
+        <soap12:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RemoveAllMembers">
+      <soap12:operation soapAction="http://group.services.babel.com/IGroupService/RemoveAllMembers" style="document"/>
+      <wsdl:input>
+        <soap12:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="BasicHttpBinding_IGroupService" type="tns:IGroupService">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http"/>
+    <wsdl:operation name="AddGroup">
+      <soap:operation soapAction="http://group.services.babel.com/IGroupService/AddGroup" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreateGroup">
+      <soap:operation soapAction="http://group.services.babel.com/IGroupService/CreateGroup" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetGroup">
+      <soap:operation soapAction="http://group.services.babel.com/IGroupService/GetGroup" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAllGroups">
+      <soap:operation soapAction="http://group.services.babel.com/IGroupService/GetAllGroups" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ModifyGroup">
+      <soap:operation soapAction="http://group.services.babel.com/IGroupService/ModifyGroup" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteGroup">
+      <soap:operation soapAction="http://group.services.babel.com/IGroupService/DeleteGroup" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SearchGroups">
+      <soap:operation soapAction="http://group.services.babel.com/IGroupService/SearchGroups" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddMember">
+      <soap:operation soapAction="http://group.services.babel.com/IGroupService/AddMember" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddMembers">
+      <soap:operation soapAction="http://group.services.babel.com/IGroupService/AddMembers" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetMembers">
+      <soap:operation soapAction="http://group.services.babel.com/IGroupService/GetMembers" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RemoveMember">
+      <soap:operation soapAction="http://group.services.babel.com/IGroupService/RemoveMember" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RemoveAllMembers">
+      <soap:operation soapAction="http://group.services.babel.com/IGroupService/RemoveAllMembers" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="GroupService">
+    <wsdl:port name="WSHttpBinding_IGroupService" binding="tns:WSHttpBinding_IGroupService">
+      <soap12:address location="http://devbox:8080/Babel.Services/GroupService.svc"/>
+      <wsa10:EndpointReference>
+        <wsa10:Address>http://devbox:8080/Babel.Services/GroupService.svc</wsa10:Address>
+      </wsa10:EndpointReference>
+    </wsdl:port>
+    <wsdl:port name="BasicHttpBinding_IGroupService" binding="tns:BasicHttpBinding_IGroupService">
+      <soap:address location="http://devbox:8080/Babel.Services/GroupService.svc/basic"/>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>]]></con:content><con:type>http://schemas.xmlsoap.org/wsdl/</con:type></con:part><con:part><con:url>http://devbox:8080/Babel.Services/GroupService.svc?xsd=xsd0</con:url><con:content><![CDATA[<xs:schema elementFormDefault="qualified" targetNamespace="http://group.services.babel.com" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://group.services.babel.com">
+  <xs:import schemaLocation="http://devbox:8080/Babel.Services/GroupService.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/Babel.Services.Domain"/>
+  <xs:import schemaLocation="http://devbox:8080/Babel.Services/GroupService.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/"/>
+  <xs:import schemaLocation="http://devbox:8080/Babel.Services/GroupService.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/Babel.Services.Filters"/>
+  <xs:import schemaLocation="http://devbox:8080/Babel.Services/GroupService.svc?xsd=xsd4" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays"/>
+  <xs:element name="AddGroup">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="group" nillable="true" type="q1:Group" xmlns:q1="http://schemas.datacontract.org/2004/07/Babel.Services.Domain"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AddGroupResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="AddGroupResult" type="q2:guid" xmlns:q2="http://schemas.microsoft.com/2003/10/Serialization/"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CreateGroup">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="name" nillable="true" type="xs:string"/>
+        <xs:element minOccurs="0" name="description" nillable="true" type="xs:string"/>
+        <xs:element minOccurs="0" name="interests" nillable="true" type="xs:string"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CreateGroupResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="CreateGroupResult" type="q3:guid" xmlns:q3="http://schemas.microsoft.com/2003/10/Serialization/"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetGroup">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="id" type="q4:guid" xmlns:q4="http://schemas.microsoft.com/2003/10/Serialization/"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetGroupResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetGroupResult" nillable="true" type="q5:Group" xmlns:q5="http://schemas.datacontract.org/2004/07/Babel.Services.Domain"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAllGroups">
+    <xs:complexType>
+      <xs:sequence/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAllGroupsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetAllGroupsResult" nillable="true" type="q6:ArrayOfGroup" xmlns:q6="http://schemas.datacontract.org/2004/07/Babel.Services.Domain"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ModifyGroup">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="group" nillable="true" type="q7:Group" xmlns:q7="http://schemas.datacontract.org/2004/07/Babel.Services.Domain"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ModifyGroupResponse">
+    <xs:complexType>
+      <xs:sequence/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DeleteGroup">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="id" type="q8:guid" xmlns:q8="http://schemas.microsoft.com/2003/10/Serialization/"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DeleteGroupResponse">
+    <xs:complexType>
+      <xs:sequence/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SearchGroups">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="filter" nillable="true" type="q9:GroupFilter" xmlns:q9="http://schemas.datacontract.org/2004/07/Babel.Services.Filters"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SearchGroupsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="SearchGroupsResult" nillable="true" type="q10:ArrayOfGroup" xmlns:q10="http://schemas.datacontract.org/2004/07/Babel.Services.Domain"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AddMember">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="id" type="q11:guid" xmlns:q11="http://schemas.microsoft.com/2003/10/Serialization/"/>
+        <xs:element minOccurs="0" name="memberID" type="q12:guid" xmlns:q12="http://schemas.microsoft.com/2003/10/Serialization/"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AddMemberResponse">
+    <xs:complexType>
+      <xs:sequence/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AddMembers">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="id" type="q13:guid" xmlns:q13="http://schemas.microsoft.com/2003/10/Serialization/"/>
+        <xs:element minOccurs="0" name="memberIDs" nillable="true" type="q14:ArrayOfguid" xmlns:q14="http://schemas.microsoft.com/2003/10/Serialization/Arrays"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AddMembersResponse">
+    <xs:complexType>
+      <xs:sequence/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetMembers">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="id" type="q15:guid" xmlns:q15="http://schemas.microsoft.com/2003/10/Serialization/"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetMembersResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetMembersResult" nillable="true" type="q16:ArrayOfProfile" xmlns:q16="http://schemas.datacontract.org/2004/07/Babel.Services.Domain"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RemoveMember">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="id" type="q17:guid" xmlns:q17="http://schemas.microsoft.com/2003/10/Serialization/"/>
+        <xs:element minOccurs="0" name="memberID" type="q18:guid" xmlns:q18="http://schemas.microsoft.com/2003/10/Serialization/"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RemoveMemberResponse">
+    <xs:complexType>
+      <xs:sequence/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RemoveAllMembers">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="id" type="q19:guid" xmlns:q19="http://schemas.microsoft.com/2003/10/Serialization/"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RemoveAllMembersResponse">
+    <xs:complexType>
+      <xs:sequence/>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part><con:part><con:url>http://devbox:8080/Babel.Services/GroupService.svc?xsd=xsd2</con:url><con:content><![CDATA[<xs:schema elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/Babel.Services.Domain" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:ser="http://schemas.microsoft.com/2003/10/Serialization/" xmlns:tns="http://schemas.datacontract.org/2004/07/Babel.Services.Domain">
+  <xs:import schemaLocation="http://devbox:8080/Babel.Services/GroupService.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/"/>
+  <xs:import schemaLocation="http://devbox:8080/Babel.Services/GroupService.svc?xsd=xsd5" namespace="http://schemas.datacontract.org/2004/07/Babel.Services.Common"/>
+  <xs:complexType name="Group">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CreatedOn" type="xs:dateTime"/>
+      <xs:element minOccurs="0" name="Description" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="ID" type="ser:guid"/>
+      <xs:element minOccurs="0" name="Interests" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="UpdatedOn" type="xs:dateTime"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Group" nillable="true" type="tns:Group"/>
+  <xs:complexType name="ArrayOfGroup">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Group" nillable="true" type="tns:Group"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfGroup" nillable="true" type="tns:ArrayOfGroup"/>
+  <xs:complexType name="ArrayOfProfile">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Profile" nillable="true" type="tns:Profile"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfProfile" nillable="true" type="tns:ArrayOfProfile"/>
+  <xs:complexType name="Profile">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Address" nillable="true" type="tns:Address"/>
+      <xs:element minOccurs="0" name="CreatedOn" type="xs:dateTime"/>
+      <xs:element minOccurs="0" name="DateOfBirth" nillable="true" type="xs:dateTime"/>
+      <xs:element minOccurs="0" name="Description" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="Email" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="Gender" nillable="true" type="q1:Gender" xmlns:q1="http://schemas.datacontract.org/2004/07/Babel.Services.Common"/>
+      <xs:element minOccurs="0" name="ID" type="ser:guid"/>
+      <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="Password" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="Picture" nillable="true" type="xs:base64Binary"/>
+      <xs:element minOccurs="0" name="PictureUploadedOn" nillable="true" type="xs:dateTime"/>
+      <xs:element minOccurs="0" name="Surname" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="UpdatedOn" type="xs:dateTime"/>
+      <xs:element minOccurs="0" name="Username" nillable="true" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Profile" nillable="true" type="tns:Profile"/>
+  <xs:complexType name="Address">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="City" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="PostalCode" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="Street" nillable="true" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Address" nillable="true" type="tns:Address"/>
+</xs:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part><con:part><con:url>http://devbox:8080/Babel.Services/GroupService.svc?xsd=xsd1</con:url><con:content><![CDATA[<xs:schema attributeFormDefault="qualified" elementFormDefault="qualified" targetNamespace="http://schemas.microsoft.com/2003/10/Serialization/" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://schemas.microsoft.com/2003/10/Serialization/">
+  <xs:element name="anyType" nillable="true" type="xs:anyType"/>
+  <xs:element name="anyURI" nillable="true" type="xs:anyURI"/>
+  <xs:element name="base64Binary" nillable="true" type="xs:base64Binary"/>
+  <xs:element name="boolean" nillable="true" type="xs:boolean"/>
+  <xs:element name="byte" nillable="true" type="xs:byte"/>
+  <xs:element name="dateTime" nillable="true" type="xs:dateTime"/>
+  <xs:element name="decimal" nillable="true" type="xs:decimal"/>
+  <xs:element name="double" nillable="true" type="xs:double"/>
+  <xs:element name="float" nillable="true" type="xs:float"/>
+  <xs:element name="int" nillable="true" type="xs:int"/>
+  <xs:element name="long" nillable="true" type="xs:long"/>
+  <xs:element name="QName" nillable="true" type="xs:QName"/>
+  <xs:element name="short" nillable="true" type="xs:short"/>
+  <xs:element name="string" nillable="true" type="xs:string"/>
+  <xs:element name="unsignedByte" nillable="true" type="xs:unsignedByte"/>
+  <xs:element name="unsignedInt" nillable="true" type="xs:unsignedInt"/>
+  <xs:element name="unsignedLong" nillable="true" type="xs:unsignedLong"/>
+  <xs:element name="unsignedShort" nillable="true" type="xs:unsignedShort"/>
+  <xs:element name="char" nillable="true" type="tns:char"/>
+  <xs:simpleType name="char">
+    <xs:restriction base="xs:int"/>
+  </xs:simpleType>
+  <xs:element name="duration" nillable="true" type="tns:duration"/>
+  <xs:simpleType name="duration">
+    <xs:restriction base="xs:duration">
+      <xs:pattern value="\-?P(\d*D)?(T(\d*H)?(\d*M)?(\d*(\.\d*)?S)?)?"/>
+      <xs:minInclusive value="-P10675199DT2H48M5.4775808S"/>
+      <xs:maxInclusive value="P10675199DT2H48M5.4775807S"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="guid" nillable="true" type="tns:guid"/>
+  <xs:simpleType name="guid">
+    <xs:restriction base="xs:string">
+      <xs:pattern value="[\da-fA-F]{8}-[\da-fA-F]{4}-[\da-fA-F]{4}-[\da-fA-F]{4}-[\da-fA-F]{12}"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:attribute name="FactoryType" type="xs:QName"/>
+  <xs:attribute name="Id" type="xs:ID"/>
+  <xs:attribute name="Ref" type="xs:IDREF"/>
+</xs:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part><con:part><con:url>http://devbox:8080/Babel.Services/GroupService.svc?xsd=xsd5</con:url><con:content><![CDATA[<xs:schema elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/Babel.Services.Common" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://schemas.datacontract.org/2004/07/Babel.Services.Common">
+  <xs:simpleType name="Gender">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Male"/>
+      <xs:enumeration value="Female"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="Gender" nillable="true" type="tns:Gender"/>
+</xs:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part><con:part><con:url>http://devbox:8080/Babel.Services/GroupService.svc?xsd=xsd3</con:url><con:content><![CDATA[<xs:schema elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/Babel.Services.Filters" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://schemas.datacontract.org/2004/07/Babel.Services.Filters">
+  <xs:complexType name="GroupFilter">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CreatedAfter" type="xs:dateTime"/>
+      <xs:element minOccurs="0" name="CreatedBefore" type="xs:dateTime"/>
+      <xs:element minOccurs="0" name="Description" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="Interests" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="GroupFilter" nillable="true" type="tns:GroupFilter"/>
+</xs:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part><con:part><con:url>http://devbox:8080/Babel.Services/GroupService.svc?xsd=xsd4</con:url><con:content><![CDATA[<xs:schema elementFormDefault="qualified" targetNamespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:ser="http://schemas.microsoft.com/2003/10/Serialization/" xmlns:tns="http://schemas.microsoft.com/2003/10/Serialization/Arrays">
+  <xs:import schemaLocation="http://devbox:8080/Babel.Services/GroupService.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/"/>
+  <xs:complexType name="ArrayOfguid">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="guid" type="ser:guid"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfguid" nillable="true" type="tns:ArrayOfguid"/>
+</xs:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part></con:definitionCache><con:endpoints><con:endpoint>http://devbox:8080/Babel.Services/GroupService.svc</con:endpoint></con:endpoints><con:operation isOneWay="false" action="http://group.services.babel.com/IGroupService/AddGroup" name="AddGroup" bindingOperationName="AddGroup" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call name="Request 1" useWsAddressing="true"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://devbox:8080/Babel.Services/GroupService.svc</con:endpoint><con:request><![CDATA[<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope" xmlns:gro="http://group.services.babel.com" xmlns:bab="http://schemas.datacontract.org/2004/07/Babel.Services.Domain">
+   <soap:Header/>
+   <soap:Body>
+      <gro:AddGroup>
+         <!--Optional:-->
+         <gro:group>
+            <!--Optional:-->
+            <bab:CreatedOn>?</bab:CreatedOn>
+            <!--Optional:-->
+            <bab:Description>?</bab:Description>
+            <!--Optional:-->
+            <bab:ID>?</bab:ID>
+            <!--Optional:-->
+            <bab:Interests>?</bab:Interests>
+            <!--Optional:-->
+            <bab:Name>?</bab:Name>
+            <!--Optional:-->
+            <bab:UpdatedOn>?</bab:UpdatedOn>
+         </gro:group>
+      </gro:AddGroup>
+   </soap:Body>
+</soap:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://group.services.babel.com/IGroupService/AddGroup"/></con:call></con:operation><con:operation isOneWay="false" action="http://group.services.babel.com/IGroupService/AddMember" name="AddMember" bindingOperationName="AddMember" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call name="Request 1" useWsAddressing="true"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://devbox:8080/Babel.Services/GroupService.svc</con:endpoint><con:request><![CDATA[<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope" xmlns:gro="http://group.services.babel.com">
+   <soap:Header/>
+   <soap:Body>
+      <gro:AddMember>
+         <!--Optional:-->
+         <gro:id>?</gro:id>
+         <!--Optional:-->
+         <gro:memberID>?</gro:memberID>
+      </gro:AddMember>
+   </soap:Body>
+</soap:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://group.services.babel.com/IGroupService/AddMember"/></con:call></con:operation><con:operation isOneWay="false" action="http://group.services.babel.com/IGroupService/AddMembers" name="AddMembers" bindingOperationName="AddMembers" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call name="Request 1" useWsAddressing="true"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://devbox:8080/Babel.Services/GroupService.svc</con:endpoint><con:request><![CDATA[<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope" xmlns:gro="http://group.services.babel.com" xmlns:arr="http://schemas.microsoft.com/2003/10/Serialization/Arrays">
+   <soap:Header/>
+   <soap:Body>
+      <gro:AddMembers>
+         <!--Optional:-->
+         <gro:id>?</gro:id>
+         <!--Optional:-->
+         <gro:memberIDs>
+            <!--Zero or more repetitions:-->
+            <arr:guid>?</arr:guid>
+         </gro:memberIDs>
+      </gro:AddMembers>
+   </soap:Body>
+</soap:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://group.services.babel.com/IGroupService/AddMembers"/></con:call></con:operation><con:operation isOneWay="false" action="http://group.services.babel.com/IGroupService/CreateGroup" name="CreateGroup" bindingOperationName="CreateGroup" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call name="Request 1" useWsAddressing="true"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://devbox:8080/Babel.Services/GroupService.svc</con:endpoint><con:request><![CDATA[<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope" xmlns:gro="http://group.services.babel.com">
+   <soap:Header/>
+   <soap:Body>
+      <gro:CreateGroup>
+         <!--Optional:-->
+         <gro:name>?</gro:name>
+         <!--Optional:-->
+         <gro:description>?</gro:description>
+         <!--Optional:-->
+         <gro:interests>?</gro:interests>
+      </gro:CreateGroup>
+   </soap:Body>
+</soap:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://group.services.babel.com/IGroupService/CreateGroup"/></con:call></con:operation><con:operation isOneWay="false" action="http://group.services.babel.com/IGroupService/DeleteGroup" name="DeleteGroup" bindingOperationName="DeleteGroup" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call name="Request 1" useWsAddressing="true"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://devbox:8080/Babel.Services/GroupService.svc</con:endpoint><con:request><![CDATA[<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope" xmlns:gro="http://group.services.babel.com">
+   <soap:Header/>
+   <soap:Body>
+      <gro:DeleteGroup>
+         <!--Optional:-->
+         <gro:id>?</gro:id>
+      </gro:DeleteGroup>
+   </soap:Body>
+</soap:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://group.services.babel.com/IGroupService/DeleteGroup"/></con:call></con:operation><con:operation isOneWay="false" action="http://group.services.babel.com/IGroupService/GetAllGroups" name="GetAllGroups" bindingOperationName="GetAllGroups" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call name="Request 1" useWsAddressing="true"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://devbox:8080/Babel.Services/GroupService.svc</con:endpoint><con:request><![CDATA[<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope" xmlns:gro="http://group.services.babel.com">
+   <soap:Header/>
+   <soap:Body>
+      <gro:GetAllGroups/>
+   </soap:Body>
+</soap:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://group.services.babel.com/IGroupService/GetAllGroups"/></con:call></con:operation><con:operation isOneWay="false" action="http://group.services.babel.com/IGroupService/GetGroup" name="GetGroup" bindingOperationName="GetGroup" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call name="Request 1" useWsAddressing="true"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://devbox:8080/Babel.Services/GroupService.svc</con:endpoint><con:request><![CDATA[<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope" xmlns:gro="http://group.services.babel.com">
+   <soap:Header/>
+   <soap:Body>
+      <gro:GetGroup>
+         <!--Optional:-->
+         <gro:id>?</gro:id>
+      </gro:GetGroup>
+   </soap:Body>
+</soap:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://group.services.babel.com/IGroupService/GetGroup"/></con:call></con:operation><con:operation isOneWay="false" action="http://group.services.babel.com/IGroupService/GetMembers" name="GetMembers" bindingOperationName="GetMembers" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call name="Request 1" useWsAddressing="true"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://devbox:8080/Babel.Services/GroupService.svc</con:endpoint><con:request><![CDATA[<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope" xmlns:gro="http://group.services.babel.com">
+   <soap:Header/>
+   <soap:Body>
+      <gro:GetMembers>
+         <!--Optional:-->
+         <gro:id>?</gro:id>
+      </gro:GetMembers>
+   </soap:Body>
+</soap:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://group.services.babel.com/IGroupService/GetMembers"/></con:call></con:operation><con:operation isOneWay="false" action="http://group.services.babel.com/IGroupService/ModifyGroup" name="ModifyGroup" bindingOperationName="ModifyGroup" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call name="Request 1" useWsAddressing="true"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://devbox:8080/Babel.Services/GroupService.svc</con:endpoint><con:request><![CDATA[<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope" xmlns:gro="http://group.services.babel.com" xmlns:bab="http://schemas.datacontract.org/2004/07/Babel.Services.Domain">
+   <soap:Header/>
+   <soap:Body>
+      <gro:ModifyGroup>
+         <!--Optional:-->
+         <gro:group>
+            <!--Optional:-->
+            <bab:CreatedOn>?</bab:CreatedOn>
+            <!--Optional:-->
+            <bab:Description>?</bab:Description>
+            <!--Optional:-->
+            <bab:ID>?</bab:ID>
+            <!--Optional:-->
+            <bab:Interests>?</bab:Interests>
+            <!--Optional:-->
+            <bab:Name>?</bab:Name>
+            <!--Optional:-->
+            <bab:UpdatedOn>?</bab:UpdatedOn>
+         </gro:group>
+      </gro:ModifyGroup>
+   </soap:Body>
+</soap:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://group.services.babel.com/IGroupService/ModifyGroup"/></con:call></con:operation><con:operation isOneWay="false" action="http://group.services.babel.com/IGroupService/RemoveAllMembers" name="RemoveAllMembers" bindingOperationName="RemoveAllMembers" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call name="Request 1" useWsAddressing="true"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://devbox:8080/Babel.Services/GroupService.svc</con:endpoint><con:request><![CDATA[<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope" xmlns:gro="http://group.services.babel.com">
+   <soap:Header/>
+   <soap:Body>
+      <gro:RemoveAllMembers>
+         <!--Optional:-->
+         <gro:id>?</gro:id>
+      </gro:RemoveAllMembers>
+   </soap:Body>
+</soap:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://group.services.babel.com/IGroupService/RemoveAllMembers"/></con:call></con:operation><con:operation isOneWay="false" action="http://group.services.babel.com/IGroupService/RemoveMember" name="RemoveMember" bindingOperationName="RemoveMember" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call name="Request 1" useWsAddressing="true"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://devbox:8080/Babel.Services/GroupService.svc</con:endpoint><con:request><![CDATA[<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope" xmlns:gro="http://group.services.babel.com">
+   <soap:Header/>
+   <soap:Body>
+      <gro:RemoveMember>
+         <!--Optional:-->
+         <gro:id>?</gro:id>
+         <!--Optional:-->
+         <gro:memberID>?</gro:memberID>
+      </gro:RemoveMember>
+   </soap:Body>
+</soap:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://group.services.babel.com/IGroupService/RemoveMember"/></con:call></con:operation><con:operation isOneWay="false" action="http://group.services.babel.com/IGroupService/SearchGroups" name="SearchGroups" bindingOperationName="SearchGroups" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call name="Request 1" useWsAddressing="true"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://devbox:8080/Babel.Services/GroupService.svc</con:endpoint><con:request><![CDATA[<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope" xmlns:gro="http://group.services.babel.com" xmlns:bab="http://schemas.datacontract.org/2004/07/Babel.Services.Filters">
+   <soap:Header/>
+   <soap:Body>
+      <gro:SearchGroups>
+         <!--Optional:-->
+         <gro:filter>
+            <!--Optional:-->
+            <bab:CreatedAfter>?</bab:CreatedAfter>
+            <!--Optional:-->
+            <bab:CreatedBefore>?</bab:CreatedBefore>
+            <!--Optional:-->
+            <bab:Description>?</bab:Description>
+            <!--Optional:-->
+            <bab:Interests>?</bab:Interests>
+            <!--Optional:-->
+            <bab:Name>?</bab:Name>
+         </gro:filter>
+      </gro:SearchGroups>
+   </soap:Body>
+</soap:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://group.services.babel.com/IGroupService/SearchGroups"/></con:call></con:operation></con:interface><con:properties/><con:wssContainer/></con:soapui-project>

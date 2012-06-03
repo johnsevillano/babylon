@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:soapui-workspace name="babylon" soapui-version="4.0.1" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings/>
+  <con:project name="ProfileService">/home/guille/workspace/babylon/services/tests/ProfileService-project.xml</con:project>
+  <con:project name="GroupService">/home/guille/workspace/babylon/services/tests/GroupService-project.xml</con:project>
+  <con:project name="MediaService">/home/guille/workspace/babylon/services/tests/MediaService-project.xml</con:project>
+</con:soapui-workspace>

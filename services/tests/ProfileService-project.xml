@@ -1,0 +1,1115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:soapui-project name="ProfileService" resourceRoot="" soapui-version="4.0.1" xmlns:con="http://eviware.com/soapui/config"><con:settings/><con:interface xsi:type="con:WsdlInterface" wsaVersion="NONE" name="BasicHttpBinding_IProfileService" type="wsdl" bindingName="{http://profile.services.babel.com}BasicHttpBinding_IProfileService" soapVersion="1_1" anonymous="optional" definition="http://devbox:8080/Babel.Services/ProfileService.svc?wsdl" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:settings/><con:definitionCache/><con:endpoints><con:endpoint>http://devbox:8080/Babel.Services/ProfileService.svc/basic</con:endpoint></con:endpoints><con:operation isOneWay="false" action="http://profile.services.babel.com/IProfileService/AddContact" name="AddContact" bindingOperationName="AddContact" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://devbox:8080/Babel.Services/ProfileService.svc/basic</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:prof="http://profile.services.babel.com">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <prof:AddContact>
+         <!--Optional:-->
+         <prof:id>?</prof:id>
+         <!--Optional:-->
+         <prof:contactID>?</prof:contactID>
+      </prof:AddContact>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://profile.services.babel.com/IProfileService/AddContact"/></con:call></con:operation><con:operation isOneWay="false" action="http://profile.services.babel.com/IProfileService/AddContacts" name="AddContacts" bindingOperationName="AddContacts" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://devbox:8080/Babel.Services/ProfileService.svc/basic</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:prof="http://profile.services.babel.com" xmlns:arr="http://schemas.microsoft.com/2003/10/Serialization/Arrays">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <prof:AddContacts>
+         <!--Optional:-->
+         <prof:id>?</prof:id>
+         <!--Optional:-->
+         <prof:contactIDs>
+            <!--Zero or more repetitions:-->
+            <arr:guid>?</arr:guid>
+         </prof:contactIDs>
+      </prof:AddContacts>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://profile.services.babel.com/IProfileService/AddContacts"/></con:call></con:operation><con:operation isOneWay="false" action="http://profile.services.babel.com/IProfileService/AddProfile" name="AddProfile" bindingOperationName="AddProfile" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://devbox:8080/Babel.Services/ProfileService.svc/basic</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:prof="http://profile.services.babel.com" xmlns:bab="http://schemas.datacontract.org/2004/07/Babel.Services.Domain">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <prof:AddProfile>
+         <!--Optional:-->
+         <prof:profile>
+            <!--Optional:-->
+            <bab:Address>
+               <!--Optional:-->
+               <bab:City>?</bab:City>
+               <!--Optional:-->
+               <bab:PostalCode>?</bab:PostalCode>
+               <!--Optional:-->
+               <bab:Street>?</bab:Street>
+            </bab:Address>
+            <!--Optional:-->
+            <bab:CreatedOn>?</bab:CreatedOn>
+            <!--Optional:-->
+            <bab:DateOfBirth>?</bab:DateOfBirth>
+            <!--Optional:-->
+            <bab:Description>?</bab:Description>
+            <!--Optional:-->
+            <bab:Email>?</bab:Email>
+            <!--Optional:-->
+            <bab:Gender>?</bab:Gender>
+            <!--Optional:-->
+            <bab:ID>?</bab:ID>
+            <!--Optional:-->
+            <bab:Name>?</bab:Name>
+            <!--Optional:-->
+            <bab:Password>?</bab:Password>
+            <!--Optional:-->
+            <bab:Picture>cid:1273084045085</bab:Picture>
+            <!--Optional:-->
+            <bab:PictureUploadedOn>?</bab:PictureUploadedOn>
+            <!--Optional:-->
+            <bab:Surname>?</bab:Surname>
+            <!--Optional:-->
+            <bab:UpdatedOn>?</bab:UpdatedOn>
+            <!--Optional:-->
+            <bab:Username>?</bab:Username>
+         </prof:profile>
+      </prof:AddProfile>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://profile.services.babel.com/IProfileService/AddProfile"/></con:call></con:operation><con:operation isOneWay="false" action="http://profile.services.babel.com/IProfileService/CreateProfile" name="CreateProfile" bindingOperationName="CreateProfile" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://devbox:8080/Babel.Services/ProfileService.svc/basic</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:prof="http://profile.services.babel.com">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <prof:CreateProfile>
+         <!--Optional:-->
+         <prof:username>?</prof:username>
+         <!--Optional:-->
+         <prof:password>?</prof:password>
+         <!--Optional:-->
+         <prof:email>?</prof:email>
+         <!--Optional:-->
+         <prof:name>?</prof:name>
+         <!--Optional:-->
+         <prof:surname>?</prof:surname>
+      </prof:CreateProfile>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://profile.services.babel.com/IProfileService/CreateProfile"/></con:call></con:operation><con:operation isOneWay="false" action="http://profile.services.babel.com/IProfileService/DeleteProfile" name="DeleteProfile" bindingOperationName="DeleteProfile" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://devbox:8080/Babel.Services/ProfileService.svc/basic</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:prof="http://profile.services.babel.com">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <prof:DeleteProfile>
+         <!--Optional:-->
+         <prof:id>?</prof:id>
+      </prof:DeleteProfile>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://profile.services.babel.com/IProfileService/DeleteProfile"/></con:call></con:operation><con:operation isOneWay="false" action="http://profile.services.babel.com/IProfileService/GetAllProfiles" name="GetAllProfiles" bindingOperationName="GetAllProfiles" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://devbox:8080/Babel.Services/ProfileService.svc/basic</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:prof="http://profile.services.babel.com">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <prof:GetAllProfiles/>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://profile.services.babel.com/IProfileService/GetAllProfiles"/></con:call></con:operation><con:operation isOneWay="false" action="http://profile.services.babel.com/IProfileService/GetContacts" name="GetContacts" bindingOperationName="GetContacts" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://devbox:8080/Babel.Services/ProfileService.svc/basic</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:prof="http://profile.services.babel.com">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <prof:GetContacts>
+         <!--Optional:-->
+         <prof:id>?</prof:id>
+      </prof:GetContacts>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://profile.services.babel.com/IProfileService/GetContacts"/></con:call></con:operation><con:operation isOneWay="false" action="http://profile.services.babel.com/IProfileService/GetProfileByCredentials" name="GetProfileByCredentials" bindingOperationName="GetProfileByCredentials" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://devbox:8080/Babel.Services/ProfileService.svc/basic</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:prof="http://profile.services.babel.com">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <prof:GetProfileByCredentials>
+         <!--Optional:-->
+         <prof:username>?</prof:username>
+         <!--Optional:-->
+         <prof:password>?</prof:password>
+      </prof:GetProfileByCredentials>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://profile.services.babel.com/IProfileService/GetProfileByCredentials"/></con:call></con:operation><con:operation isOneWay="false" action="http://profile.services.babel.com/IProfileService/GetProfileByID" name="GetProfileByID" bindingOperationName="GetProfileByID" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://devbox:8080/Babel.Services/ProfileService.svc/basic</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:prof="http://profile.services.babel.com">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <prof:GetProfileByID>
+         <!--Optional:-->
+         <prof:id>?</prof:id>
+      </prof:GetProfileByID>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://profile.services.babel.com/IProfileService/GetProfileByID"/></con:call></con:operation><con:operation isOneWay="false" action="http://profile.services.babel.com/IProfileService/ModifyProfile" name="ModifyProfile" bindingOperationName="ModifyProfile" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://devbox:8080/Babel.Services/ProfileService.svc/basic</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:prof="http://profile.services.babel.com" xmlns:bab="http://schemas.datacontract.org/2004/07/Babel.Services.Domain">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <prof:ModifyProfile>
+         <!--Optional:-->
+         <prof:profile>
+            <!--Optional:-->
+            <bab:Address>
+               <!--Optional:-->
+               <bab:City>?</bab:City>
+               <!--Optional:-->
+               <bab:PostalCode>?</bab:PostalCode>
+               <!--Optional:-->
+               <bab:Street>?</bab:Street>
+            </bab:Address>
+            <!--Optional:-->
+            <bab:CreatedOn>?</bab:CreatedOn>
+            <!--Optional:-->
+            <bab:DateOfBirth>?</bab:DateOfBirth>
+            <!--Optional:-->
+            <bab:Description>?</bab:Description>
+            <!--Optional:-->
+            <bab:Email>?</bab:Email>
+            <!--Optional:-->
+            <bab:Gender>?</bab:Gender>
+            <!--Optional:-->
+            <bab:ID>?</bab:ID>
+            <!--Optional:-->
+            <bab:Name>?</bab:Name>
+            <!--Optional:-->
+            <bab:Password>?</bab:Password>
+            <!--Optional:-->
+            <bab:Picture>cid:911592055238</bab:Picture>
+            <!--Optional:-->
+            <bab:PictureUploadedOn>?</bab:PictureUploadedOn>
+            <!--Optional:-->
+            <bab:Surname>?</bab:Surname>
+            <!--Optional:-->
+            <bab:UpdatedOn>?</bab:UpdatedOn>
+            <!--Optional:-->
+            <bab:Username>?</bab:Username>
+         </prof:profile>
+      </prof:ModifyProfile>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://profile.services.babel.com/IProfileService/ModifyProfile"/></con:call></con:operation><con:operation isOneWay="false" action="http://profile.services.babel.com/IProfileService/RemoveAllContacts" name="RemoveAllContacts" bindingOperationName="RemoveAllContacts" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://devbox:8080/Babel.Services/ProfileService.svc/basic</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:prof="http://profile.services.babel.com">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <prof:RemoveAllContacts>
+         <!--Optional:-->
+         <prof:id>?</prof:id>
+      </prof:RemoveAllContacts>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://profile.services.babel.com/IProfileService/RemoveAllContacts"/></con:call></con:operation><con:operation isOneWay="false" action="http://profile.services.babel.com/IProfileService/RemoveContact" name="RemoveContact" bindingOperationName="RemoveContact" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://devbox:8080/Babel.Services/ProfileService.svc/basic</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:prof="http://profile.services.babel.com">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <prof:RemoveContact>
+         <!--Optional:-->
+         <prof:id>?</prof:id>
+         <!--Optional:-->
+         <prof:contactID>?</prof:contactID>
+      </prof:RemoveContact>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://profile.services.babel.com/IProfileService/RemoveContact"/></con:call></con:operation><con:operation isOneWay="false" action="http://profile.services.babel.com/IProfileService/SearchProfiles" name="SearchProfiles" bindingOperationName="SearchProfiles" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://devbox:8080/Babel.Services/ProfileService.svc/basic</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:prof="http://profile.services.babel.com" xmlns:bab="http://schemas.datacontract.org/2004/07/Babel.Services.Filters">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <prof:SearchProfiles>
+         <!--Optional:-->
+         <prof:filter>
+            <!--Optional:-->
+            <bab:AgeAbove>?</bab:AgeAbove>
+            <!--Optional:-->
+            <bab:AgeBelow>?</bab:AgeBelow>
+            <!--Optional:-->
+            <bab:City>?</bab:City>
+            <!--Optional:-->
+            <bab:Email>?</bab:Email>
+            <!--Optional:-->
+            <bab:Gender>?</bab:Gender>
+            <!--Optional:-->
+            <bab:Name>?</bab:Name>
+            <!--Optional:-->
+            <bab:Street>?</bab:Street>
+            <!--Optional:-->
+            <bab:Surname>?</bab:Surname>
+            <!--Optional:-->
+            <bab:Username>?</bab:Username>
+         </prof:filter>
+      </prof:SearchProfiles>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://profile.services.babel.com/IProfileService/SearchProfiles"/></con:call></con:operation></con:interface><con:interface xsi:type="con:WsdlInterface" wsaVersion="200508" name="WSHttpBinding_IProfileService" type="wsdl" bindingName="{http://profile.services.babel.com}WSHttpBinding_IProfileService" soapVersion="1_2" anonymous="optional" definition="http://devbox:8080/Babel.Services/ProfileService.svc?wsdl" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:settings/><con:definitionCache type="TEXT" rootPart="http://devbox:8080/Babel.Services/ProfileService.svc?wsdl"><con:part><con:url>http://devbox:8080/Babel.Services/ProfileService.svc?wsdl</con:url><con:content><![CDATA[<wsdl:definitions name="ProfileService" targetNamespace="http://profile.services.babel.com" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:tns="http://profile.services.babel.com" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata">
+  <wsp:Policy wsu:Id="WSHttpBinding_IProfileService_policy">
+    <wsp:ExactlyOne>
+      <wsp:All>
+        <wsaw:UsingAddressing/>
+      </wsp:All>
+    </wsp:ExactlyOne>
+  </wsp:Policy>
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://profile.services.babel.com/Imports">
+      <xsd:import schemaLocation="http://devbox:8080/Babel.Services/ProfileService.svc?xsd=xsd0" namespace="http://profile.services.babel.com"/>
+      <xsd:import schemaLocation="http://devbox:8080/Babel.Services/ProfileService.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/"/>
+      <xsd:import schemaLocation="http://devbox:8080/Babel.Services/ProfileService.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/Babel.Services.Domain"/>
+      <xsd:import schemaLocation="http://devbox:8080/Babel.Services/ProfileService.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/Babel.Services.Common"/>
+      <xsd:import schemaLocation="http://devbox:8080/Babel.Services/ProfileService.svc?xsd=xsd4" namespace="http://schemas.datacontract.org/2004/07/Babel.Services.Filters"/>
+      <xsd:import schemaLocation="http://devbox:8080/Babel.Services/ProfileService.svc?xsd=xsd5" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays"/>
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IProfileService_AddProfile_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddProfile"/>
+  </wsdl:message>
+  <wsdl:message name="IProfileService_AddProfile_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddProfileResponse"/>
+  </wsdl:message>
+  <wsdl:message name="IProfileService_CreateProfile_InputMessage">
+    <wsdl:part name="parameters" element="tns:CreateProfile"/>
+  </wsdl:message>
+  <wsdl:message name="IProfileService_CreateProfile_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CreateProfileResponse"/>
+  </wsdl:message>
+  <wsdl:message name="IProfileService_GetProfileByCredentials_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetProfileByCredentials"/>
+  </wsdl:message>
+  <wsdl:message name="IProfileService_GetProfileByCredentials_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetProfileByCredentialsResponse"/>
+  </wsdl:message>
+  <wsdl:message name="IProfileService_GetProfileByID_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetProfileByID"/>
+  </wsdl:message>
+  <wsdl:message name="IProfileService_GetProfileByID_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetProfileByIDResponse"/>
+  </wsdl:message>
+  <wsdl:message name="IProfileService_GetAllProfiles_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllProfiles"/>
+  </wsdl:message>
+  <wsdl:message name="IProfileService_GetAllProfiles_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllProfilesResponse"/>
+  </wsdl:message>
+  <wsdl:message name="IProfileService_ModifyProfile_InputMessage">
+    <wsdl:part name="parameters" element="tns:ModifyProfile"/>
+  </wsdl:message>
+  <wsdl:message name="IProfileService_ModifyProfile_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ModifyProfileResponse"/>
+  </wsdl:message>
+  <wsdl:message name="IProfileService_DeleteProfile_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteProfile"/>
+  </wsdl:message>
+  <wsdl:message name="IProfileService_DeleteProfile_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteProfileResponse"/>
+  </wsdl:message>
+  <wsdl:message name="IProfileService_SearchProfiles_InputMessage">
+    <wsdl:part name="parameters" element="tns:SearchProfiles"/>
+  </wsdl:message>
+  <wsdl:message name="IProfileService_SearchProfiles_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SearchProfilesResponse"/>
+  </wsdl:message>
+  <wsdl:message name="IProfileService_AddContact_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddContact"/>
+  </wsdl:message>
+  <wsdl:message name="IProfileService_AddContact_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddContactResponse"/>
+  </wsdl:message>
+  <wsdl:message name="IProfileService_AddContacts_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddContacts"/>
+  </wsdl:message>
+  <wsdl:message name="IProfileService_AddContacts_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddContactsResponse"/>
+  </wsdl:message>
+  <wsdl:message name="IProfileService_GetContacts_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetContacts"/>
+  </wsdl:message>
+  <wsdl:message name="IProfileService_GetContacts_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetContactsResponse"/>
+  </wsdl:message>
+  <wsdl:message name="IProfileService_RemoveContact_InputMessage">
+    <wsdl:part name="parameters" element="tns:RemoveContact"/>
+  </wsdl:message>
+  <wsdl:message name="IProfileService_RemoveContact_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RemoveContactResponse"/>
+  </wsdl:message>
+  <wsdl:message name="IProfileService_RemoveAllContacts_InputMessage">
+    <wsdl:part name="parameters" element="tns:RemoveAllContacts"/>
+  </wsdl:message>
+  <wsdl:message name="IProfileService_RemoveAllContacts_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RemoveAllContactsResponse"/>
+  </wsdl:message>
+  <wsdl:portType name="IProfileService">
+    <wsdl:operation name="AddProfile">
+      <wsdl:input wsaw:Action="http://profile.services.babel.com/IProfileService/AddProfile" message="tns:IProfileService_AddProfile_InputMessage"/>
+      <wsdl:output wsaw:Action="http://profile.services.babel.com/IProfileService/AddProfileResponse" message="tns:IProfileService_AddProfile_OutputMessage"/>
+    </wsdl:operation>
+    <wsdl:operation name="CreateProfile">
+      <wsdl:input wsaw:Action="http://profile.services.babel.com/IProfileService/CreateProfile" message="tns:IProfileService_CreateProfile_InputMessage"/>
+      <wsdl:output wsaw:Action="http://profile.services.babel.com/IProfileService/CreateProfileResponse" message="tns:IProfileService_CreateProfile_OutputMessage"/>
+    </wsdl:operation>
+    <wsdl:operation name="GetProfileByCredentials">
+      <wsdl:input wsaw:Action="http://profile.services.babel.com/IProfileService/GetProfileByCredentials" message="tns:IProfileService_GetProfileByCredentials_InputMessage"/>
+      <wsdl:output wsaw:Action="http://profile.services.babel.com/IProfileService/GetProfileByCredentialsResponse" message="tns:IProfileService_GetProfileByCredentials_OutputMessage"/>
+    </wsdl:operation>
+    <wsdl:operation name="GetProfileByID">
+      <wsdl:input wsaw:Action="http://profile.services.babel.com/IProfileService/GetProfileByID" message="tns:IProfileService_GetProfileByID_InputMessage"/>
+      <wsdl:output wsaw:Action="http://profile.services.babel.com/IProfileService/GetProfileByIDResponse" message="tns:IProfileService_GetProfileByID_OutputMessage"/>
+    </wsdl:operation>
+    <wsdl:operation name="GetAllProfiles">
+      <wsdl:input wsaw:Action="http://profile.services.babel.com/IProfileService/GetAllProfiles" message="tns:IProfileService_GetAllProfiles_InputMessage"/>
+      <wsdl:output wsaw:Action="http://profile.services.babel.com/IProfileService/GetAllProfilesResponse" message="tns:IProfileService_GetAllProfiles_OutputMessage"/>
+    </wsdl:operation>
+    <wsdl:operation name="ModifyProfile">
+      <wsdl:input wsaw:Action="http://profile.services.babel.com/IProfileService/ModifyProfile" message="tns:IProfileService_ModifyProfile_InputMessage"/>
+      <wsdl:output wsaw:Action="http://profile.services.babel.com/IProfileService/ModifyProfileResponse" message="tns:IProfileService_ModifyProfile_OutputMessage"/>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteProfile">
+      <wsdl:input wsaw:Action="http://profile.services.babel.com/IProfileService/DeleteProfile" message="tns:IProfileService_DeleteProfile_InputMessage"/>
+      <wsdl:output wsaw:Action="http://profile.services.babel.com/IProfileService/DeleteProfileResponse" message="tns:IProfileService_DeleteProfile_OutputMessage"/>
+    </wsdl:operation>
+    <wsdl:operation name="SearchProfiles">
+      <wsdl:input wsaw:Action="http://profile.services.babel.com/IProfileService/SearchProfiles" message="tns:IProfileService_SearchProfiles_InputMessage"/>
+      <wsdl:output wsaw:Action="http://profile.services.babel.com/IProfileService/SearchProfilesResponse" message="tns:IProfileService_SearchProfiles_OutputMessage"/>
+    </wsdl:operation>
+    <wsdl:operation name="AddContact">
+      <wsdl:input wsaw:Action="http://profile.services.babel.com/IProfileService/AddContact" message="tns:IProfileService_AddContact_InputMessage"/>
+      <wsdl:output wsaw:Action="http://profile.services.babel.com/IProfileService/AddContactResponse" message="tns:IProfileService_AddContact_OutputMessage"/>
+    </wsdl:operation>
+    <wsdl:operation name="AddContacts">
+      <wsdl:input wsaw:Action="http://profile.services.babel.com/IProfileService/AddContacts" message="tns:IProfileService_AddContacts_InputMessage"/>
+      <wsdl:output wsaw:Action="http://profile.services.babel.com/IProfileService/AddContactsResponse" message="tns:IProfileService_AddContacts_OutputMessage"/>
+    </wsdl:operation>
+    <wsdl:operation name="GetContacts">
+      <wsdl:input wsaw:Action="http://profile.services.babel.com/IProfileService/GetContacts" message="tns:IProfileService_GetContacts_InputMessage"/>
+      <wsdl:output wsaw:Action="http://profile.services.babel.com/IProfileService/GetContactsResponse" message="tns:IProfileService_GetContacts_OutputMessage"/>
+    </wsdl:operation>
+    <wsdl:operation name="RemoveContact">
+      <wsdl:input wsaw:Action="http://profile.services.babel.com/IProfileService/RemoveContact" message="tns:IProfileService_RemoveContact_InputMessage"/>
+      <wsdl:output wsaw:Action="http://profile.services.babel.com/IProfileService/RemoveContactResponse" message="tns:IProfileService_RemoveContact_OutputMessage"/>
+    </wsdl:operation>
+    <wsdl:operation name="RemoveAllContacts">
+      <wsdl:input wsaw:Action="http://profile.services.babel.com/IProfileService/RemoveAllContacts" message="tns:IProfileService_RemoveAllContacts_InputMessage"/>
+      <wsdl:output wsaw:Action="http://profile.services.babel.com/IProfileService/RemoveAllContactsResponse" message="tns:IProfileService_RemoveAllContacts_OutputMessage"/>
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="WSHttpBinding_IProfileService" type="tns:IProfileService">
+    <wsp:PolicyReference URI="#WSHttpBinding_IProfileService_policy"/>
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http"/>
+    <wsdl:operation name="AddProfile">
+      <soap12:operation soapAction="http://profile.services.babel.com/IProfileService/AddProfile" style="document"/>
+      <wsdl:input>
+        <soap12:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreateProfile">
+      <soap12:operation soapAction="http://profile.services.babel.com/IProfileService/CreateProfile" style="document"/>
+      <wsdl:input>
+        <soap12:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetProfileByCredentials">
+      <soap12:operation soapAction="http://profile.services.babel.com/IProfileService/GetProfileByCredentials" style="document"/>
+      <wsdl:input>
+        <soap12:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetProfileByID">
+      <soap12:operation soapAction="http://profile.services.babel.com/IProfileService/GetProfileByID" style="document"/>
+      <wsdl:input>
+        <soap12:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAllProfiles">
+      <soap12:operation soapAction="http://profile.services.babel.com/IProfileService/GetAllProfiles" style="document"/>
+      <wsdl:input>
+        <soap12:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ModifyProfile">
+      <soap12:operation soapAction="http://profile.services.babel.com/IProfileService/ModifyProfile" style="document"/>
+      <wsdl:input>
+        <soap12:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteProfile">
+      <soap12:operation soapAction="http://profile.services.babel.com/IProfileService/DeleteProfile" style="document"/>
+      <wsdl:input>
+        <soap12:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SearchProfiles">
+      <soap12:operation soapAction="http://profile.services.babel.com/IProfileService/SearchProfiles" style="document"/>
+      <wsdl:input>
+        <soap12:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddContact">
+      <soap12:operation soapAction="http://profile.services.babel.com/IProfileService/AddContact" style="document"/>
+      <wsdl:input>
+        <soap12:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddContacts">
+      <soap12:operation soapAction="http://profile.services.babel.com/IProfileService/AddContacts" style="document"/>
+      <wsdl:input>
+        <soap12:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetContacts">
+      <soap12:operation soapAction="http://profile.services.babel.com/IProfileService/GetContacts" style="document"/>
+      <wsdl:input>
+        <soap12:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RemoveContact">
+      <soap12:operation soapAction="http://profile.services.babel.com/IProfileService/RemoveContact" style="document"/>
+      <wsdl:input>
+        <soap12:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RemoveAllContacts">
+      <soap12:operation soapAction="http://profile.services.babel.com/IProfileService/RemoveAllContacts" style="document"/>
+      <wsdl:input>
+        <soap12:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="BasicHttpBinding_IProfileService" type="tns:IProfileService">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http"/>
+    <wsdl:operation name="AddProfile">
+      <soap:operation soapAction="http://profile.services.babel.com/IProfileService/AddProfile" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreateProfile">
+      <soap:operation soapAction="http://profile.services.babel.com/IProfileService/CreateProfile" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetProfileByCredentials">
+      <soap:operation soapAction="http://profile.services.babel.com/IProfileService/GetProfileByCredentials" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetProfileByID">
+      <soap:operation soapAction="http://profile.services.babel.com/IProfileService/GetProfileByID" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAllProfiles">
+      <soap:operation soapAction="http://profile.services.babel.com/IProfileService/GetAllProfiles" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ModifyProfile">
+      <soap:operation soapAction="http://profile.services.babel.com/IProfileService/ModifyProfile" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteProfile">
+      <soap:operation soapAction="http://profile.services.babel.com/IProfileService/DeleteProfile" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SearchProfiles">
+      <soap:operation soapAction="http://profile.services.babel.com/IProfileService/SearchProfiles" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddContact">
+      <soap:operation soapAction="http://profile.services.babel.com/IProfileService/AddContact" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddContacts">
+      <soap:operation soapAction="http://profile.services.babel.com/IProfileService/AddContacts" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetContacts">
+      <soap:operation soapAction="http://profile.services.babel.com/IProfileService/GetContacts" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RemoveContact">
+      <soap:operation soapAction="http://profile.services.babel.com/IProfileService/RemoveContact" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RemoveAllContacts">
+      <soap:operation soapAction="http://profile.services.babel.com/IProfileService/RemoveAllContacts" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="ProfileService">
+    <wsdl:port name="WSHttpBinding_IProfileService" binding="tns:WSHttpBinding_IProfileService">
+      <soap12:address location="http://devbox:8080/Babel.Services/ProfileService.svc"/>
+      <wsa10:EndpointReference>
+        <wsa10:Address>http://devbox:8080/Babel.Services/ProfileService.svc</wsa10:Address>
+      </wsa10:EndpointReference>
+    </wsdl:port>
+    <wsdl:port name="BasicHttpBinding_IProfileService" binding="tns:BasicHttpBinding_IProfileService">
+      <soap:address location="http://devbox:8080/Babel.Services/ProfileService.svc/basic"/>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>]]></con:content><con:type>http://schemas.xmlsoap.org/wsdl/</con:type></con:part><con:part><con:url>http://devbox:8080/Babel.Services/ProfileService.svc?xsd=xsd0</con:url><con:content><![CDATA[<xs:schema elementFormDefault="qualified" targetNamespace="http://profile.services.babel.com" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://profile.services.babel.com">
+  <xs:import schemaLocation="http://devbox:8080/Babel.Services/ProfileService.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/Babel.Services.Domain"/>
+  <xs:import schemaLocation="http://devbox:8080/Babel.Services/ProfileService.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/"/>
+  <xs:import schemaLocation="http://devbox:8080/Babel.Services/ProfileService.svc?xsd=xsd4" namespace="http://schemas.datacontract.org/2004/07/Babel.Services.Filters"/>
+  <xs:import schemaLocation="http://devbox:8080/Babel.Services/ProfileService.svc?xsd=xsd5" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays"/>
+  <xs:element name="AddProfile">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="profile" nillable="true" type="q1:Profile" xmlns:q1="http://schemas.datacontract.org/2004/07/Babel.Services.Domain"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AddProfileResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="AddProfileResult" type="q2:guid" xmlns:q2="http://schemas.microsoft.com/2003/10/Serialization/"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CreateProfile">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="username" nillable="true" type="xs:string"/>
+        <xs:element minOccurs="0" name="password" nillable="true" type="xs:string"/>
+        <xs:element minOccurs="0" name="email" nillable="true" type="xs:string"/>
+        <xs:element minOccurs="0" name="name" nillable="true" type="xs:string"/>
+        <xs:element minOccurs="0" name="surname" nillable="true" type="xs:string"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CreateProfileResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="CreateProfileResult" type="q3:guid" xmlns:q3="http://schemas.microsoft.com/2003/10/Serialization/"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetProfileByCredentials">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="username" nillable="true" type="xs:string"/>
+        <xs:element minOccurs="0" name="password" nillable="true" type="xs:string"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetProfileByCredentialsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetProfileByCredentialsResult" nillable="true" type="q4:Profile" xmlns:q4="http://schemas.datacontract.org/2004/07/Babel.Services.Domain"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetProfileByID">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="id" type="q5:guid" xmlns:q5="http://schemas.microsoft.com/2003/10/Serialization/"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetProfileByIDResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetProfileByIDResult" nillable="true" type="q6:Profile" xmlns:q6="http://schemas.datacontract.org/2004/07/Babel.Services.Domain"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAllProfiles">
+    <xs:complexType>
+      <xs:sequence/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAllProfilesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetAllProfilesResult" nillable="true" type="q7:ArrayOfProfile" xmlns:q7="http://schemas.datacontract.org/2004/07/Babel.Services.Domain"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ModifyProfile">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="profile" nillable="true" type="q8:Profile" xmlns:q8="http://schemas.datacontract.org/2004/07/Babel.Services.Domain"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ModifyProfileResponse">
+    <xs:complexType>
+      <xs:sequence/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DeleteProfile">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="id" type="q9:guid" xmlns:q9="http://schemas.microsoft.com/2003/10/Serialization/"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DeleteProfileResponse">
+    <xs:complexType>
+      <xs:sequence/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SearchProfiles">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="filter" nillable="true" type="q10:ProfileFilter" xmlns:q10="http://schemas.datacontract.org/2004/07/Babel.Services.Filters"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SearchProfilesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="SearchProfilesResult" nillable="true" type="q11:ArrayOfProfile" xmlns:q11="http://schemas.datacontract.org/2004/07/Babel.Services.Domain"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AddContact">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="id" type="q12:guid" xmlns:q12="http://schemas.microsoft.com/2003/10/Serialization/"/>
+        <xs:element minOccurs="0" name="contactID" type="q13:guid" xmlns:q13="http://schemas.microsoft.com/2003/10/Serialization/"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AddContactResponse">
+    <xs:complexType>
+      <xs:sequence/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AddContacts">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="id" type="q14:guid" xmlns:q14="http://schemas.microsoft.com/2003/10/Serialization/"/>
+        <xs:element minOccurs="0" name="contactIDs" nillable="true" type="q15:ArrayOfguid" xmlns:q15="http://schemas.microsoft.com/2003/10/Serialization/Arrays"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AddContactsResponse">
+    <xs:complexType>
+      <xs:sequence/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetContacts">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="id" type="q16:guid" xmlns:q16="http://schemas.microsoft.com/2003/10/Serialization/"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetContactsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetContactsResult" nillable="true" type="q17:ArrayOfProfile" xmlns:q17="http://schemas.datacontract.org/2004/07/Babel.Services.Domain"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RemoveContact">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="id" type="q18:guid" xmlns:q18="http://schemas.microsoft.com/2003/10/Serialization/"/>
+        <xs:element minOccurs="0" name="contactID" type="q19:guid" xmlns:q19="http://schemas.microsoft.com/2003/10/Serialization/"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RemoveContactResponse">
+    <xs:complexType>
+      <xs:sequence/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RemoveAllContacts">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="id" type="q20:guid" xmlns:q20="http://schemas.microsoft.com/2003/10/Serialization/"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RemoveAllContactsResponse">
+    <xs:complexType>
+      <xs:sequence/>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part><con:part><con:url>http://devbox:8080/Babel.Services/ProfileService.svc?xsd=xsd2</con:url><con:content><![CDATA[<xs:schema elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/Babel.Services.Domain" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:ser="http://schemas.microsoft.com/2003/10/Serialization/" xmlns:tns="http://schemas.datacontract.org/2004/07/Babel.Services.Domain">
+  <xs:import schemaLocation="http://devbox:8080/Babel.Services/ProfileService.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/Babel.Services.Common"/>
+  <xs:import schemaLocation="http://devbox:8080/Babel.Services/ProfileService.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/"/>
+  <xs:complexType name="Profile">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Address" nillable="true" type="tns:Address"/>
+      <xs:element minOccurs="0" name="CreatedOn" type="xs:dateTime"/>
+      <xs:element minOccurs="0" name="DateOfBirth" nillable="true" type="xs:dateTime"/>
+      <xs:element minOccurs="0" name="Description" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="Email" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="Gender" nillable="true" type="q1:Gender" xmlns:q1="http://schemas.datacontract.org/2004/07/Babel.Services.Common"/>
+      <xs:element minOccurs="0" name="ID" type="ser:guid"/>
+      <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="Password" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="Picture" nillable="true" type="xs:base64Binary"/>
+      <xs:element minOccurs="0" name="PictureUploadedOn" nillable="true" type="xs:dateTime"/>
+      <xs:element minOccurs="0" name="Surname" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="UpdatedOn" type="xs:dateTime"/>
+      <xs:element minOccurs="0" name="Username" nillable="true" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Profile" nillable="true" type="tns:Profile"/>
+  <xs:complexType name="Address">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="City" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="PostalCode" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="Street" nillable="true" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Address" nillable="true" type="tns:Address"/>
+  <xs:complexType name="ArrayOfProfile">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Profile" nillable="true" type="tns:Profile"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfProfile" nillable="true" type="tns:ArrayOfProfile"/>
+</xs:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part><con:part><con:url>http://devbox:8080/Babel.Services/ProfileService.svc?xsd=xsd3</con:url><con:content><![CDATA[<xs:schema elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/Babel.Services.Common" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://schemas.datacontract.org/2004/07/Babel.Services.Common">
+  <xs:simpleType name="Gender">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Male"/>
+      <xs:enumeration value="Female"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="Gender" nillable="true" type="tns:Gender"/>
+</xs:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part><con:part><con:url>http://devbox:8080/Babel.Services/ProfileService.svc?xsd=xsd1</con:url><con:content><![CDATA[<xs:schema attributeFormDefault="qualified" elementFormDefault="qualified" targetNamespace="http://schemas.microsoft.com/2003/10/Serialization/" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://schemas.microsoft.com/2003/10/Serialization/">
+  <xs:element name="anyType" nillable="true" type="xs:anyType"/>
+  <xs:element name="anyURI" nillable="true" type="xs:anyURI"/>
+  <xs:element name="base64Binary" nillable="true" type="xs:base64Binary"/>
+  <xs:element name="boolean" nillable="true" type="xs:boolean"/>
+  <xs:element name="byte" nillable="true" type="xs:byte"/>
+  <xs:element name="dateTime" nillable="true" type="xs:dateTime"/>
+  <xs:element name="decimal" nillable="true" type="xs:decimal"/>
+  <xs:element name="double" nillable="true" type="xs:double"/>
+  <xs:element name="float" nillable="true" type="xs:float"/>
+  <xs:element name="int" nillable="true" type="xs:int"/>
+  <xs:element name="long" nillable="true" type="xs:long"/>
+  <xs:element name="QName" nillable="true" type="xs:QName"/>
+  <xs:element name="short" nillable="true" type="xs:short"/>
+  <xs:element name="string" nillable="true" type="xs:string"/>
+  <xs:element name="unsignedByte" nillable="true" type="xs:unsignedByte"/>
+  <xs:element name="unsignedInt" nillable="true" type="xs:unsignedInt"/>
+  <xs:element name="unsignedLong" nillable="true" type="xs:unsignedLong"/>
+  <xs:element name="unsignedShort" nillable="true" type="xs:unsignedShort"/>
+  <xs:element name="char" nillable="true" type="tns:char"/>
+  <xs:simpleType name="char">
+    <xs:restriction base="xs:int"/>
+  </xs:simpleType>
+  <xs:element name="duration" nillable="true" type="tns:duration"/>
+  <xs:simpleType name="duration">
+    <xs:restriction base="xs:duration">
+      <xs:pattern value="\-?P(\d*D)?(T(\d*H)?(\d*M)?(\d*(\.\d*)?S)?)?"/>
+      <xs:minInclusive value="-P10675199DT2H48M5.4775808S"/>
+      <xs:maxInclusive value="P10675199DT2H48M5.4775807S"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="guid" nillable="true" type="tns:guid"/>
+  <xs:simpleType name="guid">
+    <xs:restriction base="xs:string">
+      <xs:pattern value="[\da-fA-F]{8}-[\da-fA-F]{4}-[\da-fA-F]{4}-[\da-fA-F]{4}-[\da-fA-F]{12}"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:attribute name="FactoryType" type="xs:QName"/>
+  <xs:attribute name="Id" type="xs:ID"/>
+  <xs:attribute name="Ref" type="xs:IDREF"/>
+</xs:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part><con:part><con:url>http://devbox:8080/Babel.Services/ProfileService.svc?xsd=xsd4</con:url><con:content><![CDATA[<xs:schema elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/Babel.Services.Filters" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://schemas.datacontract.org/2004/07/Babel.Services.Filters">
+  <xs:import schemaLocation="http://devbox:8080/Babel.Services/ProfileService.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/Babel.Services.Common"/>
+  <xs:complexType name="ProfileFilter">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="AgeAbove" type="xs:int"/>
+      <xs:element minOccurs="0" name="AgeBelow" type="xs:int"/>
+      <xs:element minOccurs="0" name="City" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="Email" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="Gender" type="q1:Gender" xmlns:q1="http://schemas.datacontract.org/2004/07/Babel.Services.Common"/>
+      <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="Street" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="Surname" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="Username" nillable="true" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ProfileFilter" nillable="true" type="tns:ProfileFilter"/>
+</xs:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part><con:part><con:url>http://devbox:8080/Babel.Services/ProfileService.svc?xsd=xsd5</con:url><con:content><![CDATA[<xs:schema elementFormDefault="qualified" targetNamespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:ser="http://schemas.microsoft.com/2003/10/Serialization/" xmlns:tns="http://schemas.microsoft.com/2003/10/Serialization/Arrays">
+  <xs:import schemaLocation="http://devbox:8080/Babel.Services/ProfileService.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/"/>
+  <xs:complexType name="ArrayOfguid">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="guid" type="ser:guid"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfguid" nillable="true" type="tns:ArrayOfguid"/>
+</xs:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part></con:definitionCache><con:endpoints><con:endpoint>http://devbox:8080/Babel.Services/ProfileService.svc</con:endpoint></con:endpoints><con:operation isOneWay="false" action="http://profile.services.babel.com/IProfileService/AddContact" name="AddContact" bindingOperationName="AddContact" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call name="Request 1" useWsAddressing="true"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://devbox:8080/Babel.Services/ProfileService.svc</con:endpoint><con:request><![CDATA[<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope" xmlns:prof="http://profile.services.babel.com">
+   <soap:Header/>
+   <soap:Body>
+      <prof:AddContact>
+         <!--Optional:-->
+         <prof:id>?</prof:id>
+         <!--Optional:-->
+         <prof:contactID>?</prof:contactID>
+      </prof:AddContact>
+   </soap:Body>
+</soap:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://profile.services.babel.com/IProfileService/AddContact"/></con:call></con:operation><con:operation isOneWay="false" action="http://profile.services.babel.com/IProfileService/AddContacts" name="AddContacts" bindingOperationName="AddContacts" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call name="Request 1" useWsAddressing="true"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://devbox:8080/Babel.Services/ProfileService.svc</con:endpoint><con:request><![CDATA[<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope" xmlns:prof="http://profile.services.babel.com" xmlns:arr="http://schemas.microsoft.com/2003/10/Serialization/Arrays">
+   <soap:Header/>
+   <soap:Body>
+      <prof:AddContacts>
+         <!--Optional:-->
+         <prof:id>?</prof:id>
+         <!--Optional:-->
+         <prof:contactIDs>
+            <!--Zero or more repetitions:-->
+            <arr:guid>?</arr:guid>
+         </prof:contactIDs>
+      </prof:AddContacts>
+   </soap:Body>
+</soap:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://profile.services.babel.com/IProfileService/AddContacts"/></con:call></con:operation><con:operation isOneWay="false" action="http://profile.services.babel.com/IProfileService/AddProfile" name="AddProfile" bindingOperationName="AddProfile" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call name="Request 1" useWsAddressing="true"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://devbox:8080/Babel.Services/ProfileService.svc</con:endpoint><con:request><![CDATA[<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope" xmlns:prof="http://profile.services.babel.com" xmlns:bab="http://schemas.datacontract.org/2004/07/Babel.Services.Domain">
+   <soap:Header/>
+   <soap:Body>
+      <prof:AddProfile>
+         <!--Optional:-->
+         <prof:profile>
+            <!--Optional:-->
+            <bab:Address>
+               <!--Optional:-->
+               <bab:City>?</bab:City>
+               <!--Optional:-->
+               <bab:PostalCode>?</bab:PostalCode>
+               <!--Optional:-->
+               <bab:Street>?</bab:Street>
+            </bab:Address>
+            <!--Optional:-->
+            <bab:CreatedOn>?</bab:CreatedOn>
+            <!--Optional:-->
+            <bab:DateOfBirth>?</bab:DateOfBirth>
+            <!--Optional:-->
+            <bab:Description>?</bab:Description>
+            <!--Optional:-->
+            <bab:Email>?</bab:Email>
+            <!--Optional:-->
+            <bab:Gender>?</bab:Gender>
+            <!--Optional:-->
+            <bab:ID>?</bab:ID>
+            <!--Optional:-->
+            <bab:Name>?</bab:Name>
+            <!--Optional:-->
+            <bab:Password>?</bab:Password>
+            <!--Optional:-->
+            <bab:Picture>cid:320853578330</bab:Picture>
+            <!--Optional:-->
+            <bab:PictureUploadedOn>?</bab:PictureUploadedOn>
+            <!--Optional:-->
+            <bab:Surname>?</bab:Surname>
+            <!--Optional:-->
+            <bab:UpdatedOn>?</bab:UpdatedOn>
+            <!--Optional:-->
+            <bab:Username>?</bab:Username>
+         </prof:profile>
+      </prof:AddProfile>
+   </soap:Body>
+</soap:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://profile.services.babel.com/IProfileService/AddProfile"/></con:call></con:operation><con:operation isOneWay="false" action="http://profile.services.babel.com/IProfileService/CreateProfile" name="CreateProfile" bindingOperationName="CreateProfile" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call name="Request 1" useWsAddressing="true"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://devbox:8080/Babel.Services/ProfileService.svc</con:endpoint><con:request><![CDATA[<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope" xmlns:prof="http://profile.services.babel.com">
+   <soap:Header/>
+   <soap:Body>
+      <prof:CreateProfile>
+         <!--Optional:-->
+         <prof:username>?</prof:username>
+         <!--Optional:-->
+         <prof:password>?</prof:password>
+         <!--Optional:-->
+         <prof:email>?</prof:email>
+         <!--Optional:-->
+         <prof:name>?</prof:name>
+         <!--Optional:-->
+         <prof:surname>?</prof:surname>
+      </prof:CreateProfile>
+   </soap:Body>
+</soap:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://profile.services.babel.com/IProfileService/CreateProfile"/></con:call></con:operation><con:operation isOneWay="false" action="http://profile.services.babel.com/IProfileService/DeleteProfile" name="DeleteProfile" bindingOperationName="DeleteProfile" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call name="Request 1" useWsAddressing="true"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://devbox:8080/Babel.Services/ProfileService.svc</con:endpoint><con:request><![CDATA[<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope" xmlns:prof="http://profile.services.babel.com">
+   <soap:Header/>
+   <soap:Body>
+      <prof:DeleteProfile>
+         <!--Optional:-->
+         <prof:id>?</prof:id>
+      </prof:DeleteProfile>
+   </soap:Body>
+</soap:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://profile.services.babel.com/IProfileService/DeleteProfile"/></con:call></con:operation><con:operation isOneWay="false" action="http://profile.services.babel.com/IProfileService/GetAllProfiles" name="GetAllProfiles" bindingOperationName="GetAllProfiles" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call name="Request 1" useWsAddressing="true"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://devbox:8080/Babel.Services/ProfileService.svc</con:endpoint><con:request><![CDATA[<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope" xmlns:prof="http://profile.services.babel.com">
+   <soap:Header/>
+   <soap:Body>
+      <prof:GetAllProfiles/>
+   </soap:Body>
+</soap:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://profile.services.babel.com/IProfileService/GetAllProfiles"/></con:call></con:operation><con:operation isOneWay="false" action="http://profile.services.babel.com/IProfileService/GetContacts" name="GetContacts" bindingOperationName="GetContacts" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call name="Request 1" useWsAddressing="true"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://devbox:8080/Babel.Services/ProfileService.svc</con:endpoint><con:request><![CDATA[<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope" xmlns:prof="http://profile.services.babel.com">
+   <soap:Header/>
+   <soap:Body>
+      <prof:GetContacts>
+         <!--Optional:-->
+         <prof:id>?</prof:id>
+      </prof:GetContacts>
+   </soap:Body>
+</soap:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://profile.services.babel.com/IProfileService/GetContacts"/></con:call></con:operation><con:operation isOneWay="false" action="http://profile.services.babel.com/IProfileService/GetProfileByCredentials" name="GetProfileByCredentials" bindingOperationName="GetProfileByCredentials" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call name="Request 1" useWsAddressing="true"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://devbox:8080/Babel.Services/ProfileService.svc</con:endpoint><con:request><![CDATA[<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope" xmlns:prof="http://profile.services.babel.com">
+   <soap:Header/>
+   <soap:Body>
+      <prof:GetProfileByCredentials>
+         <!--Optional:-->
+         <prof:username>?</prof:username>
+         <!--Optional:-->
+         <prof:password>?</prof:password>
+      </prof:GetProfileByCredentials>
+   </soap:Body>
+</soap:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://profile.services.babel.com/IProfileService/GetProfileByCredentials"/></con:call></con:operation><con:operation isOneWay="false" action="http://profile.services.babel.com/IProfileService/GetProfileByID" name="GetProfileByID" bindingOperationName="GetProfileByID" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call name="Request 1" useWsAddressing="true"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://devbox:8080/Babel.Services/ProfileService.svc</con:endpoint><con:request><![CDATA[<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope" xmlns:prof="http://profile.services.babel.com">
+   <soap:Header/>
+   <soap:Body>
+      <prof:GetProfileByID>
+         <!--Optional:-->
+         <prof:id>?</prof:id>
+      </prof:GetProfileByID>
+   </soap:Body>
+</soap:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://profile.services.babel.com/IProfileService/GetProfileByID"/></con:call></con:operation><con:operation isOneWay="false" action="http://profile.services.babel.com/IProfileService/ModifyProfile" name="ModifyProfile" bindingOperationName="ModifyProfile" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call name="Request 1" useWsAddressing="true"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://devbox:8080/Babel.Services/ProfileService.svc</con:endpoint><con:request><![CDATA[<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope" xmlns:prof="http://profile.services.babel.com" xmlns:bab="http://schemas.datacontract.org/2004/07/Babel.Services.Domain">
+   <soap:Header/>
+   <soap:Body>
+      <prof:ModifyProfile>
+         <!--Optional:-->
+         <prof:profile>
+            <!--Optional:-->
+            <bab:Address>
+               <!--Optional:-->
+               <bab:City>?</bab:City>
+               <!--Optional:-->
+               <bab:PostalCode>?</bab:PostalCode>
+               <!--Optional:-->
+               <bab:Street>?</bab:Street>
+            </bab:Address>
+            <!--Optional:-->
+            <bab:CreatedOn>?</bab:CreatedOn>
+            <!--Optional:-->
+            <bab:DateOfBirth>?</bab:DateOfBirth>
+            <!--Optional:-->
+            <bab:Description>?</bab:Description>
+            <!--Optional:-->
+            <bab:Email>?</bab:Email>
+            <!--Optional:-->
+            <bab:Gender>?</bab:Gender>
+            <!--Optional:-->
+            <bab:ID>?</bab:ID>
+            <!--Optional:-->
+            <bab:Name>?</bab:Name>
+            <!--Optional:-->
+            <bab:Password>?</bab:Password>
+            <!--Optional:-->
+            <bab:Picture>cid:1310862509005</bab:Picture>
+            <!--Optional:-->
+            <bab:PictureUploadedOn>?</bab:PictureUploadedOn>
+            <!--Optional:-->
+            <bab:Surname>?</bab:Surname>
+            <!--Optional:-->
+            <bab:UpdatedOn>?</bab:UpdatedOn>
+            <!--Optional:-->
+            <bab:Username>?</bab:Username>
+         </prof:profile>
+      </prof:ModifyProfile>
+   </soap:Body>
+</soap:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://profile.services.babel.com/IProfileService/ModifyProfile"/></con:call></con:operation><con:operation isOneWay="false" action="http://profile.services.babel.com/IProfileService/RemoveAllContacts" name="RemoveAllContacts" bindingOperationName="RemoveAllContacts" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call name="Request 1" useWsAddressing="true"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://devbox:8080/Babel.Services/ProfileService.svc</con:endpoint><con:request><![CDATA[<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope" xmlns:prof="http://profile.services.babel.com">
+   <soap:Header/>
+   <soap:Body>
+      <prof:RemoveAllContacts>
+         <!--Optional:-->
+         <prof:id>?</prof:id>
+      </prof:RemoveAllContacts>
+   </soap:Body>
+</soap:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://profile.services.babel.com/IProfileService/RemoveAllContacts"/></con:call></con:operation><con:operation isOneWay="false" action="http://profile.services.babel.com/IProfileService/RemoveContact" name="RemoveContact" bindingOperationName="RemoveContact" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call name="Request 1" useWsAddressing="true"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://devbox:8080/Babel.Services/ProfileService.svc</con:endpoint><con:request><![CDATA[<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope" xmlns:prof="http://profile.services.babel.com">
+   <soap:Header/>
+   <soap:Body>
+      <prof:RemoveContact>
+         <!--Optional:-->
+         <prof:id>?</prof:id>
+         <!--Optional:-->
+         <prof:contactID>?</prof:contactID>
+      </prof:RemoveContact>
+   </soap:Body>
+</soap:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://profile.services.babel.com/IProfileService/RemoveContact"/></con:call></con:operation><con:operation isOneWay="false" action="http://profile.services.babel.com/IProfileService/SearchProfiles" name="SearchProfiles" bindingOperationName="SearchProfiles" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call name="Request 1" useWsAddressing="true"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://devbox:8080/Babel.Services/ProfileService.svc</con:endpoint><con:request><![CDATA[<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope" xmlns:prof="http://profile.services.babel.com" xmlns:bab="http://schemas.datacontract.org/2004/07/Babel.Services.Filters">
+   <soap:Header/>
+   <soap:Body>
+      <prof:SearchProfiles>
+         <!--Optional:-->
+         <prof:filter>
+            <!--Optional:-->
+            <bab:AgeAbove>?</bab:AgeAbove>
+            <!--Optional:-->
+            <bab:AgeBelow>?</bab:AgeBelow>
+            <!--Optional:-->
+            <bab:City>?</bab:City>
+            <!--Optional:-->
+            <bab:Email>?</bab:Email>
+            <!--Optional:-->
+            <bab:Gender>?</bab:Gender>
+            <!--Optional:-->
+            <bab:Name>?</bab:Name>
+            <!--Optional:-->
+            <bab:Street>?</bab:Street>
+            <!--Optional:-->
+            <bab:Surname>?</bab:Surname>
+            <!--Optional:-->
+            <bab:Username>?</bab:Username>
+         </prof:filter>
+      </prof:SearchProfiles>
+   </soap:Body>
+</soap:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://profile.services.babel.com/IProfileService/SearchProfiles"/></con:call></con:operation></con:interface><con:properties/><con:wssContainer/></con:soapui-project>
