@@ -12,7 +12,7 @@ using Babel.Services.Repositories;
 
 namespace Babel.Services
 {
-    [ServiceBehavior(Namespace = "http://media.services.babel.com")]
+    [ServiceBehavior(Namespace="http://babylon.com/services")]
     public class MediaService : IMediaService
     {
         private IMediaRepository _repository;

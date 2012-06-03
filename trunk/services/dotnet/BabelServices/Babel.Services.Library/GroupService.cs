@@ -9,7 +9,7 @@ using Babel.Services.Filters;
 
 namespace Babel.Services
 {
-    [ServiceBehavior(Namespace = "http://group.services.babel.com")]
+    [ServiceBehavior(Namespace = "http://babylon.com/services")]
     public class GroupService : IGroupService
     {
         private IGroupRepository _repository;
