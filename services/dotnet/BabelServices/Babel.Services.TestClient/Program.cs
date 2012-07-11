@@ -11,7 +11,7 @@ namespace Babel.Services.TestClient
     {
         static void Main(string[] args)
         {
-            ProfileServiceClient client = new ProfileServiceClient("WSHttpBinding_IProfileService");
+            ProfileServiceClient client = new ProfileServiceClient("WSHttpBinding_ProfileService");
 
             // AddProfile
             Profile newProfile = new Profile()

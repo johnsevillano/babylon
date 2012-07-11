@@ -71,7 +71,9 @@
     </Content>
     <Content Include="GroupService.svc" />
     <Content Include="MediaService.svc" />
-    <Content Include="Web.config" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Babel.Services.Library\Babel.Services.Library.csproj">
