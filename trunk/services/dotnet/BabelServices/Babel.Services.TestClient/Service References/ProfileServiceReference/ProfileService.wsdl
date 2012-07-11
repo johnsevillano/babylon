@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://profile.services.babel.com" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="ProfileService" targetNamespace="http://profile.services.babel.com" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
-  <wsp:Policy wsu:Id="WSHttpBinding_IProfileService_policy">
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://babylon.com/services" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="ProfileService" targetNamespace="http://babylon.com/services" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsp:Policy wsu:Id="WSHttpBinding_ProfileService_policy">
     <wsp:ExactlyOne>
       <wsp:All>
         <wsaw:UsingAddressing />
@@ -8,8 +8,8 @@
     </wsp:ExactlyOne>
   </wsp:Policy>
   <wsdl:types>
-    <xsd:schema targetNamespace="http://profile.services.babel.com/Imports">
-      <xsd:import schemaLocation="http://devbox:8080/Babel.Services/ProfileService.svc?xsd=xsd0" namespace="http://profile.services.babel.com" />
+    <xsd:schema targetNamespace="http://babylon.com/services/Imports">
+      <xsd:import schemaLocation="http://devbox:8080/Babel.Services/ProfileService.svc?xsd=xsd0" namespace="http://babylon.com/services" />
       <xsd:import schemaLocation="http://devbox:8080/Babel.Services/ProfileService.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
       <xsd:import schemaLocation="http://devbox:8080/Babel.Services/ProfileService.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/Babel.Services.Domain" />
       <xsd:import schemaLocation="http://devbox:8080/Babel.Services/ProfileService.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/Babel.Services.Common" />
@@ -17,143 +17,143 @@
       <xsd:import schemaLocation="http://devbox:8080/Babel.Services/ProfileService.svc?xsd=xsd5" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
     </xsd:schema>
   </wsdl:types>
-  <wsdl:message name="IProfileService_AddProfile_InputMessage">
+  <wsdl:message name="ProfileService_AddProfile_InputMessage">
     <wsdl:part name="parameters" element="tns:AddProfile" />
   </wsdl:message>
-  <wsdl:message name="IProfileService_AddProfile_OutputMessage">
+  <wsdl:message name="ProfileService_AddProfile_OutputMessage">
     <wsdl:part name="parameters" element="tns:AddProfileResponse" />
   </wsdl:message>
-  <wsdl:message name="IProfileService_CreateProfile_InputMessage">
+  <wsdl:message name="ProfileService_CreateProfile_InputMessage">
     <wsdl:part name="parameters" element="tns:CreateProfile" />
   </wsdl:message>
-  <wsdl:message name="IProfileService_CreateProfile_OutputMessage">
+  <wsdl:message name="ProfileService_CreateProfile_OutputMessage">
     <wsdl:part name="parameters" element="tns:CreateProfileResponse" />
   </wsdl:message>
-  <wsdl:message name="IProfileService_GetProfileByCredentials_InputMessage">
+  <wsdl:message name="ProfileService_GetProfileByCredentials_InputMessage">
     <wsdl:part name="parameters" element="tns:GetProfileByCredentials" />
   </wsdl:message>
-  <wsdl:message name="IProfileService_GetProfileByCredentials_OutputMessage">
+  <wsdl:message name="ProfileService_GetProfileByCredentials_OutputMessage">
     <wsdl:part name="parameters" element="tns:GetProfileByCredentialsResponse" />
   </wsdl:message>
-  <wsdl:message name="IProfileService_GetProfileByID_InputMessage">
+  <wsdl:message name="ProfileService_GetProfileByID_InputMessage">
     <wsdl:part name="parameters" element="tns:GetProfileByID" />
   </wsdl:message>
-  <wsdl:message name="IProfileService_GetProfileByID_OutputMessage">
+  <wsdl:message name="ProfileService_GetProfileByID_OutputMessage">
     <wsdl:part name="parameters" element="tns:GetProfileByIDResponse" />
   </wsdl:message>
-  <wsdl:message name="IProfileService_GetAllProfiles_InputMessage">
+  <wsdl:message name="ProfileService_GetAllProfiles_InputMessage">
     <wsdl:part name="parameters" element="tns:GetAllProfiles" />
   </wsdl:message>
-  <wsdl:message name="IProfileService_GetAllProfiles_OutputMessage">
+  <wsdl:message name="ProfileService_GetAllProfiles_OutputMessage">
     <wsdl:part name="parameters" element="tns:GetAllProfilesResponse" />
   </wsdl:message>
-  <wsdl:message name="IProfileService_ModifyProfile_InputMessage">
+  <wsdl:message name="ProfileService_ModifyProfile_InputMessage">
     <wsdl:part name="parameters" element="tns:ModifyProfile" />
   </wsdl:message>
-  <wsdl:message name="IProfileService_ModifyProfile_OutputMessage">
+  <wsdl:message name="ProfileService_ModifyProfile_OutputMessage">
     <wsdl:part name="parameters" element="tns:ModifyProfileResponse" />
   </wsdl:message>
-  <wsdl:message name="IProfileService_DeleteProfile_InputMessage">
+  <wsdl:message name="ProfileService_DeleteProfile_InputMessage">
     <wsdl:part name="parameters" element="tns:DeleteProfile" />
   </wsdl:message>
-  <wsdl:message name="IProfileService_DeleteProfile_OutputMessage">
+  <wsdl:message name="ProfileService_DeleteProfile_OutputMessage">
     <wsdl:part name="parameters" element="tns:DeleteProfileResponse" />
   </wsdl:message>
-  <wsdl:message name="IProfileService_SearchProfiles_InputMessage">
+  <wsdl:message name="ProfileService_SearchProfiles_InputMessage">
     <wsdl:part name="parameters" element="tns:SearchProfiles" />
   </wsdl:message>
-  <wsdl:message name="IProfileService_SearchProfiles_OutputMessage">
+  <wsdl:message name="ProfileService_SearchProfiles_OutputMessage">
     <wsdl:part name="parameters" element="tns:SearchProfilesResponse" />
   </wsdl:message>
-  <wsdl:message name="IProfileService_AddContact_InputMessage">
+  <wsdl:message name="ProfileService_AddContact_InputMessage">
     <wsdl:part name="parameters" element="tns:AddContact" />
   </wsdl:message>
-  <wsdl:message name="IProfileService_AddContact_OutputMessage">
+  <wsdl:message name="ProfileService_AddContact_OutputMessage">
     <wsdl:part name="parameters" element="tns:AddContactResponse" />
   </wsdl:message>
-  <wsdl:message name="IProfileService_AddContacts_InputMessage">
+  <wsdl:message name="ProfileService_AddContacts_InputMessage">
     <wsdl:part name="parameters" element="tns:AddContacts" />
   </wsdl:message>
-  <wsdl:message name="IProfileService_AddContacts_OutputMessage">
+  <wsdl:message name="ProfileService_AddContacts_OutputMessage">
     <wsdl:part name="parameters" element="tns:AddContactsResponse" />
   </wsdl:message>
-  <wsdl:message name="IProfileService_GetContacts_InputMessage">
+  <wsdl:message name="ProfileService_GetContacts_InputMessage">
     <wsdl:part name="parameters" element="tns:GetContacts" />
   </wsdl:message>
-  <wsdl:message name="IProfileService_GetContacts_OutputMessage">
+  <wsdl:message name="ProfileService_GetContacts_OutputMessage">
     <wsdl:part name="parameters" element="tns:GetContactsResponse" />
   </wsdl:message>
-  <wsdl:message name="IProfileService_RemoveContact_InputMessage">
+  <wsdl:message name="ProfileService_RemoveContact_InputMessage">
     <wsdl:part name="parameters" element="tns:RemoveContact" />
   </wsdl:message>
-  <wsdl:message name="IProfileService_RemoveContact_OutputMessage">
+  <wsdl:message name="ProfileService_RemoveContact_OutputMessage">
     <wsdl:part name="parameters" element="tns:RemoveContactResponse" />
   </wsdl:message>
-  <wsdl:message name="IProfileService_RemoveAllContacts_InputMessage">
+  <wsdl:message name="ProfileService_RemoveAllContacts_InputMessage">
     <wsdl:part name="parameters" element="tns:RemoveAllContacts" />
   </wsdl:message>
-  <wsdl:message name="IProfileService_RemoveAllContacts_OutputMessage">
+  <wsdl:message name="ProfileService_RemoveAllContacts_OutputMessage">
     <wsdl:part name="parameters" element="tns:RemoveAllContactsResponse" />
   </wsdl:message>
-  <wsdl:portType name="IProfileService">
+  <wsdl:portType name="ProfileService">
     <wsdl:operation name="AddProfile">
-      <wsdl:input wsaw:Action="http://profile.services.babel.com/IProfileService/AddProfile" message="tns:IProfileService_AddProfile_InputMessage" />
-      <wsdl:output wsaw:Action="http://profile.services.babel.com/IProfileService/AddProfileResponse" message="tns:IProfileService_AddProfile_OutputMessage" />
+      <wsdl:input wsaw:Action="http://babylon.com/services/ProfileService/AddProfile" message="tns:ProfileService_AddProfile_InputMessage" />
+      <wsdl:output wsaw:Action="http://babylon.com/services/ProfileService/AddProfileResponse" message="tns:ProfileService_AddProfile_OutputMessage" />
     </wsdl:operation>
     <wsdl:operation name="CreateProfile">
-      <wsdl:input wsaw:Action="http://profile.services.babel.com/IProfileService/CreateProfile" message="tns:IProfileService_CreateProfile_InputMessage" />
-      <wsdl:output wsaw:Action="http://profile.services.babel.com/IProfileService/CreateProfileResponse" message="tns:IProfileService_CreateProfile_OutputMessage" />
+      <wsdl:input wsaw:Action="http://babylon.com/services/ProfileService/CreateProfile" message="tns:ProfileService_CreateProfile_InputMessage" />
+      <wsdl:output wsaw:Action="http://babylon.com/services/ProfileService/CreateProfileResponse" message="tns:ProfileService_CreateProfile_OutputMessage" />
     </wsdl:operation>
     <wsdl:operation name="GetProfileByCredentials">
-      <wsdl:input wsaw:Action="http://profile.services.babel.com/IProfileService/GetProfileByCredentials" message="tns:IProfileService_GetProfileByCredentials_InputMessage" />
-      <wsdl:output wsaw:Action="http://profile.services.babel.com/IProfileService/GetProfileByCredentialsResponse" message="tns:IProfileService_GetProfileByCredentials_OutputMessage" />
+      <wsdl:input wsaw:Action="http://babylon.com/services/ProfileService/GetProfileByCredentials" message="tns:ProfileService_GetProfileByCredentials_InputMessage" />
+      <wsdl:output wsaw:Action="http://babylon.com/services/ProfileService/GetProfileByCredentialsResponse" message="tns:ProfileService_GetProfileByCredentials_OutputMessage" />
     </wsdl:operation>
     <wsdl:operation name="GetProfileByID">
-      <wsdl:input wsaw:Action="http://profile.services.babel.com/IProfileService/GetProfileByID" message="tns:IProfileService_GetProfileByID_InputMessage" />
-      <wsdl:output wsaw:Action="http://profile.services.babel.com/IProfileService/GetProfileByIDResponse" message="tns:IProfileService_GetProfileByID_OutputMessage" />
+      <wsdl:input wsaw:Action="http://babylon.com/services/ProfileService/GetProfileByID" message="tns:ProfileService_GetProfileByID_InputMessage" />
+      <wsdl:output wsaw:Action="http://babylon.com/services/ProfileService/GetProfileByIDResponse" message="tns:ProfileService_GetProfileByID_OutputMessage" />
     </wsdl:operation>
     <wsdl:operation name="GetAllProfiles">
-      <wsdl:input wsaw:Action="http://profile.services.babel.com/IProfileService/GetAllProfiles" message="tns:IProfileService_GetAllProfiles_InputMessage" />
-      <wsdl:output wsaw:Action="http://profile.services.babel.com/IProfileService/GetAllProfilesResponse" message="tns:IProfileService_GetAllProfiles_OutputMessage" />
+      <wsdl:input wsaw:Action="http://babylon.com/services/ProfileService/GetAllProfiles" message="tns:ProfileService_GetAllProfiles_InputMessage" />
+      <wsdl:output wsaw:Action="http://babylon.com/services/ProfileService/GetAllProfilesResponse" message="tns:ProfileService_GetAllProfiles_OutputMessage" />
     </wsdl:operation>
     <wsdl:operation name="ModifyProfile">
-      <wsdl:input wsaw:Action="http://profile.services.babel.com/IProfileService/ModifyProfile" message="tns:IProfileService_ModifyProfile_InputMessage" />
-      <wsdl:output wsaw:Action="http://profile.services.babel.com/IProfileService/ModifyProfileResponse" message="tns:IProfileService_ModifyProfile_OutputMessage" />
+      <wsdl:input wsaw:Action="http://babylon.com/services/ProfileService/ModifyProfile" message="tns:ProfileService_ModifyProfile_InputMessage" />
+      <wsdl:output wsaw:Action="http://babylon.com/services/ProfileService/ModifyProfileResponse" message="tns:ProfileService_ModifyProfile_OutputMessage" />
     </wsdl:operation>
     <wsdl:operation name="DeleteProfile">
-      <wsdl:input wsaw:Action="http://profile.services.babel.com/IProfileService/DeleteProfile" message="tns:IProfileService_DeleteProfile_InputMessage" />
-      <wsdl:output wsaw:Action="http://profile.services.babel.com/IProfileService/DeleteProfileResponse" message="tns:IProfileService_DeleteProfile_OutputMessage" />
+      <wsdl:input wsaw:Action="http://babylon.com/services/ProfileService/DeleteProfile" message="tns:ProfileService_DeleteProfile_InputMessage" />
+      <wsdl:output wsaw:Action="http://babylon.com/services/ProfileService/DeleteProfileResponse" message="tns:ProfileService_DeleteProfile_OutputMessage" />
     </wsdl:operation>
     <wsdl:operation name="SearchProfiles">
-      <wsdl:input wsaw:Action="http://profile.services.babel.com/IProfileService/SearchProfiles" message="tns:IProfileService_SearchProfiles_InputMessage" />
-      <wsdl:output wsaw:Action="http://profile.services.babel.com/IProfileService/SearchProfilesResponse" message="tns:IProfileService_SearchProfiles_OutputMessage" />
+      <wsdl:input wsaw:Action="http://babylon.com/services/ProfileService/SearchProfiles" message="tns:ProfileService_SearchProfiles_InputMessage" />
+      <wsdl:output wsaw:Action="http://babylon.com/services/ProfileService/SearchProfilesResponse" message="tns:ProfileService_SearchProfiles_OutputMessage" />
     </wsdl:operation>
     <wsdl:operation name="AddContact">
-      <wsdl:input wsaw:Action="http://profile.services.babel.com/IProfileService/AddContact" message="tns:IProfileService_AddContact_InputMessage" />
-      <wsdl:output wsaw:Action="http://profile.services.babel.com/IProfileService/AddContactResponse" message="tns:IProfileService_AddContact_OutputMessage" />
+      <wsdl:input wsaw:Action="http://babylon.com/services/ProfileService/AddContact" message="tns:ProfileService_AddContact_InputMessage" />
+      <wsdl:output wsaw:Action="http://babylon.com/services/ProfileService/AddContactResponse" message="tns:ProfileService_AddContact_OutputMessage" />
     </wsdl:operation>
     <wsdl:operation name="AddContacts">
-      <wsdl:input wsaw:Action="http://profile.services.babel.com/IProfileService/AddContacts" message="tns:IProfileService_AddContacts_InputMessage" />
-      <wsdl:output wsaw:Action="http://profile.services.babel.com/IProfileService/AddContactsResponse" message="tns:IProfileService_AddContacts_OutputMessage" />
+      <wsdl:input wsaw:Action="http://babylon.com/services/ProfileService/AddContacts" message="tns:ProfileService_AddContacts_InputMessage" />
+      <wsdl:output wsaw:Action="http://babylon.com/services/ProfileService/AddContactsResponse" message="tns:ProfileService_AddContacts_OutputMessage" />
     </wsdl:operation>
     <wsdl:operation name="GetContacts">
-      <wsdl:input wsaw:Action="http://profile.services.babel.com/IProfileService/GetContacts" message="tns:IProfileService_GetContacts_InputMessage" />
-      <wsdl:output wsaw:Action="http://profile.services.babel.com/IProfileService/GetContactsResponse" message="tns:IProfileService_GetContacts_OutputMessage" />
+      <wsdl:input wsaw:Action="http://babylon.com/services/ProfileService/GetContacts" message="tns:ProfileService_GetContacts_InputMessage" />
+      <wsdl:output wsaw:Action="http://babylon.com/services/ProfileService/GetContactsResponse" message="tns:ProfileService_GetContacts_OutputMessage" />
     </wsdl:operation>
     <wsdl:operation name="RemoveContact">
-      <wsdl:input wsaw:Action="http://profile.services.babel.com/IProfileService/RemoveContact" message="tns:IProfileService_RemoveContact_InputMessage" />
-      <wsdl:output wsaw:Action="http://profile.services.babel.com/IProfileService/RemoveContactResponse" message="tns:IProfileService_RemoveContact_OutputMessage" />
+      <wsdl:input wsaw:Action="http://babylon.com/services/ProfileService/RemoveContact" message="tns:ProfileService_RemoveContact_InputMessage" />
+      <wsdl:output wsaw:Action="http://babylon.com/services/ProfileService/RemoveContactResponse" message="tns:ProfileService_RemoveContact_OutputMessage" />
     </wsdl:operation>
     <wsdl:operation name="RemoveAllContacts">
-      <wsdl:input wsaw:Action="http://profile.services.babel.com/IProfileService/RemoveAllContacts" message="tns:IProfileService_RemoveAllContacts_InputMessage" />
-      <wsdl:output wsaw:Action="http://profile.services.babel.com/IProfileService/RemoveAllContactsResponse" message="tns:IProfileService_RemoveAllContacts_OutputMessage" />
+      <wsdl:input wsaw:Action="http://babylon.com/services/ProfileService/RemoveAllContacts" message="tns:ProfileService_RemoveAllContacts_InputMessage" />
+      <wsdl:output wsaw:Action="http://babylon.com/services/ProfileService/RemoveAllContactsResponse" message="tns:ProfileService_RemoveAllContacts_OutputMessage" />
     </wsdl:operation>
   </wsdl:portType>
-  <wsdl:binding name="WSHttpBinding_IProfileService" type="tns:IProfileService">
-    <wsp:PolicyReference URI="#WSHttpBinding_IProfileService_policy" />
+  <wsdl:binding name="WSHttpBinding_ProfileService" type="tns:ProfileService">
+    <wsp:PolicyReference URI="#WSHttpBinding_ProfileService_policy" />
     <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
     <wsdl:operation name="AddProfile">
-      <soap12:operation soapAction="http://profile.services.babel.com/IProfileService/AddProfile" style="document" />
+      <soap12:operation soapAction="http://babylon.com/services/ProfileService/AddProfile" style="document" />
       <wsdl:input>
         <soap12:body use="literal" />
       </wsdl:input>
@@ -162,7 +162,7 @@
       </wsdl:output>
     </wsdl:operation>
     <wsdl:operation name="CreateProfile">
-      <soap12:operation soapAction="http://profile.services.babel.com/IProfileService/CreateProfile" style="document" />
+      <soap12:operation soapAction="http://babylon.com/services/ProfileService/CreateProfile" style="document" />
       <wsdl:input>
         <soap12:body use="literal" />
       </wsdl:input>
@@ -171,7 +171,7 @@
       </wsdl:output>
     </wsdl:operation>
     <wsdl:operation name="GetProfileByCredentials">
-      <soap12:operation soapAction="http://profile.services.babel.com/IProfileService/GetProfileByCredentials" style="document" />
+      <soap12:operation soapAction="http://babylon.com/services/ProfileService/GetProfileByCredentials" style="document" />
       <wsdl:input>
         <soap12:body use="literal" />
       </wsdl:input>
@@ -180,7 +180,7 @@
       </wsdl:output>
     </wsdl:operation>
     <wsdl:operation name="GetProfileByID">
-      <soap12:operation soapAction="http://profile.services.babel.com/IProfileService/GetProfileByID" style="document" />
+      <soap12:operation soapAction="http://babylon.com/services/ProfileService/GetProfileByID" style="document" />
       <wsdl:input>
         <soap12:body use="literal" />
       </wsdl:input>
@@ -189,7 +189,7 @@
       </wsdl:output>
     </wsdl:operation>
     <wsdl:operation name="GetAllProfiles">
-      <soap12:operation soapAction="http://profile.services.babel.com/IProfileService/GetAllProfiles" style="document" />
+      <soap12:operation soapAction="http://babylon.com/services/ProfileService/GetAllProfiles" style="document" />
       <wsdl:input>
         <soap12:body use="literal" />
       </wsdl:input>
@@ -198,7 +198,7 @@
       </wsdl:output>
     </wsdl:operation>
     <wsdl:operation name="ModifyProfile">
-      <soap12:operation soapAction="http://profile.services.babel.com/IProfileService/ModifyProfile" style="document" />
+      <soap12:operation soapAction="http://babylon.com/services/ProfileService/ModifyProfile" style="document" />
       <wsdl:input>
         <soap12:body use="literal" />
       </wsdl:input>
@@ -207,7 +207,7 @@
       </wsdl:output>
     </wsdl:operation>
     <wsdl:operation name="DeleteProfile">
-      <soap12:operation soapAction="http://profile.services.babel.com/IProfileService/DeleteProfile" style="document" />
+      <soap12:operation soapAction="http://babylon.com/services/ProfileService/DeleteProfile" style="document" />
       <wsdl:input>
         <soap12:body use="literal" />
       </wsdl:input>
@@ -216,7 +216,7 @@
       </wsdl:output>
     </wsdl:operation>
     <wsdl:operation name="SearchProfiles">
-      <soap12:operation soapAction="http://profile.services.babel.com/IProfileService/SearchProfiles" style="document" />
+      <soap12:operation soapAction="http://babylon.com/services/ProfileService/SearchProfiles" style="document" />
       <wsdl:input>
         <soap12:body use="literal" />
       </wsdl:input>
@@ -225,7 +225,7 @@
       </wsdl:output>
     </wsdl:operation>
     <wsdl:operation name="AddContact">
-      <soap12:operation soapAction="http://profile.services.babel.com/IProfileService/AddContact" style="document" />
+      <soap12:operation soapAction="http://babylon.com/services/ProfileService/AddContact" style="document" />
       <wsdl:input>
         <soap12:body use="literal" />
       </wsdl:input>
@@ -234,7 +234,7 @@
       </wsdl:output>
     </wsdl:operation>
     <wsdl:operation name="AddContacts">
-      <soap12:operation soapAction="http://profile.services.babel.com/IProfileService/AddContacts" style="document" />
+      <soap12:operation soapAction="http://babylon.com/services/ProfileService/AddContacts" style="document" />
       <wsdl:input>
         <soap12:body use="literal" />
       </wsdl:input>
@@ -243,7 +243,7 @@
       </wsdl:output>
     </wsdl:operation>
     <wsdl:operation name="GetContacts">
-      <soap12:operation soapAction="http://profile.services.babel.com/IProfileService/GetContacts" style="document" />
+      <soap12:operation soapAction="http://babylon.com/services/ProfileService/GetContacts" style="document" />
       <wsdl:input>
         <soap12:body use="literal" />
       </wsdl:input>
@@ -252,7 +252,7 @@
       </wsdl:output>
     </wsdl:operation>
     <wsdl:operation name="RemoveContact">
-      <soap12:operation soapAction="http://profile.services.babel.com/IProfileService/RemoveContact" style="document" />
+      <soap12:operation soapAction="http://babylon.com/services/ProfileService/RemoveContact" style="document" />
       <wsdl:input>
         <soap12:body use="literal" />
       </wsdl:input>
@@ -261,7 +261,7 @@
       </wsdl:output>
     </wsdl:operation>
     <wsdl:operation name="RemoveAllContacts">
-      <soap12:operation soapAction="http://profile.services.babel.com/IProfileService/RemoveAllContacts" style="document" />
+      <soap12:operation soapAction="http://babylon.com/services/ProfileService/RemoveAllContacts" style="document" />
       <wsdl:input>
         <soap12:body use="literal" />
       </wsdl:input>
@@ -270,10 +270,10 @@
       </wsdl:output>
     </wsdl:operation>
   </wsdl:binding>
-  <wsdl:binding name="BasicHttpBinding_IProfileService" type="tns:IProfileService">
+  <wsdl:binding name="BasicHttpBinding_ProfileService" type="tns:ProfileService">
     <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
     <wsdl:operation name="AddProfile">
-      <soap:operation soapAction="http://profile.services.babel.com/IProfileService/AddProfile" style="document" />
+      <soap:operation soapAction="http://babylon.com/services/ProfileService/AddProfile" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>
@@ -282,7 +282,7 @@
       </wsdl:output>
     </wsdl:operation>
     <wsdl:operation name="CreateProfile">
-      <soap:operation soapAction="http://profile.services.babel.com/IProfileService/CreateProfile" style="document" />
+      <soap:operation soapAction="http://babylon.com/services/ProfileService/CreateProfile" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>
@@ -291,7 +291,7 @@
       </wsdl:output>
     </wsdl:operation>
     <wsdl:operation name="GetProfileByCredentials">
-      <soap:operation soapAction="http://profile.services.babel.com/IProfileService/GetProfileByCredentials" style="document" />
+      <soap:operation soapAction="http://babylon.com/services/ProfileService/GetProfileByCredentials" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>
@@ -300,7 +300,7 @@
       </wsdl:output>
     </wsdl:operation>
     <wsdl:operation name="GetProfileByID">
-      <soap:operation soapAction="http://profile.services.babel.com/IProfileService/GetProfileByID" style="document" />
+      <soap:operation soapAction="http://babylon.com/services/ProfileService/GetProfileByID" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>
@@ -309,7 +309,7 @@
       </wsdl:output>
     </wsdl:operation>
     <wsdl:operation name="GetAllProfiles">
-      <soap:operation soapAction="http://profile.services.babel.com/IProfileService/GetAllProfiles" style="document" />
+      <soap:operation soapAction="http://babylon.com/services/ProfileService/GetAllProfiles" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>
@@ -318,7 +318,7 @@
       </wsdl:output>
     </wsdl:operation>
     <wsdl:operation name="ModifyProfile">
-      <soap:operation soapAction="http://profile.services.babel.com/IProfileService/ModifyProfile" style="document" />
+      <soap:operation soapAction="http://babylon.com/services/ProfileService/ModifyProfile" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>
@@ -327,7 +327,7 @@
       </wsdl:output>
     </wsdl:operation>
     <wsdl:operation name="DeleteProfile">
-      <soap:operation soapAction="http://profile.services.babel.com/IProfileService/DeleteProfile" style="document" />
+      <soap:operation soapAction="http://babylon.com/services/ProfileService/DeleteProfile" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>
@@ -336,7 +336,7 @@
       </wsdl:output>
     </wsdl:operation>
     <wsdl:operation name="SearchProfiles">
-      <soap:operation soapAction="http://profile.services.babel.com/IProfileService/SearchProfiles" style="document" />
+      <soap:operation soapAction="http://babylon.com/services/ProfileService/SearchProfiles" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>
@@ -345,7 +345,7 @@
       </wsdl:output>
     </wsdl:operation>
     <wsdl:operation name="AddContact">
-      <soap:operation soapAction="http://profile.services.babel.com/IProfileService/AddContact" style="document" />
+      <soap:operation soapAction="http://babylon.com/services/ProfileService/AddContact" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>
@@ -354,7 +354,7 @@
       </wsdl:output>
     </wsdl:operation>
     <wsdl:operation name="AddContacts">
-      <soap:operation soapAction="http://profile.services.babel.com/IProfileService/AddContacts" style="document" />
+      <soap:operation soapAction="http://babylon.com/services/ProfileService/AddContacts" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>
@@ -363,7 +363,7 @@
       </wsdl:output>
     </wsdl:operation>
     <wsdl:operation name="GetContacts">
-      <soap:operation soapAction="http://profile.services.babel.com/IProfileService/GetContacts" style="document" />
+      <soap:operation soapAction="http://babylon.com/services/ProfileService/GetContacts" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>
@@ -372,7 +372,7 @@
       </wsdl:output>
     </wsdl:operation>
     <wsdl:operation name="RemoveContact">
-      <soap:operation soapAction="http://profile.services.babel.com/IProfileService/RemoveContact" style="document" />
+      <soap:operation soapAction="http://babylon.com/services/ProfileService/RemoveContact" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>
@@ -381,7 +381,7 @@
       </wsdl:output>
     </wsdl:operation>
     <wsdl:operation name="RemoveAllContacts">
-      <soap:operation soapAction="http://profile.services.babel.com/IProfileService/RemoveAllContacts" style="document" />
+      <soap:operation soapAction="http://babylon.com/services/ProfileService/RemoveAllContacts" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>
@@ -391,13 +391,13 @@
     </wsdl:operation>
   </wsdl:binding>
   <wsdl:service name="ProfileService">
-    <wsdl:port name="WSHttpBinding_IProfileService" binding="tns:WSHttpBinding_IProfileService">
+    <wsdl:port name="WSHttpBinding_ProfileService" binding="tns:WSHttpBinding_ProfileService">
       <soap12:address location="http://devbox:8080/Babel.Services/ProfileService.svc" />
       <wsa10:EndpointReference>
         <wsa10:Address>http://devbox:8080/Babel.Services/ProfileService.svc</wsa10:Address>
       </wsa10:EndpointReference>
     </wsdl:port>
-    <wsdl:port name="BasicHttpBinding_IProfileService" binding="tns:BasicHttpBinding_IProfileService">
+    <wsdl:port name="BasicHttpBinding_ProfileService" binding="tns:BasicHttpBinding_ProfileService">
       <soap:address location="http://devbox:8080/Babel.Services/ProfileService.svc/basic" />
     </wsdl:port>
   </wsdl:service>
