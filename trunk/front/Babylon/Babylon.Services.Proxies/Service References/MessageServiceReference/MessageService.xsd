@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://Metro.Services.Babylon/" targetNamespace="http://Metro.Services.Babylon/" version="1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="CreateMessage" type="tns:CreateMessage" />
+  <xs:element name="CreateMessageResponse" type="tns:CreateMessageResponse" />
+  <xs:element name="DeleteMessage" type="tns:DeleteMessage" />
+  <xs:element name="GetMessage" type="tns:GetMessage" />
+  <xs:element name="GetMessageResponse" type="tns:GetMessageResponse" />
+  <xs:element name="GetReceivedMessages" type="tns:GetReceivedMessages" />
+  <xs:element name="GetReceivedMessagesResponse" type="tns:GetReceivedMessagesResponse" />
+  <xs:element name="GetSentMessages" type="tns:GetSentMessages" />
+  <xs:element name="GetSentMessagesResponse" type="tns:GetSentMessagesResponse" />
+  <xs:element name="ModifyMessage" type="tns:ModifyMessage" />
+  <xs:element name="SearchMessages" type="tns:SearchMessages" />
+  <xs:element name="SearchMessagesResponse" type="tns:SearchMessagesResponse" />
+  <xs:element name="SendMessage" type="tns:SendMessage" />
+  <xs:element name="SendMessageResponse" type="tns:SendMessageResponse" />
+  <xs:complexType name="SearchMessages">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="filter" type="tns:messageFilter" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="messageFilter">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="sentAfter" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="sentBefore" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="sentBy" type="xs:string" />
+      <xs:element minOccurs="0" name="subject" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="SearchMessagesResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:message" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="message">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="attachments" nillable="true" type="tns:attachment" />
+      <xs:element minOccurs="0" name="body" type="xs:string" />
+      <xs:element minOccurs="0" name="deleted" type="xs:boolean" />
+      <xs:element minOccurs="0" name="id" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="recipients" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="sender" type="xs:string" />
+      <xs:element minOccurs="0" name="sentOn" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="subject" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="attachment">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="content" type="xs:base64Binary" />
+      <xs:element minOccurs="0" name="contentSize" type="xs:long" />
+      <xs:element minOccurs="0" name="link" type="xs:string" />
+      <xs:element minOccurs="0" name="name" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="ModifyMessage">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="message" type="tns:message" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="CreateMessage">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="sender" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="recipients" type="xs:string" />
+      <xs:element minOccurs="0" name="subject" type="xs:string" />
+      <xs:element minOccurs="0" name="body" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="CreateMessageResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:message" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="GetMessage">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="id" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="GetMessageResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:message" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="GetReceivedMessages">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="recipient" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="GetReceivedMessagesResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:message" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="SendMessage">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="message" type="tns:message" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="SendMessageResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="GetSentMessages">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="sender" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="GetSentMessagesResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:message" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="DeleteMessage">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="id" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>
