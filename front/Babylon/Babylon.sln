@@ -3,10 +3,24 @@ Microsoft Visual Studio Solution File, Format Version 11.00
 # Visual Studio 2010
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Babylon.Site", "Babylon.Site\Babylon.Site.csproj", "{D4851CBD-B7B3-472E-8BFE-CDF436CD53C2}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Babylon.Services.Proxies", "Babylon.Services.Proxies\Babylon.Services.Proxies.csproj", "{0777D05E-0A6D-442C-96BB-8409C241922F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Babylon.Services.Proxies.Test", "Babylon.Services.Proxies.Test\Babylon.Services.Proxies.Test.csproj", "{1EE64270-3BDC-43B2-93A1-CE75C50D613E}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{7FB4D0D6-29CC-427B-BEB2-5581D713F5DD}"
+	ProjectSection(SolutionItems) = preProject
+		Babylon.vsmdi = Babylon.vsmdi
+		Local.testsettings = Local.testsettings
+		TraceAndTestImpact.testsettings = TraceAndTestImpact.testsettings
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SubversionScc) = preSolution
 		Svn-Managed = True
 		Manager = AnkhSVN - Subversion Support for Visual Studio
+	EndGlobalSection
+	GlobalSection(TestCaseManagementSettings) = postSolution
+		CategoryFile = Babylon.vsmdi
 	EndGlobalSection
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -17,6 +31,14 @@ Global
 		{D4851CBD-B7B3-472E-8BFE-CDF436CD53C2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D4851CBD-B7B3-472E-8BFE-CDF436CD53C2}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D4851CBD-B7B3-472E-8BFE-CDF436CD53C2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0777D05E-0A6D-442C-96BB-8409C241922F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0777D05E-0A6D-442C-96BB-8409C241922F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0777D05E-0A6D-442C-96BB-8409C241922F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0777D05E-0A6D-442C-96BB-8409C241922F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1EE64270-3BDC-43B2-93A1-CE75C50D613E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1EE64270-3BDC-43B2-93A1-CE75C50D613E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1EE64270-3BDC-43B2-93A1-CE75C50D613E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1EE64270-3BDC-43B2-93A1-CE75C50D613E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
