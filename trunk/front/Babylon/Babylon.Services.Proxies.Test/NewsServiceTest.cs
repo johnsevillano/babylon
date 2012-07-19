@@ -35,9 +35,13 @@ namespace Babylon.Services.Proxies.Test
 
             nItem.picture = Encoding.UTF8.GetBytes("hola coca cola");
             nItem.pictureScale = 16.9;
+            nItem.pictureScaleSpecified = true;
             nItem.pictureSize = 20;
+            nItem.pictureSizeSpecified = true;
             nItem.rating = 3;
+            nItem.ratingSpecified = true;
             nItem.reviews = 50;
+            nItem.reviewsSpecified = true;
 
             string nItemID = client.ReportNewsItem(nItem);
 
@@ -60,9 +64,14 @@ namespace Babylon.Services.Proxies.Test
                 reportedBy = "4ab87d67-db83-4364-9ded-d6dd4e616a34",
                 picture = bytes,
                 pictureScale = 16.9,
+                pictureScaleSpecified = true,
                 pictureSize = bytes.Length,
+                pictureSizeSpecified = true,
                 rating = 10,
-                reviews = 50
+                ratingSpecified = true,
+                reviews = 50,
+                reviewsSpecified = true,
+                tags = new string[] { "tag1", "tag2", "tag3" }
             };
 
             string id = client.ReportNewsItem(nItem);
@@ -92,9 +101,14 @@ namespace Babylon.Services.Proxies.Test
                 reportedBy = "4ab87d67-db83-4364-9ded-d6dd4e616a34",
                 picture = bytes,
                 pictureScale = 16.9,
+                pictureScaleSpecified = true,
                 pictureSize = bytes.Length,
+                pictureSizeSpecified = true,
                 rating = 10,
-                reviews = 50
+                ratingSpecified = true,
+                reviews = 50,
+                reviewsSpecified = true,
+                tags = new string[] { "tag1", "tag2", "tag3" }
             };
 
             string id1 = client.ReportNewsItem(nItem);
@@ -108,9 +122,14 @@ namespace Babylon.Services.Proxies.Test
                 reportedBy = "4ab87d67-8888-4444-9999-d6dd4e616a34",
                 picture = bytes,
                 pictureScale = 16.9,
+                pictureScaleSpecified = true,
                 pictureSize = bytes.Length,
+                pictureSizeSpecified = true,
                 rating = 10,
-                reviews = 50
+                ratingSpecified = true,
+                reviews = 50,
+                reviewsSpecified = true,
+                tags = new string[] { "tag4", "tag5" }
             };
 
             string id2 = client.ReportNewsItem(nItem);
@@ -121,8 +140,8 @@ namespace Babylon.Services.Proxies.Test
             Assert.IsNotNull(latest);
             Assert.AreEqual<int>(1, latest.Length);
 
-            client.DeleteNewsItem(id1);
-            client.DeleteNewsItem(id2);
+            //client.DeleteNewsItem(id1);
+            //client.DeleteNewsItem(id2);
         }
 
         [TestMethod]
@@ -139,9 +158,13 @@ namespace Babylon.Services.Proxies.Test
                 reportedBy = "4ab87d67-db83-4364-9ded-d6dd4e616a34",
                 picture = bytes,
                 pictureScale = 16.9,
+                pictureScaleSpecified = true,
                 pictureSize = bytes.Length,
+                pictureSizeSpecified = true,
                 rating = 10,
-                reviews = 50
+                ratingSpecified = true,
+                reviews = 50,
+                reviewsSpecified = true
             };
 
             string id = client.ReportNewsItem(nItem);
@@ -151,7 +174,9 @@ namespace Babylon.Services.Proxies.Test
             nItemFromDB.title = "Modified title";
             nItemFromDB.body = "Modified body";
             nItemFromDB.rating = 5;
+            nItemFromDB.ratingSpecified = true;
             nItemFromDB.reviews = 1;
+            nItemFromDB.reviewsSpecified = true;
 
             client.ModifyNewsItem(nItemFromDB);
 
