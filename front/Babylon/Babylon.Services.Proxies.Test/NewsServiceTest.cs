@@ -71,7 +71,11 @@ namespace Babylon.Services.Proxies.Test
                 ratingSpecified = true,
                 reviews = 50,
                 reviewsSpecified = true,
-                tags = new string[] { "tag1", "tag2", "tag3" }
+                tags = new string[] { "tag1", "tag2", "tag3" },
+                categories = new newsItemEntry[] {
+                    new newsItemEntry() { key="sport", value="Sports" },
+                    new newsItemEntry() { key="economy", value="Bussiness and Economy" }
+                }
             };
 
             string id = client.ReportNewsItem(nItem);
@@ -108,7 +112,11 @@ namespace Babylon.Services.Proxies.Test
                 ratingSpecified = true,
                 reviews = 50,
                 reviewsSpecified = true,
-                tags = new string[] { "tag1", "tag2", "tag3" }
+                tags = new string[] { "tag1", "tag2", "tag3" },
+                categories = new newsItemEntry[] {
+                    new newsItemEntry() { key="sport", value="Sports" },
+                    new newsItemEntry() { key="economy", value="Bussiness and Economy" }
+                }
             };
 
             string id1 = client.ReportNewsItem(nItem);
@@ -129,7 +137,11 @@ namespace Babylon.Services.Proxies.Test
                 ratingSpecified = true,
                 reviews = 50,
                 reviewsSpecified = true,
-                tags = new string[] { "tag4", "tag5" }
+                tags = new string[] { "tag4", "tag5" },
+                categories = new newsItemEntry[] {
+                    new newsItemEntry() { key="culture", value="Culture and Art" },
+                    new newsItemEntry() { key="international", value="International" }
+                }
             };
 
             string id2 = client.ReportNewsItem(nItem);
@@ -140,8 +152,8 @@ namespace Babylon.Services.Proxies.Test
             Assert.IsNotNull(latest);
             Assert.AreEqual<int>(1, latest.Length);
 
-            //client.DeleteNewsItem(id1);
-            //client.DeleteNewsItem(id2);
+            client.DeleteNewsItem(id1);
+            client.DeleteNewsItem(id2);
         }
 
         [TestMethod]
