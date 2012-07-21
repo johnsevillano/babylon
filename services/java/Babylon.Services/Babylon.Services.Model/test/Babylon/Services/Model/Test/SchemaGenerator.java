@@ -48,6 +48,12 @@ public class SchemaGenerator {
 
     @Test
     public void dropSchema() {
+        // Load configuration file
+        Configuration cfg = new Configuration();
+        cfg.configure("hibernate.cfg.xml");
+
+        // Create database
+        new SchemaExport(cfg).drop(false, true);
     }
 
 }
