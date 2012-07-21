@@ -14,5 +14,15 @@
       <property name="pictureScale" column="PICTURE_SCALE"/>
       <property name="reviews" column="REVIEWS"/>
       <property name="rating" column="RATING"/>
+      <list name="tags" table="NEWS_ITEM_TAGS" lazy="false">
+          <key column="NEWS_ITEM_ID" not-null="true"/>
+          <list-index column="TAG_ORDER"/>
+          <element column="TAG" type="string" not-null="true"/>
+      </list>
+      <map name="categories" table="NEWS_ITEM_CATEGORIES" lazy="false">
+          <key column="NEWS_ITEM_ID" not-null="true"/>
+          <map-key column="CATEGORY_KEY" type="string"/>
+          <element column="CATEGORY_NAME" type="string" not-null="true"/>
+      </map>
   </class>
 </hibernate-mapping>
