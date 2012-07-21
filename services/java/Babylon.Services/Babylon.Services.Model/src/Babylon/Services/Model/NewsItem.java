@@ -212,16 +212,6 @@ public class NewsItem {
      * @return 
      */
     public List<String> getTags() {
-        
-        tags = new LinkedList<String>();
-        
-        tags.add("football");
-        tags.add("europe");
-        tags.add("usa");
-        tags.add("basketball");
-        tags.add("crisis");
-        tags.add("trainning");
-        
         return tags;
     }
     
@@ -240,16 +230,6 @@ public class NewsItem {
      * @return 
      */
     public Map<String, String> getCategories() {
-        
-        categories = new HashMap<String, String>();
-        
-        categories.put("sports", "Sport News");
-        categories.put("business", "Business News");
-        categories.put("international", "International News");
-        categories.put("politics", "Politics News");
-        categories.put("weather", "Weather News");
-        categories.put("culture", "Culture News");
-        
         return categories;
     }
     
