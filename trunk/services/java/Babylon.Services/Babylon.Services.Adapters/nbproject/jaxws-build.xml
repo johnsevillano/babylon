@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+        *** GENERATED FROM jax-ws.xml - DO NOT EDIT !                             ***
+        *** TO MODIFY wsimport options USE Web Service node -> Edit WS Attributes ***
+        *** TO CHANGE TARGETS GENERATED TO jaxws-build.xml COPY THOSE             ***
+        *** TARGETS TO ../build.xml AND MODIFY THAT FILE INSTEAD                  ***
+
+        -->
+<project xmlns:xalan="http://xml.apache.org/xslt" xmlns:j2seproject3="http://www.netbeans.org/ns/j2se-project/3" xmlns:jaxws="http://www.netbeans.org/ns/jax-ws/1">
+    <!--
+                ===================
+                JAX-WS WSIMPORT SECTION
+                ===================
+            -->
+    <target name="wsimport-init" depends="init">
+        <mkdir dir="${build.generated.sources.dir}/jax-ws"/>
+        <taskdef name="wsimport" classname="com.sun.tools.ws.ant.WsImport">
+            <classpath path="${libs.jaxws21.classpath}"/>
+        </taskdef>
+    </target>
+    <target name="wsimport-client-ProfileService" depends="wsimport-init">
+        <mkdir dir="${build.generated.dir}/jax-wsCache/ProfileService"/>
+        <property name="wsdl-ProfileService" location="xml-resources/web-service-references/ProfileService/wsdl/devbox_8080/Babel.Services/ProfileService.svc.wsdl"/>
+        <wsimport sourcedestdir="${build.generated.dir}/jax-wsCache/ProfileService" destdir="${build.generated.dir}/jax-wsCache/ProfileService" wsdl="${wsdl-ProfileService}" catalog="catalog.xml" extension="true" verbose="true" wsdlLocation="http://devbox:8080/Babel.Services/ProfileService.svc?wsdl" xendorsed="true" package="Babylon.Services.Proxies.ProfileService">
+            <depends file="${wsdl-ProfileService}"/>
+            <produces dir="${build.generated.dir}/jax-wsCache/ProfileService"/>
+        </wsimport>
+        <copy todir="${build.generated.sources.dir}/jax-ws">
+            <fileset dir="${build.generated.dir}/jax-wsCache/ProfileService">
+                <include name="**/*.java"/>
+            </fileset>
+        </copy>
+    </target>
+    <target name="wsimport-client-clean-ProfileService" depends="-init-project">
+        <delete dir="${build.generated.dir}/jax-wsCache/ProfileService"/>
+        <delete dir="${build.generated.sources.dir}/jax-ws/Babylon/Services/Proxies/ProfileService"/>
+    </target>
+    <target name="wsimport-client-GroupService" depends="wsimport-init">
+        <mkdir dir="${build.generated.dir}/jax-wsCache/GroupService"/>
+        <property name="wsdl-GroupService" location="xml-resources/web-service-references/GroupService/wsdl/devbox_8080/Babel.Services/GroupService.svc.wsdl"/>
+        <wsimport sourcedestdir="${build.generated.dir}/jax-wsCache/GroupService" destdir="${build.generated.dir}/jax-wsCache/GroupService" wsdl="${wsdl-GroupService}" catalog="catalog.xml" extension="true" verbose="true" wsdlLocation="http://devbox:8080/Babel.Services/GroupService.svc?wsdl" xendorsed="true" package="Babylon.Services.Proxies.GroupService">
+            <depends file="${wsdl-GroupService}"/>
+            <produces dir="${build.generated.dir}/jax-wsCache/GroupService"/>
+        </wsimport>
+        <copy todir="${build.generated.sources.dir}/jax-ws">
+            <fileset dir="${build.generated.dir}/jax-wsCache/GroupService">
+                <include name="**/*.java"/>
+            </fileset>
+        </copy>
+    </target>
+    <target name="wsimport-client-clean-GroupService" depends="-init-project">
+        <delete dir="${build.generated.dir}/jax-wsCache/GroupService"/>
+        <delete dir="${build.generated.sources.dir}/jax-ws/Babylon/Services/Proxies/GroupService"/>
+    </target>
+    <target name="wsimport-client-MediaService" depends="wsimport-init">
+        <mkdir dir="${build.generated.dir}/jax-wsCache/MediaService"/>
+        <property name="wsdl-MediaService" location="xml-resources/web-service-references/MediaService/wsdl/devbox_8080/Babel.Services/MediaService.svc.wsdl"/>
+        <wsimport sourcedestdir="${build.generated.dir}/jax-wsCache/MediaService" destdir="${build.generated.dir}/jax-wsCache/MediaService" wsdl="${wsdl-MediaService}" catalog="catalog.xml" extension="true" verbose="true" wsdlLocation="http://devbox:8080/Babel.Services/MediaService.svc?wsdl" xendorsed="true" package="Babylon.Services.Proxies.MediaService">
+            <depends file="${wsdl-MediaService}"/>
+            <produces dir="${build.generated.dir}/jax-wsCache/MediaService"/>
+        </wsimport>
+        <copy todir="${build.generated.sources.dir}/jax-ws">
+            <fileset dir="${build.generated.dir}/jax-wsCache/MediaService">
+                <include name="**/*.java"/>
+            </fileset>
+        </copy>
+    </target>
+    <target name="wsimport-client-clean-MediaService" depends="-init-project">
+        <delete dir="${build.generated.dir}/jax-wsCache/MediaService"/>
+        <delete dir="${build.generated.sources.dir}/jax-ws/Babylon/Services/Proxies/MediaService"/>
+    </target>
+    <target name="wsimport-client-generate" depends="wsimport-client-ProfileService, wsimport-client-GroupService, wsimport-client-MediaService"/>
+</project>
