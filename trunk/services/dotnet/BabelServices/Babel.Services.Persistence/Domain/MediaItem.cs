@@ -35,18 +35,7 @@ namespace Babel.Services.Domain
 
         public virtual Profile Owner { get; set; }
 
+        [DataMember]
         public virtual byte[] Bytes { get; set; }
-
-        public virtual string Base64
-        {
-            get
-            {
-                return Convert.ToBase64String(Bytes);
-            }
-            set
-            {
-                Bytes = Convert.FromBase64String(value);
-            }
-        }
     }
 }

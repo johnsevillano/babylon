@@ -18,10 +18,10 @@ namespace Babel.Services
         Guid CreateMediaItem(string name, string title, MediaType type, MediaFormat format, string alt);
 
         [OperationContract]
-        void UploadMediaItem(Guid id, string base64);
+        void UploadMediaItem(Guid id, byte[] bytes);
 
         [OperationContract]
-        string DownloadMediaItem(Guid id);
+        byte[] DownloadMediaItem(Guid id);
 
         [OperationContract]
         MediaItem GetMediaItem(Guid id);

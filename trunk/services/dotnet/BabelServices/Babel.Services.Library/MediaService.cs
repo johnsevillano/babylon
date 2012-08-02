@@ -32,17 +32,17 @@ namespace Babel.Services
             return newMediaItem.ID;
         }
 
-        public void UploadMediaItem(Guid id, string base64)
+        public void UploadMediaItem(Guid id, byte[] bytes)
         {
             MediaItem mediaItem = Repository.GetMediaItemByID(id);
-            mediaItem.Base64 = base64;
+            mediaItem.Bytes = bytes;
             Repository.Update(mediaItem);
         }
 
-        public string DownloadMediaItem(Guid id)
+        public byte[] DownloadMediaItem(Guid id)
         {
             MediaItem mediaItem = Repository.GetMediaItemByID(id);
-            return mediaItem.Base64;
+            return mediaItem.Bytes;
         }
 
         public MediaItem GetMediaItem(Guid id)
