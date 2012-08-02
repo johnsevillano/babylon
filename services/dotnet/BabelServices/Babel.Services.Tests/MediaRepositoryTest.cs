@@ -109,7 +109,6 @@ namespace Babel.Services.Tests
                 Assert.AreEqual<MediaType>(media.Type, mediaFromDB.Type);
                 Assert.AreEqual<MediaFormat>(media.Format, mediaFromDB.Format);
                 Assert.AreEqual<string>(media.AlternativeText, mediaFromDB.AlternativeText);
-                Assert.AreEqual<string>(media.Base64, mediaFromDB.Base64);
             }
         }
         
