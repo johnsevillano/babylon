@@ -22,12 +22,18 @@
         <mkdir dir="${build.generated.dir}/jax-wsCache/ProfileService"/>
         <property name="wsdl-ProfileService" location="xml-resources/web-service-references/ProfileService/wsdl/devbox_8080/Babel.Services/ProfileService.svc.wsdl"/>
         <wsimport sourcedestdir="${build.generated.dir}/jax-wsCache/ProfileService" destdir="${build.generated.dir}/jax-wsCache/ProfileService" wsdl="${wsdl-ProfileService}" catalog="catalog.xml" extension="true" verbose="true" wsdlLocation="http://devbox:8080/Babel.Services/ProfileService.svc?wsdl" xendorsed="true" package="Babylon.Services.Proxies.ProfileService">
+            <binding dir="xml-resources/web-service-references/ProfileService/bindings" includes="jaxb-bindings.xml"/>
             <depends file="${wsdl-ProfileService}"/>
             <produces dir="${build.generated.dir}/jax-wsCache/ProfileService"/>
         </wsimport>
         <copy todir="${build.generated.sources.dir}/jax-ws">
             <fileset dir="${build.generated.dir}/jax-wsCache/ProfileService">
                 <include name="**/*.java"/>
+            </fileset>
+        </copy>
+        <copy todir="${build.classes.dir}">
+            <fileset dir="${build.generated.dir}/jax-wsCache/ProfileService">
+                <include name="**/*.xml"/>
             </fileset>
         </copy>
     </target>
@@ -39,12 +45,18 @@
         <mkdir dir="${build.generated.dir}/jax-wsCache/GroupService"/>
         <property name="wsdl-GroupService" location="xml-resources/web-service-references/GroupService/wsdl/devbox_8080/Babel.Services/GroupService.svc.wsdl"/>
         <wsimport sourcedestdir="${build.generated.dir}/jax-wsCache/GroupService" destdir="${build.generated.dir}/jax-wsCache/GroupService" wsdl="${wsdl-GroupService}" catalog="catalog.xml" extension="true" verbose="true" wsdlLocation="http://devbox:8080/Babel.Services/GroupService.svc?wsdl" xendorsed="true" package="Babylon.Services.Proxies.GroupService">
+            <binding dir="xml-resources/web-service-references/GroupService/bindings" includes="jaxb-bindings.xml"/>
             <depends file="${wsdl-GroupService}"/>
             <produces dir="${build.generated.dir}/jax-wsCache/GroupService"/>
         </wsimport>
         <copy todir="${build.generated.sources.dir}/jax-ws">
             <fileset dir="${build.generated.dir}/jax-wsCache/GroupService">
                 <include name="**/*.java"/>
+            </fileset>
+        </copy>
+        <copy todir="${build.classes.dir}">
+            <fileset dir="${build.generated.dir}/jax-wsCache/GroupService">
+                <include name="**/*.xml"/>
             </fileset>
         </copy>
     </target>
@@ -56,12 +68,18 @@
         <mkdir dir="${build.generated.dir}/jax-wsCache/MediaService"/>
         <property name="wsdl-MediaService" location="xml-resources/web-service-references/MediaService/wsdl/devbox_8080/Babel.Services/MediaService.svc.wsdl"/>
         <wsimport sourcedestdir="${build.generated.dir}/jax-wsCache/MediaService" destdir="${build.generated.dir}/jax-wsCache/MediaService" wsdl="${wsdl-MediaService}" catalog="catalog.xml" extension="true" verbose="true" wsdlLocation="http://devbox:8080/Babel.Services/MediaService.svc?wsdl" xendorsed="true" package="Babylon.Services.Proxies.MediaService">
+            <binding dir="xml-resources/web-service-references/MediaService/bindings" includes="jaxb-bindings.xml"/>
             <depends file="${wsdl-MediaService}"/>
             <produces dir="${build.generated.dir}/jax-wsCache/MediaService"/>
         </wsimport>
         <copy todir="${build.generated.sources.dir}/jax-ws">
             <fileset dir="${build.generated.dir}/jax-wsCache/MediaService">
                 <include name="**/*.java"/>
+            </fileset>
+        </copy>
+        <copy todir="${build.classes.dir}">
+            <fileset dir="${build.generated.dir}/jax-wsCache/MediaService">
+                <include name="**/*.xml"/>
             </fileset>
         </copy>
     </target>

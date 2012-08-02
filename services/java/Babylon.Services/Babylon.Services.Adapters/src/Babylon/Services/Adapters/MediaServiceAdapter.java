@@ -25,7 +25,7 @@ public class MediaServiceAdapter {
         port.deleteMediaItem(id);
     }
 
-    public String downloadMediaItem(String id) {
+    public byte[] downloadMediaItem(String id) {
         MediaService_Service service = new MediaService_Service();
         MediaService port = service.getWSHttpBindingMediaService();
         return port.downloadMediaItem(id);
@@ -61,10 +61,10 @@ public class MediaServiceAdapter {
         return port.searchMediaItems(filter);
     }
 
-    public void uploadMediaItem(String id, String base64) {
+    public void uploadMediaItem(String id, byte[] bytes) {
         MediaService_Service service = new MediaService_Service();
         MediaService port = service.getWSHttpBindingMediaService();
-        port.uploadMediaItem(id, base64);
+        port.uploadMediaItem(id, bytes);
     }
     
 }
