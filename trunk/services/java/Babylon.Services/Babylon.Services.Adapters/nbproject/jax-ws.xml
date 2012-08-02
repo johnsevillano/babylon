@@ -7,6 +7,9 @@
       <local-wsdl-file>devbox_8080/Babel.Services/ProfileService.svc.wsdl</local-wsdl-file>
       <package-name forceReplace="true">Babylon.Services.Proxies.ProfileService</package-name>
       <catalog-file>catalog.xml</catalog-file>
+      <binding>
+        <file-name>jaxb-bindings.xml</file-name>
+      </binding>
       <wsimport-options>
         <wsimport-option>
           <wsimport-option-name>extension</wsimport-option-name>
@@ -35,6 +38,9 @@
       <local-wsdl-file>devbox_8080/Babel.Services/GroupService.svc.wsdl</local-wsdl-file>
       <package-name forceReplace="true">Babylon.Services.Proxies.GroupService</package-name>
       <catalog-file>catalog.xml</catalog-file>
+      <binding>
+        <file-name>jaxb-bindings.xml</file-name>
+      </binding>
       <wsimport-options>
         <wsimport-option>
           <wsimport-option-name>extension</wsimport-option-name>
@@ -63,6 +69,9 @@
       <local-wsdl-file>devbox_8080/Babel.Services/MediaService.svc.wsdl</local-wsdl-file>
       <package-name forceReplace="true">Babylon.Services.Proxies.MediaService</package-name>
       <catalog-file>catalog.xml</catalog-file>
+      <binding>
+        <file-name>jaxb-bindings.xml</file-name>
+      </binding>
       <wsimport-options>
         <wsimport-option>
           <wsimport-option-name>extension</wsimport-option-name>
