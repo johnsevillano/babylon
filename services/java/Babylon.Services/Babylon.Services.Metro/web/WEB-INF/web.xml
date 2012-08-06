@@ -13,6 +13,11 @@
         <servlet-class>com.sun.xml.ws.transport.http.servlet.WSServlet</servlet-class>
         <load-on-startup>1</load-on-startup>
     </servlet>
+    <servlet>
+        <servlet-name>ProfileService</servlet-name>
+        <servlet-class>com.sun.xml.ws.transport.http.servlet.WSServlet</servlet-class>
+        <load-on-startup>1</load-on-startup>
+    </servlet>
     <servlet-mapping>
         <servlet-name>MessageService</servlet-name>
         <url-pattern>/MessageService</url-pattern>
@@ -20,6 +25,10 @@
     <servlet-mapping>
         <servlet-name>NewsService</servlet-name>
         <url-pattern>/NewsService</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>ProfileService</servlet-name>
+        <url-pattern>/ProfileService</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>
