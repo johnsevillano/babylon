@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:ns1="http://schemas.datacontract.org/2004/07/Babel.Services.Domain" xmlns:tns="http://Metro.Services.Babylon/" xmlns:ns2="http://schemas.microsoft.com/2003/10/Serialization/Arrays" targetNamespace="http://Metro.Services.Babylon/" version="1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://guillelaptop:8084/Babylon.Services.Metro/ProfileService?xsd=2" namespace="http://schemas.datacontract.org/2004/07/Babel.Services.Domain" />
+  <xs:import schemaLocation="http://guillelaptop:8084/Babylon.Services.Metro/ProfileService?xsd=1" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+  <xs:element name="AddContact" type="tns:AddContact" />
+  <xs:element name="AddContactResponse" type="tns:AddContactResponse" />
+  <xs:element name="AddContacts" type="tns:AddContacts" />
+  <xs:element name="AddContactsResponse" type="tns:AddContactsResponse" />
+  <xs:element name="AddProfile" type="tns:AddProfile" />
+  <xs:element name="AddProfileResponse" type="tns:AddProfileResponse" />
+  <xs:element name="CreateProfile" type="tns:CreateProfile" />
+  <xs:element name="CreateProfileResponse" type="tns:CreateProfileResponse" />
+  <xs:element name="DeleteProfile" type="tns:DeleteProfile" />
+  <xs:element name="DeleteProfileResponse" type="tns:DeleteProfileResponse" />
+  <xs:element name="GetAllProfiles" type="tns:GetAllProfiles" />
+  <xs:element name="GetAllProfilesResponse" type="tns:GetAllProfilesResponse" />
+  <xs:element name="GetContacts" type="tns:GetContacts" />
+  <xs:element name="GetContactsResponse" type="tns:GetContactsResponse" />
+  <xs:element name="GetProfileByCredentials" type="tns:GetProfileByCredentials" />
+  <xs:element name="GetProfileByCredentialsResponse" type="tns:GetProfileByCredentialsResponse" />
+  <xs:element name="GetProfileByID" type="tns:GetProfileByID" />
+  <xs:element name="GetProfileByIDResponse" type="tns:GetProfileByIDResponse" />
+  <xs:element name="ModifyProfile" type="tns:ModifyProfile" />
+  <xs:element name="ModifyProfileResponse" type="tns:ModifyProfileResponse" />
+  <xs:element name="RemoveAllContacts" type="tns:RemoveAllContacts" />
+  <xs:element name="RemoveAllContactsResponse" type="tns:RemoveAllContactsResponse" />
+  <xs:element name="RemoveContact" type="tns:RemoveContact" />
+  <xs:element name="RemoveContactResponse" type="tns:RemoveContactResponse" />
+  <xs:complexType name="ModifyProfile">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="profile" type="ns1:Profile" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="ModifyProfileResponse">
+    <xs:sequence />
+  </xs:complexType>
+  <xs:complexType name="CreateProfile">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="username" type="xs:string" />
+      <xs:element minOccurs="0" name="password" type="xs:string" />
+      <xs:element minOccurs="0" name="email" type="xs:string" />
+      <xs:element minOccurs="0" name="name" type="xs:string" />
+      <xs:element minOccurs="0" name="surname" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="CreateProfileResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="AddProfile">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="profile" type="ns1:Profile" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="AddProfileResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="RemoveContact">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="id" type="xs:string" />
+      <xs:element minOccurs="0" name="contactID" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="RemoveContactResponse">
+    <xs:sequence />
+  </xs:complexType>
+  <xs:complexType name="GetProfileByCredentials">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="username" type="xs:string" />
+      <xs:element minOccurs="0" name="password" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="GetProfileByCredentialsResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="ns1:Profile" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="DeleteProfile">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="id" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="DeleteProfileResponse">
+    <xs:sequence />
+  </xs:complexType>
+  <xs:complexType name="GetAllProfiles">
+    <xs:sequence />
+  </xs:complexType>
+  <xs:complexType name="GetAllProfilesResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="ns1:ArrayOfProfile" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="AddContacts">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="id" type="xs:string" />
+      <xs:element minOccurs="0" name="contactIDs" type="ns2:ArrayOfguid" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="AddContactsResponse">
+    <xs:sequence />
+  </xs:complexType>
+  <xs:complexType name="RemoveAllContacts">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="id" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="RemoveAllContactsResponse">
+    <xs:sequence />
+  </xs:complexType>
+  <xs:complexType name="GetProfileByID">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="id" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="GetProfileByIDResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="ns1:Profile" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="GetContacts">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="id" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="GetContactsResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="ns1:ArrayOfProfile" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="AddContact">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="id" type="xs:string" />
+      <xs:element minOccurs="0" name="name" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="AddContactResponse">
+    <xs:sequence />
+  </xs:complexType>
+</xs:schema>

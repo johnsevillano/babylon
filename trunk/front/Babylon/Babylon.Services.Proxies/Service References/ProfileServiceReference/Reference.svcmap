@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="57506f02-de7c-4764-8268-4946fddad59f" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings>
+      <CollectionMapping TypeName="System.Collections.Generic.List`1" Category="List" />
+    </CollectionMappings>
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://guillelaptop:8084/Babylon.Services.Metro/ProfileService?wsdl" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="ProfileService.xsd" MetadataType="Schema" ID="6a7e081f-44f1-40c9-bd93-64f3ae34b291" SourceId="1" SourceUrl="http://guillelaptop:8084/Babylon.Services.Metro/ProfileService?xsd=2" />
+    <MetadataFile FileName="ProfileService1.xsd" MetadataType="Schema" ID="19b36377-1dcb-41c1-869a-e0c9f1c29bfe" SourceId="1" SourceUrl="http://guillelaptop:8084/Babylon.Services.Metro/ProfileService?xsd=4" />
+    <MetadataFile FileName="ProfileService2.xsd" MetadataType="Schema" ID="0d4a7698-1522-40d0-a120-0ff9c054ca1b" SourceId="1" SourceUrl="http://guillelaptop:8084/Babylon.Services.Metro/ProfileService?xsd=3" />
+    <MetadataFile FileName="ProfileService3.xsd" MetadataType="Schema" ID="ac556a63-b4af-4e49-a59a-9a536036d967" SourceId="1" SourceUrl="http://guillelaptop:8084/Babylon.Services.Metro/ProfileService?xsd=1" />
+    <MetadataFile FileName="ProfileService.wsdl" MetadataType="Wsdl" ID="20e4934e-154b-40b6-b22d-797cf6a4a5cb" SourceId="1" SourceUrl="http://guillelaptop:8084/Babylon.Services.Metro/ProfileService?wsdl" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>
