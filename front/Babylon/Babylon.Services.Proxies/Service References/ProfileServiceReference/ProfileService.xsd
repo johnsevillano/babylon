@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/Babel.Services.Domain" xmlns:ns1="http://schemas.datacontract.org/2004/07/Babel.Services.Common" targetNamespace="http://schemas.datacontract.org/2004/07/Babel.Services.Domain" version="1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://guillelaptop:8084/Babylon.Services.Metro/ProfileService?xsd=3" namespace="http://schemas.datacontract.org/2004/07/Babel.Services.Common" />
+  <xs:complexType name="Profile">
+    <xs:sequence>
+      <xs:element minOccurs="0" form="qualified" name="Address" nillable="true" type="tns:Address" />
+      <xs:element minOccurs="0" form="qualified" name="CreatedOn" type="xs:dateTime" />
+      <xs:element minOccurs="0" form="qualified" name="DateOfBirth" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" form="qualified" name="Description" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" form="qualified" name="Email" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" form="qualified" name="Gender" nillable="true" type="ns1:Gender" />
+      <xs:element minOccurs="0" form="qualified" name="ID" type="xs:string" />
+      <xs:element minOccurs="0" form="qualified" name="Name" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" form="qualified" name="Password" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" form="qualified" name="Picture" nillable="true" type="xs:base64Binary" />
+      <xs:element minOccurs="0" form="qualified" name="PictureUploadedOn" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" form="qualified" name="Surname" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" form="qualified" name="UpdatedOn" type="xs:dateTime" />
+      <xs:element minOccurs="0" form="qualified" name="Username" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="Address">
+    <xs:sequence>
+      <xs:element minOccurs="0" form="qualified" name="City" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" form="qualified" name="PostalCode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" form="qualified" name="Street" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="ArrayOfProfile">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" form="qualified" name="Profile" nillable="true" type="tns:Profile" />
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>

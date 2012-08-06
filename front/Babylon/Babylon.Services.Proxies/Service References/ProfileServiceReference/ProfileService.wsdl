@@ -1,0 +1,255 @@
+<?xml version="1.0" encoding="utf-8"?>
+<definitions xmlns:wsp="http://www.w3.org/ns/ws-policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:tns="http://Metro.Services.Babylon/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:wsp1_2="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" name="ProfileService" targetNamespace="http://Metro.Services.Babylon/" xmlns="http://schemas.xmlsoap.org/wsdl/">
+  <types>
+    <xsd:schema>
+      <xsd:import schemaLocation="http://guillelaptop:8084/Babylon.Services.Metro/ProfileService?xsd=1" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+    </xsd:schema>
+    <xsd:schema>
+      <xsd:import schemaLocation="http://guillelaptop:8084/Babylon.Services.Metro/ProfileService?xsd=2" namespace="http://schemas.datacontract.org/2004/07/Babel.Services.Domain" />
+    </xsd:schema>
+    <xsd:schema>
+      <xsd:import schemaLocation="http://guillelaptop:8084/Babylon.Services.Metro/ProfileService?xsd=3" namespace="http://schemas.datacontract.org/2004/07/Babel.Services.Common" />
+    </xsd:schema>
+    <xsd:schema>
+      <xsd:import schemaLocation="http://guillelaptop:8084/Babylon.Services.Metro/ProfileService?xsd=4" namespace="http://Metro.Services.Babylon/" />
+    </xsd:schema>
+  </types>
+  <message name="AddContact">
+    <part name="parameters" element="tns:AddContact" />
+  </message>
+  <message name="AddContactResponse">
+    <part name="parameters" element="tns:AddContactResponse" />
+  </message>
+  <message name="AddContacts">
+    <part name="parameters" element="tns:AddContacts" />
+  </message>
+  <message name="AddContactsResponse">
+    <part name="parameters" element="tns:AddContactsResponse" />
+  </message>
+  <message name="AddProfile">
+    <part name="parameters" element="tns:AddProfile" />
+  </message>
+  <message name="AddProfileResponse">
+    <part name="parameters" element="tns:AddProfileResponse" />
+  </message>
+  <message name="CreateProfile">
+    <part name="parameters" element="tns:CreateProfile" />
+  </message>
+  <message name="CreateProfileResponse">
+    <part name="parameters" element="tns:CreateProfileResponse" />
+  </message>
+  <message name="DeleteProfile">
+    <part name="parameters" element="tns:DeleteProfile" />
+  </message>
+  <message name="DeleteProfileResponse">
+    <part name="parameters" element="tns:DeleteProfileResponse" />
+  </message>
+  <message name="GetAllProfiles">
+    <part name="parameters" element="tns:GetAllProfiles" />
+  </message>
+  <message name="GetAllProfilesResponse">
+    <part name="parameters" element="tns:GetAllProfilesResponse" />
+  </message>
+  <message name="GetContacts">
+    <part name="parameters" element="tns:GetContacts" />
+  </message>
+  <message name="GetContactsResponse">
+    <part name="parameters" element="tns:GetContactsResponse" />
+  </message>
+  <message name="GetProfileByCredentials">
+    <part name="parameters" element="tns:GetProfileByCredentials" />
+  </message>
+  <message name="GetProfileByCredentialsResponse">
+    <part name="parameters" element="tns:GetProfileByCredentialsResponse" />
+  </message>
+  <message name="GetProfileByID">
+    <part name="parameters" element="tns:GetProfileByID" />
+  </message>
+  <message name="GetProfileByIDResponse">
+    <part name="parameters" element="tns:GetProfileByIDResponse" />
+  </message>
+  <message name="ModifyProfile">
+    <part name="parameters" element="tns:ModifyProfile" />
+  </message>
+  <message name="ModifyProfileResponse">
+    <part name="parameters" element="tns:ModifyProfileResponse" />
+  </message>
+  <message name="RemoveAllContacts">
+    <part name="parameters" element="tns:RemoveAllContacts" />
+  </message>
+  <message name="RemoveAllContactsResponse">
+    <part name="parameters" element="tns:RemoveAllContactsResponse" />
+  </message>
+  <message name="RemoveContact">
+    <part name="parameters" element="tns:RemoveContact" />
+  </message>
+  <message name="RemoveContactResponse">
+    <part name="parameters" element="tns:RemoveContactResponse" />
+  </message>
+  <portType name="ProfileService">
+    <operation name="AddContact">
+      <input wsam:Action="http://Metro.Services.Babylon/ProfileService/AddContactRequest" message="tns:AddContact" />
+      <output wsam:Action="http://Metro.Services.Babylon/ProfileService/AddContactResponse" message="tns:AddContactResponse" />
+    </operation>
+    <operation name="AddContacts">
+      <input wsam:Action="http://Metro.Services.Babylon/ProfileService/AddContactsRequest" message="tns:AddContacts" />
+      <output wsam:Action="http://Metro.Services.Babylon/ProfileService/AddContactsResponse" message="tns:AddContactsResponse" />
+    </operation>
+    <operation name="AddProfile">
+      <input wsam:Action="http://Metro.Services.Babylon/ProfileService/AddProfileRequest" message="tns:AddProfile" />
+      <output wsam:Action="http://Metro.Services.Babylon/ProfileService/AddProfileResponse" message="tns:AddProfileResponse" />
+    </operation>
+    <operation name="CreateProfile">
+      <input wsam:Action="http://Metro.Services.Babylon/ProfileService/CreateProfileRequest" message="tns:CreateProfile" />
+      <output wsam:Action="http://Metro.Services.Babylon/ProfileService/CreateProfileResponse" message="tns:CreateProfileResponse" />
+    </operation>
+    <operation name="DeleteProfile">
+      <input wsam:Action="http://Metro.Services.Babylon/ProfileService/DeleteProfileRequest" message="tns:DeleteProfile" />
+      <output wsam:Action="http://Metro.Services.Babylon/ProfileService/DeleteProfileResponse" message="tns:DeleteProfileResponse" />
+    </operation>
+    <operation name="GetAllProfiles">
+      <input wsam:Action="http://Metro.Services.Babylon/ProfileService/GetAllProfilesRequest" message="tns:GetAllProfiles" />
+      <output wsam:Action="http://Metro.Services.Babylon/ProfileService/GetAllProfilesResponse" message="tns:GetAllProfilesResponse" />
+    </operation>
+    <operation name="GetContacts">
+      <input wsam:Action="http://Metro.Services.Babylon/ProfileService/GetContactsRequest" message="tns:GetContacts" />
+      <output wsam:Action="http://Metro.Services.Babylon/ProfileService/GetContactsResponse" message="tns:GetContactsResponse" />
+    </operation>
+    <operation name="GetProfileByCredentials">
+      <input wsam:Action="http://Metro.Services.Babylon/ProfileService/GetProfileByCredentialsRequest" message="tns:GetProfileByCredentials" />
+      <output wsam:Action="http://Metro.Services.Babylon/ProfileService/GetProfileByCredentialsResponse" message="tns:GetProfileByCredentialsResponse" />
+    </operation>
+    <operation name="GetProfileByID">
+      <input wsam:Action="http://Metro.Services.Babylon/ProfileService/GetProfileByIDRequest" message="tns:GetProfileByID" />
+      <output wsam:Action="http://Metro.Services.Babylon/ProfileService/GetProfileByIDResponse" message="tns:GetProfileByIDResponse" />
+    </operation>
+    <operation name="ModifyProfile">
+      <input wsam:Action="http://Metro.Services.Babylon/ProfileService/ModifyProfileRequest" message="tns:ModifyProfile" />
+      <output wsam:Action="http://Metro.Services.Babylon/ProfileService/ModifyProfileResponse" message="tns:ModifyProfileResponse" />
+    </operation>
+    <operation name="RemoveAllContacts">
+      <input wsam:Action="http://Metro.Services.Babylon/ProfileService/RemoveAllContactsRequest" message="tns:RemoveAllContacts" />
+      <output wsam:Action="http://Metro.Services.Babylon/ProfileService/RemoveAllContactsResponse" message="tns:RemoveAllContactsResponse" />
+    </operation>
+    <operation name="RemoveContact">
+      <input wsam:Action="http://Metro.Services.Babylon/ProfileService/RemoveContactRequest" message="tns:RemoveContact" />
+      <output wsam:Action="http://Metro.Services.Babylon/ProfileService/RemoveContactResponse" message="tns:RemoveContactResponse" />
+    </operation>
+  </portType>
+  <binding name="ProfileServicePortBinding" type="tns:ProfileService">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <operation name="AddContact">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="AddContacts">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="AddProfile">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="CreateProfile">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="DeleteProfile">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="GetAllProfiles">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="GetContacts">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="GetProfileByCredentials">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="GetProfileByID">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="ModifyProfile">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="RemoveAllContacts">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="RemoveContact">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+  </binding>
+  <service name="ProfileService">
+    <port name="ProfileServicePort" binding="tns:ProfileServicePortBinding">
+      <soap:address location="http://guillelaptop:8084/Babylon.Services.Metro/ProfileService" />
+    </port>
+  </service>
+</definitions>

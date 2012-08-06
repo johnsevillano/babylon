@@ -53,6 +53,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Compile>
+    <Compile Include="Service References\ProfileServiceReference\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <WCFMetadata Include="Service References\" />
@@ -73,10 +78,27 @@
       <SubType>Designer</SubType>
     </None>
     <None Include="Service References\NewsServiceReference\NewsServiceService.wsdl" />
+    <None Include="Service References\ProfileServiceReference\Babylon.Services.Proxies.ProfileServiceReference.Profile.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ProfileServiceReference\ProfileService.wsdl" />
+    <None Include="Service References\ProfileServiceReference\ProfileService.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ProfileServiceReference\ProfileService1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ProfileServiceReference\ProfileService2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ProfileServiceReference\ProfileService3.xsd">
+      <SubType>Designer</SubType>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <WCFMetadataStorage Include="Service References\MessageServiceReference\" />
     <WCFMetadataStorage Include="Service References\NewsServiceReference\" />
+    <WCFMetadataStorage Include="Service References\ProfileServiceReference\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Service References\MessageServiceReference\configuration91.svcinfo" />
@@ -101,6 +123,18 @@
       <Generator>WCF Proxy Generator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
       <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\ProfileServiceReference\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\ProfileServiceReference\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\ProfileServiceReference\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
     </None>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
