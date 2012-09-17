@@ -8,27 +8,28 @@ namespace Babylon.Site.Providers
 {
     public class BabylonMembershipProvider : System.Web.Security.MembershipProvider
     {
-        private string _enablePasswordRetrieval;
-        private string _enablePasswordReset;
-        private string _requiresQuestionAndAnswer;
-        private string _requiresUniqueEmail;
-        private string _maxInvalidPasswordAttempts;
-        private string _minRequiredPasswordLength;
-        private string _minRequiredNonalphanumericCharacters;
-        private string _passwordAttemptWindow;
         private string _applicationName;
+        private bool _enablePasswordRetrieval;
+        private bool _enablePasswordReset;
+        private bool _requiresQuestionAndAnswer;
+        private bool _requiresUniqueEmail;
+        private int _maxInvalidPasswordAttempts;
+        private int _minRequiredPasswordLength;
+        private int _minRequiredNonalphanumericCharacters;
+        private int _passwordAttemptWindow;
+
 
         public override void Initialize(string name, System.Collections.Specialized.NameValueCollection config)
         {
-            _enablePasswordRetrieval = config["_enablePasswordRetrieval"];
-            _enablePasswordReset = config["_enablePasswordReset"];
-            _requiresQuestionAndAnswer = config["_requiresQuestionAndAnswer"];
-            _requiresUniqueEmail = config["_requiresUniqueEmail"];
-            _maxInvalidPasswordAttempts = config["_maxInvalidPasswordAttempts"];
-            _minRequiredPasswordLength = config["_minRequiredPasswordLength"];
-            _minRequiredNonalphanumericCharacters = config["_minRequiredNonalphanumericCharacters"];
-            _passwordAttemptWindow = config["_passwordAttemptWindow"];
             _applicationName = config["_applicationName"];
+            _enablePasswordRetrieval = bool.Parse(config["_enablePasswordRetrieval"]);
+            _enablePasswordReset = bool.Parse(config["_enablePasswordReset"]);
+            _requiresQuestionAndAnswer = bool.Parse(config["_requiresQuestionAndAnswer"]);
+            _requiresUniqueEmail = bool.Parse(config["_requiresUniqueEmail"]);
+            _maxInvalidPasswordAttempts = int.Parse(config["_maxInvalidPasswordAttempts"]);
+            _minRequiredPasswordLength = int.Parse(config["_minRequiredPasswordLength"]);
+            _minRequiredNonalphanumericCharacters = int.Parse(config["_minRequiredNonalphanumericCharacters"]);
+            _passwordAttemptWindow = int.Parse(config["_passwordAttemptWindow"]);
 
             base.Initialize(name, config);
         }
@@ -37,7 +38,7 @@ namespace Babylon.Site.Providers
         {
             get
             {
-                return ConfigurationManager.AppSettings["ApplicationName"];
+                return _applicationName;
             }
             set
             {
@@ -66,12 +67,12 @@ namespace Babylon.Site.Providers
 
         public override bool EnablePasswordReset
         {
-            get { throw new NotImplementedException(); }
+            get { return _enablePasswordReset; }
         }
 
         public override bool EnablePasswordRetrieval
         {
-            get { throw new NotImplementedException(); }
+            get { return _enablePasswordRetrieval; }
         }
 
         public override System.Web.Security.MembershipUserCollection FindUsersByEmail(string emailToMatch, int pageIndex, int pageSize, out int totalRecords)
@@ -116,22 +117,22 @@ namespace Babylon.Site.Providers
 
         public override int MaxInvalidPasswordAttempts
         {
-            get { throw new NotImplementedException(); }
+            get { return _maxInvalidPasswordAttempts; }
         }
 
         public override int MinRequiredNonAlphanumericCharacters
         {
-            get { throw new NotImplementedException(); }
+            get { return _minRequiredNonalphanumericCharacters; }
         }
 
         public override int MinRequiredPasswordLength
         {
-            get { throw new NotImplementedException(); }
+            get { return _minRequiredPasswordLength; }
         }
 
         public override int PasswordAttemptWindow
         {
-            get { throw new NotImplementedException(); }
+            get { return _passwordAttemptWindow; }
         }
 
         public override System.Web.Security.MembershipPasswordFormat PasswordFormat
@@ -146,12 +147,12 @@ namespace Babylon.Site.Providers
 
         public override bool RequiresQuestionAndAnswer
         {
-            get { throw new NotImplementedException(); }
+            get { return _requiresQuestionAndAnswer; }
         }
 
         public override bool RequiresUniqueEmail
         {
-            get { throw new NotImplementedException(); }
+            get { return _requiresUniqueEmail; }
         }
 
         public override string ResetPassword(string username, string answer)
