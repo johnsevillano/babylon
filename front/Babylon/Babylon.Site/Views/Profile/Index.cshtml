@@ -1,0 +1,87 @@
+﻿@model IEnumerable<Babylon.Site.Models.Profile>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table>
+    <tr>
+        <th>
+            Username
+        </th>
+        <th>
+            Password
+        </th>
+        <th>
+            Name
+        </th>
+        <th>
+            Surname
+        </th>
+        <th>
+            Email
+        </th>
+        <th>
+            DateOfBirth
+        </th>
+        <th>
+            Description
+        </th>
+        <th>
+            PictureUploadedOn
+        </th>
+        <th>
+            CreatedOn
+        </th>
+        <th>
+            UpdatedOn
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Username)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Password)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Name)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Surname)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Email)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DateOfBirth)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Description)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PictureUploadedOn)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CreatedOn)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.UpdatedOn)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.ID }) |
+            @Html.ActionLink("Details", "Details", new { id=item.ID }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.ID })
+        </td>
+    </tr>
+}
+
+</table>
