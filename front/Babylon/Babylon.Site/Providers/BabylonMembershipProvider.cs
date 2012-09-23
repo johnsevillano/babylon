@@ -36,13 +36,9 @@ namespace Babylon.Site.Providers
 
         public override string ApplicationName
         {
-            get
-            {
-                return _applicationName;
-            }
-            set
-            {
-            }
+            get { return _applicationName; }
+
+            set { }
         }
 
         public override bool ChangePassword(string username, string oldPassword, string newPassword)
