@@ -7,11 +7,11 @@ namespace Babylon.Site.Models
 {
     public class Message
     {
-        public string ID { get; set; }
+        public Guid ID { get; set; }
 
-        public string Sender { get; set; }
+        public Guid Sender { get; set; }
 
-        public IList<string> Recipients { get; set; }
+        public IList<Guid> Recipients { get; set; }
 
         public string Subject { get; set; }
 

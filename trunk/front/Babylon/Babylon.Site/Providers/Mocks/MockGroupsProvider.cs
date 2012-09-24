@@ -6,36 +6,17 @@ using System.Web;
 using Babylon.Site.Models;
 
 
-namespace Babylon.Site.Providers
+
+namespace Babylon.Site.Providers.Mocks
 {
-    public class GroupsProvider : IGroupsProvider
+    public class MockGroupsProvider : IGroupsProvider
     {
-        public Guid Add(Babylon.Site.Models.Group group)
+        private IList<Group> _groupsCache = new List<Group>();
+
+        public Guid Add(Group group)
         {
             throw new NotImplementedException();
         }
-
-        public void Update(Babylon.Site.Models.Group group)
-        {
-            throw new NotImplementedException();
-        }
-
-        public void Remove(Babylon.Site.Models.Group group)
-        {
-            throw new NotImplementedException();
-        }
-
-        public IList<Babylon.Site.Models.Group> GetAllGroups()
-        {
-            throw new NotImplementedException();
-        }
-
-        public Babylon.Site.Models.Group GetGroupByID(Guid id)
-        {
-            throw new NotImplementedException();
-        }
-
-        //IList<Group> SearchGroups(GroupFilter filter);
 
         public void AddMember(Guid id, Guid memberID)
         {
@@ -47,7 +28,27 @@ namespace Babylon.Site.Providers
             throw new NotImplementedException();
         }
 
-        public IList<Babylon.Site.Models.Profile> GetMembers(Guid id)
+        public IList<Group> GetAllGroups()
+        {
+            throw new NotImplementedException();
+        }
+
+        public Group GetGroupByID(Guid id)
+        {
+            throw new NotImplementedException();
+        }
+
+        public IList<Profile> GetMembers(Guid id)
+        {
+            throw new NotImplementedException();
+        }
+
+        public void Remove(Group group)
+        {
+            throw new NotImplementedException();
+        }
+
+        public void RemoveAllMembers(Guid id)
         {
             throw new NotImplementedException();
         }
@@ -57,7 +58,7 @@ namespace Babylon.Site.Providers
             throw new NotImplementedException();
         }
 
-        public void RemoveAllMembers(Guid id)
+        public void Update(Group group)
         {
             throw new NotImplementedException();
         }

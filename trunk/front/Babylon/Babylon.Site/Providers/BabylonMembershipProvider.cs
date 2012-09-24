@@ -4,6 +4,9 @@ using System.Linq;
 using System.Web;
 using System.Configuration;
 
+using Babylon.Site.Models;
+
+
 namespace Babylon.Site.Providers
 {
     public class BabylonMembershipProvider : System.Web.Security.MembershipProvider
@@ -18,6 +21,8 @@ namespace Babylon.Site.Providers
         private int _minRequiredNonalphanumericCharacters;
         private int _passwordAttemptWindow;
 
+        private IProfilesProvider _profilesProvider;
+
 
         public override void Initialize(string name, System.Collections.Specialized.NameValueCollection config)
         {
@@ -30,6 +35,9 @@ namespace Babylon.Site.Providers
             _minRequiredPasswordLength = int.Parse(config["_minRequiredPasswordLength"]);
             _minRequiredNonalphanumericCharacters = int.Parse(config["_minRequiredNonalphanumericCharacters"]);
             _passwordAttemptWindow = int.Parse(config["_passwordAttemptWindow"]);
+
+            _profilesProvider = new ProvidersFactory().BuildProfilesProvider();
+
 
             base.Initialize(name, config);
         }
@@ -168,7 +176,9 @@ namespace Babylon.Site.Providers
 
         public override bool ValidateUser(string username, string password)
         {
-            throw new NotImplementedException();
+            Profile profile = _profilesProvider.GetProfileByCredentials(username, password);
+
+            return profile != null;
         }
     }
 }
