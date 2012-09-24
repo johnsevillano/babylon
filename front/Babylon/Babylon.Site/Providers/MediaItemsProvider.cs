@@ -8,29 +8,29 @@ using Babylon.Site.Models;
 
 namespace Babylon.Site.Providers
 {
-    public class MediaItemsProvider
+    public class MediaItemsProvider : IMediaItemsProvider
     {
-        public Guid Add(MediaItem mediaItem)
+        public Guid Add(Babylon.Site.Models.MediaItem mediaItem)
         {
             throw new NotImplementedException();
         }
 
-        public void Update(MediaItem mediaItem)
+        public void Update(Babylon.Site.Models.MediaItem mediaItem)
         {
             throw new NotImplementedException();
         }
 
-        public void Remove(MediaItem mediaItem)
+        public void Remove(Babylon.Site.Models.MediaItem mediaItem)
         {
             throw new NotImplementedException();
         }
 
-        public IList<MediaItem> GetAllMediaItems()
+        public IList<Babylon.Site.Models.MediaItem> GetAllMediaItems()
         {
             throw new NotImplementedException();
         }
 
-        public MediaItem GetMediaItemByID(Guid id)
+        public Babylon.Site.Models.MediaItem GetMediaItemByID(Guid id)
         {
             throw new NotImplementedException();
         }
