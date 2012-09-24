@@ -15,7 +15,7 @@ namespace Babylon.Site.Providers
         /// </summary>
         /// <param name="message"></param>
         /// <returns></returns>
-        public string Add(Babylon.Site.Models.Message message)
+        public Guid Add(Message message)
         {
             throw new NotImplementedException();
         }
@@ -24,34 +24,34 @@ namespace Babylon.Site.Providers
         /// Updates an existing Message
         /// </summary>
         /// <param name="message"></param>
-        public void Update(Babylon.Site.Models.Message message) { throw new NotImplementedException(); }
+        public void Update(Message message) { throw new NotImplementedException(); }
 
         /// <summary>
         /// Removes an existing Message from the repository
         /// </summary>
         /// <param name="message"></param>
-        public void Remove(Babylon.Site.Models.Message message) { throw new NotImplementedException(); }
+        public void Remove(Message message) { throw new NotImplementedException(); }
 
         /// <summary>
         /// Gets the Message with the 'id' identifier
         /// </summary>
         /// <param name="id"></param>
         /// <returns></returns>
-        public Babylon.Site.Models.Message GetMessageByID(String id) { throw new NotImplementedException(); }
+        public Message GetMessageByID(Guid id) { throw new NotImplementedException(); }
 
         /// <summary>
         /// Gets the list of messages sent by a given user
         /// </summary>
         /// <param name="sender"></param>
         /// <returns></returns>
-        public IList<Babylon.Site.Models.Message> GetSentMessages(string sender) { throw new NotImplementedException(); }
+        public IList<Message> GetSentMessages(Guid sender) { throw new NotImplementedException(); }
 
         /// <summary>
         /// 
         /// </summary>
         /// <param name="recipient"></param>
         /// <returns></returns>
-        public IList<Babylon.Site.Models.Message> GetReceivedMessages(string recipient) { throw new NotImplementedException(); }
+        public IList<Message> GetReceivedMessages(Guid recipient) { throw new NotImplementedException(); }
 
         /// <summary>
         /// Search the list of messages passing the given search filter
