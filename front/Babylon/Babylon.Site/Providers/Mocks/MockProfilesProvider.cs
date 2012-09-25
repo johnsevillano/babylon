@@ -67,6 +67,25 @@ namespace Babylon.Site.Providers.Mocks
             }
         }
 
+        public Guid CreateProfile(string username, string password, string email, string name, string surname)
+        {
+            Profile newProfile = new Profile()
+            {
+                ID = Guid.NewGuid(),
+                Username = username,
+                Password = password,
+                Email = email,
+                Name = name,
+                Surname = surname,
+                CreatedOn = DateTime.Now,
+                UpdatedOn = DateTime.Now
+            };
+
+            _profilesCache.Add(newProfile);
+
+            return newProfile.ID;
+        }
+
         public IList<Profile> GetAllProfiles()
         {
             return _profilesCache;
@@ -89,6 +108,20 @@ namespace Babylon.Site.Providers.Mocks
         public Profile GetProfileByID(Guid id)
         {
             Profile profile = _profilesCache.First<Profile>(p => p.ID == id);
+
+            return profile;
+        }
+
+        public Profile GetProfileByUsername(string username)
+        {
+            Profile profile = _profilesCache.First<Profile>(p => p.Username == username);
+
+            return profile;
+        }
+
+        public Profile GetProfileByEmail(string email)
+        {
+            Profile profile = _profilesCache.First<Profile>(p => p.Email == email);
 
             return profile;
         }

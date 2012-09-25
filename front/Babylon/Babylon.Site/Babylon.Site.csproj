@@ -62,8 +62,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\GroupsController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
-    <Compile Include="Controllers\ProfileController.cs" />
+    <Compile Include="Controllers\MediaItemsController.cs" />
+    <Compile Include="Controllers\MessagesController.cs" />
+    <Compile Include="Controllers\NewsItemsController.cs" />
+    <Compile Include="Controllers\ProfilesController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -163,16 +167,20 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Views\Groups\" />
+    <Folder Include="Views\MediaItems\" />
+    <Folder Include="Views\Messages\" />
+    <Folder Include="Views\NewsItems\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Views\Profile\Create.cshtml" />
-    <None Include="Views\Profile\Delete.cshtml" />
-    <None Include="Views\Profile\Details.cshtml" />
-    <None Include="Views\Profile\Edit.cshtml" />
-    <None Include="Views\Profile\Index.cshtml" />
+    <None Include="Views\Profiles\Create.cshtml" />
+    <None Include="Views\Profiles\Delete.cshtml" />
+    <None Include="Views\Profiles\Details.cshtml" />
+    <None Include="Views\Profiles\Edit.cshtml" />
+    <None Include="Views\Profiles\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Babylon.Services.Proxies\Babylon.Services.Proxies.csproj">

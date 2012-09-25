@@ -55,6 +55,22 @@ namespace Babylon.Site.Providers
         /// <summary>
         /// 
         /// </summary>
+        /// <param name="username"></param>
+        /// <param name="password"></param>
+        /// <param name="email"></param>
+        /// <param name="name"></param>
+        /// <param name="surname"></param>
+        /// <returns></returns>
+        public Guid CreateProfile(string username, string password, string email, string name, string surname)
+        {
+            string guid = _client.CreateProfile(username, password, email, name, surname);
+
+            return Guid.Parse(guid);
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
         /// <param name="profileModel"></param>
         public void Update(Models.Profile profileModel)
         {
@@ -103,6 +119,16 @@ namespace Babylon.Site.Providers
         /// <summary>
         /// 
         /// </summary>
+        /// <param name="username"></param>
+        /// <returns></returns>
+        public Models.Profile GetProfileByUsername(string username)
+        {
+            throw new NotImplementedException();
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
         /// <param name="user"></param>
         /// <param name="password"></param>
         /// <returns></returns>
@@ -111,6 +137,16 @@ namespace Babylon.Site.Providers
             Proxies.Profile profileProxy = _client.GetProfileByCredentials(user, password);
 
             return ProfileProxyToModel(profileProxy);
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="email"></param>
+        /// <returns></returns>
+        public Models.Profile GetProfileByEmail(string email)
+        {
+            throw new NotImplementedException();
         }
 
         //IList<Profile> SearchProfiles(ProfileFilter filter);

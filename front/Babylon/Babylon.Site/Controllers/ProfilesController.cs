@@ -6,11 +6,11 @@ using System.Web.Mvc;
 
 namespace Babylon.Site.Controllers
 {
-    public class ProfileController : Controller
+    public class ProfilesController : Controller
     {
         //
         // GET: /Profile/
-
+        [Authorize]
         public ActionResult Index()
         {
             return View();
@@ -18,7 +18,7 @@ namespace Babylon.Site.Controllers
 
         //
         // GET: /Profile/Details/5
-
+        [Authorize]
         public ActionResult Details(int id)
         {
             return View();
@@ -26,7 +26,7 @@ namespace Babylon.Site.Controllers
 
         //
         // GET: /Profile/Create
-
+        [Authorize]
         public ActionResult Create()
         {
             return View();
@@ -36,6 +36,7 @@ namespace Babylon.Site.Controllers
         // POST: /Profile/Create
 
         [HttpPost]
+        [Authorize]
         public ActionResult Create(FormCollection collection)
         {
             try
@@ -52,7 +53,7 @@ namespace Babylon.Site.Controllers
         
         //
         // GET: /Profile/Edit/5
- 
+        [Authorize]
         public ActionResult Edit(int id)
         {
             return View();
@@ -62,6 +63,7 @@ namespace Babylon.Site.Controllers
         // POST: /Profile/Edit/5
 
         [HttpPost]
+        [Authorize]
         public ActionResult Edit(int id, FormCollection collection)
         {
             try
@@ -78,7 +80,7 @@ namespace Babylon.Site.Controllers
 
         //
         // GET: /Profile/Delete/5
- 
+        [Authorize]
         public ActionResult Delete(int id)
         {
             return View();
@@ -88,6 +90,7 @@ namespace Babylon.Site.Controllers
         // POST: /Profile/Delete/5
 
         [HttpPost]
+        [Authorize]
         public ActionResult Delete(int id, FormCollection collection)
         {
             try
