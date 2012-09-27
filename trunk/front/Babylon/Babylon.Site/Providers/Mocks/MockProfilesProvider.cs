@@ -10,28 +10,76 @@ namespace Babylon.Site.Providers.Mocks
 {
     public class MockProfilesProvider : IProfilesProvider
     {
-        IList<Profile> _profilesCache = new List<Profile>();
+        private static MockProfilesProvider _instance;
 
-        public MockProfilesProvider()
+        public static MockProfilesProvider Instance
+        {
+            get
+            {
+                if (_instance == null)
+                {
+                    _instance = new MockProfilesProvider();
+                }
+                return _instance;
+            }
+        }
+
+        private IList<Profile> _profilesCache = new List<Profile>();
+
+        private MockProfilesProvider()
         {
             _profilesCache = new List<Profile>()
             {
                 new Profile() {
-                    Address = new Address() { City = "Dublin", PostalCode = "432", Street = "Malone St" },
+                    Address = new Address() { City = "New York", PostalCode = "123", Street = "5th Avenue." },
                     Contacts = new List<Profile>(),
                     CreatedOn = DateTime.Now,
                     DateOfBirth = DateTime.Now,
-                    Description = "Profile description",
-                    Email = "gschlereth@gmail.com",
+                    Description = "Spiderman's profile description",
+                    Email = "spiderman@gmail.com",
                     Gender = Gender.Male,
                     ID = Guid.NewGuid(),
-                    Name = "Guillermo",
+                    Name = "Peter",
                     Password = "morpheus",
                     Picture = null,
                     PictureUploadedOn = DateTime.MinValue,
-                    Surname = "Schlereth",
+                    Surname = "Parker",
                     UpdatedOn = DateTime.Now,
-                    Username = "gschlereth"
+                    Username = "spiderman"
+                },
+                new Profile() {
+                    Address = new Address() { City = "Gotham", PostalCode = "432", Street = "Darkness St." },
+                    Contacts = new List<Profile>(),
+                    CreatedOn = DateTime.Now,
+                    DateOfBirth = DateTime.Now,
+                    Description = "Batman's profile description",
+                    Email = "batman@gmail.com",
+                    Gender = Gender.Male,
+                    ID = Guid.NewGuid(),
+                    Name = "Bruce",
+                    Password = "morpheus",
+                    Picture = null,
+                    PictureUploadedOn = DateTime.MinValue,
+                    Surname = "Wayne",
+                    UpdatedOn = DateTime.Now,
+                    Username = "batman"
+                },
+                new Profile() {
+                    Address = new Address() { City = "Metropolis", PostalCode = "678", Street = "5th Avenue" },
+                    Contacts = new List<Profile>(),
+                    CreatedOn = DateTime.Now,
+                    DateOfBirth = DateTime.Now,
+                    Description = "Superman's profile description",
+                    Email = "superman@gmail.com",
+                    Gender = Gender.Male,
+                    ID = Guid.NewGuid(),
+                    Name = "Clark",
+                    Password = "morpheus",
+                    Picture = null,
+                    PictureUploadedOn = DateTime.MinValue,
+                    Surname = "Kent",
+                    UpdatedOn = DateTime.Now,
+                    Username = "superman"
                 }
             };
         }
@@ -47,8 +95,25 @@ namespace Babylon.Site.Providers.Mocks
 
         public void AddContact(Guid id, Guid contactID)
         {
-            Profile profile = _profilesCache.First<Profile>(p => p.ID == id);
-            Profile contact = _profilesCache.First<Profile>(c => c.ID == contactID);
+            var profile = (from p in _profilesCache
+                           where p.ID == id
+                           select p)
+                           .FirstOrDefault();
+
+            if (profile == null)
+            {
+                return;
+            }
+
+            var contact = (from c in _profilesCache
+                           where c.ID == contactID
+                           select c)
+                           .FirstOrDefault();
+
+            if (contact == null)
+            {
+                return;
+            }
 
             profile.Contacts.Add(contact);
             contact.Contacts.Add(profile);
@@ -56,12 +121,22 @@ namespace Babylon.Site.Providers.Mocks
 
         public void AddContacts(Guid id, IList<Guid> contactIDs)
         {
-            Profile profile = _profilesCache.First<Profile>(p => p.ID == id);
+            var profile = (from p in _profilesCache
+                           where p.ID == id
+                           select p)
+                           .FirstOrDefault();
 
-            foreach (Guid contactID in contactIDs)
+            if (profile == null)
             {
-                Profile contact = _profilesCache.First<Profile>(c => c.ID == contactID);
+                return;
+            }
 
+            var contacts = from c in _profilesCache
+                           where contactIDs.Contains(c.ID)
+                           select c;
+
+            foreach (Profile contact in contacts)
+            {
                 profile.Contacts.Add(contact);
                 contact.Contacts.Add(profile);
             }
@@ -93,65 +168,116 @@ namespace Babylon.Site.Providers.Mocks
 
         public IList<Profile> GetContacts(Guid id)
         {
-            Profile profile = _profilesCache.First<Profile>(p => p.ID == id);
+            var profile = (from p in _profilesCache
+                           where p.ID == id
+                           select p)
+                           .FirstOrDefault();
+
+            if (profile == null)
+            {
+                return null;
+            }
 
             return profile.Contacts;
         }
 
         public Profile GetProfileByCredentials(string user, string password)
         {
-            Profile profile = _profilesCache.First<Profile>(p => p.Username == user && p.Password == password);
+            var profile = (from p in _profilesCache
+                           where p.Username == user && p.Password == password
+                           select p)
+                           .FirstOrDefault();
 
             return profile;
         }
 
         public Profile GetProfileByID(Guid id)
         {
-            Profile profile = _profilesCache.First<Profile>(p => p.ID == id);
+            var profile = (from p in _profilesCache
+                           where p.ID == id
+                           select p)
+                           .FirstOrDefault();
 
             return profile;
         }
 
         public Profile GetProfileByUsername(string username)
         {
-            Profile profile = _profilesCache.First<Profile>(p => p.Username == username);
+            var profile = (from p in _profilesCache
+                           where p.Username == username
+                           select p)
+                           .FirstOrDefault();
 
             return profile;
         }
 
         public Profile GetProfileByEmail(string email)
         {
-            Profile profile = _profilesCache.First<Profile>(p => p.Email == email);
+            var profile = (from p in _profilesCache
+                           where p.Email == email
+                           select p)
+                           .FirstOrDefault();
 
             return profile;
         }
 
-        public void Remove(Profile profileModel)
+        public void Remove(Guid id)
         {
-            Profile profile = _profilesCache.First<Profile>(p => p.ID == profileModel.ID);
+            var profile = (from p in _profilesCache
+                            where p.ID == id
+                            select p)
+                            .FirstOrDefault();
 
-            _profilesCache.Remove(profile);
+            if (profile != null)
+            {
+                _profilesCache.Remove(profile);
+            }
         }
 
         public void RemoveAllContacts(Guid id)
         {
-            Profile profile = _profilesCache.First<Profile>(p => p.ID == id);
+            var profile = (from p in _profilesCache
+                           where p.ID == id
+                           select p)
+                           .FirstOrDefault();
 
-            profile.Contacts = new List<Profile>();
+            if (profile != null)
+            {
+                profile.Contacts = new List<Profile>();
+            }
         }
 
         public void RemoveContact(Guid id, Guid contactID)
         {
-            Profile profile = _profilesCache.First<Profile>(p => p.ID == id);
+            var profile = (from p in _profilesCache
+                           where p.ID == id
+                           select p)
+                           .FirstOrDefault();
 
-            Profile contact = profile.Contacts.First<Profile>(c => c.ID == contactID);
+            if (profile == null)
+            {
+                return;
+            }
+
+            var contact = (from c in profile.Contacts
+                           where c.ID == contactID
+                           select c)
+                           .FirstOrDefault();
+
+            if (contact == null)
+            {
+                return;
+            }
 
             profile.Contacts.Remove(contact);
         }
 
         public void Update(Profile profileModel)
         {
-            Profile profile = _profilesCache.First<Profile>(p => p.ID == profileModel.ID);
+            var profile = (from p in _profilesCache
+                          where p.ID == profileModel.ID
+                          select p)
+                          .FirstOrDefault();
 
             int index = _profilesCache.IndexOf(profile);
 

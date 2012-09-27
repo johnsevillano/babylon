@@ -14,7 +14,7 @@ namespace Babylon.Site.Providers
         Babylon.Site.Models.Profile GetProfileByID(Guid id);
         Babylon.Site.Models.Profile GetProfileByUsername(string username);
         Babylon.Site.Models.Profile GetProfileByEmail(string email);
-        void Remove(Babylon.Site.Models.Profile profileModel);
+        void Remove(Guid id);
         void RemoveAllContacts(Guid id);
         void RemoveContact(Guid id, Guid contactID);
         void Update(Babylon.Site.Models.Profile profileModel);
