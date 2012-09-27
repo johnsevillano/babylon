@@ -1,10 +1,10 @@
 ﻿@model IEnumerable<Babylon.Site.Models.Profile>
 
 @{
-    ViewBag.Title = "Index";
+    ViewBag.Title = "Profiles";
 }
 
-<h2>Index</h2>
+<h2>Profiles</h2>
 
 <p>
     @Html.ActionLink("Create New", "Create")
@@ -13,9 +13,6 @@
     <tr>
         <th>
             Username
-        </th>
-        <th>
-            Password
         </th>
         <th>
             Name
@@ -27,19 +24,19 @@
             Email
         </th>
         <th>
-            DateOfBirth
+            Date of Birth
         </th>
         <th>
-            Description
+            Gender
         </th>
         <th>
-            PictureUploadedOn
+            City
         </th>
         <th>
-            CreatedOn
+            Street
         </th>
         <th>
-            UpdatedOn
+            Created On
         </th>
         <th></th>
     </tr>
@@ -47,10 +44,7 @@
 @foreach (var item in Model) {
     <tr>
         <td>
-            @Html.DisplayFor(modelItem => item.Username)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Password)
+            @Html.ActionLink(item.Username, "Details", new { id=item.ID })
         </td>
         <td>
             @Html.DisplayFor(modelItem => item.Name)
@@ -65,21 +59,21 @@
             @Html.DisplayFor(modelItem => item.DateOfBirth)
         </td>
         <td>
-            @Html.DisplayFor(modelItem => item.Description)
+            @Html.DisplayFor(modelItem => item.Gender)
         </td>
         <td>
-            @Html.DisplayFor(modelItem => item.PictureUploadedOn)
+            @Html.DisplayFor(modelItem => item.Address.City)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Address.Street)
         </td>
         <td>
             @Html.DisplayFor(modelItem => item.CreatedOn)
         </td>
         <td>
-            @Html.DisplayFor(modelItem => item.UpdatedOn)
-        </td>
-        <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.ID }) |
-            @Html.ActionLink("Details", "Details", new { id=item.ID }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.ID })
+            @Html.ActionLink("Details", "Details", new { id = item.ID }) |
+            @Html.ActionLink("Edit", "Edit", new { id = item.ID }) |
+            @Html.ActionLink("Delete", "Delete", new { id = item.ID })
         </td>
     </tr>
 }

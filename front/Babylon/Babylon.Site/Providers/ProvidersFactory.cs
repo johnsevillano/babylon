@@ -125,7 +125,7 @@ namespace Babylon.Site.Providers
             }
             else
             {
-                provider = new MockProfilesProvider();
+                provider = MockProfilesProvider.Instance;
             }
 
             return provider;

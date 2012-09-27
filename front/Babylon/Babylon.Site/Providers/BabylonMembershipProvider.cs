@@ -182,7 +182,7 @@ namespace Babylon.Site.Providers
 
             if (profile == null) return false;
 
-            _profilesProvider.Remove(profile);
+            _profilesProvider.Remove(profile.ID);
 
             return true;
         }

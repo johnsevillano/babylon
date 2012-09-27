@@ -83,9 +83,9 @@ namespace Babylon.Site.Providers
         /// 
         /// </summary>
         /// <param name="profileModel"></param>
-        public void Remove(Models.Profile profileModel)
+        public void Remove(Guid id)
         {
-            _client.DeleteProfile(profileModel.ID.ToString());
+            _client.DeleteProfile(id.ToString());
         }
 
         /// <summary>

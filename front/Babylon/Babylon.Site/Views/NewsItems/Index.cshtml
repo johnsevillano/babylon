@@ -1,0 +1,75 @@
+﻿@model IEnumerable<Babylon.Site.Models.NewsItem>
+
+@{
+    ViewBag.Title = "News";
+}
+
+<h2>News</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table>
+    <tr>
+        <th>
+            Title
+        </th>
+        <th>
+            Body
+        </th>
+        <th>
+            ReportedOn
+        </th>
+        <th>
+            ReportedBy
+        </th>
+        <th>
+            PictureSize
+        </th>
+        <th>
+            PictureScale
+        </th>
+        <th>
+            Reviews
+        </th>
+        <th>
+            Rating
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Title)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Body)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ReportedOn)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ReportedBy)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PictureSize)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PictureScale)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Reviews)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Rating)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.ID }) |
+            @Html.ActionLink("Details", "Details", new { id=item.ID }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.ID })
+        </td>
+    </tr>
+}
+
+</table>

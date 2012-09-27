@@ -4,24 +4,35 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 
+using Babylon.Site.Models;
+using Babylon.Site.Providers;
+
+
 namespace Babylon.Site.Controllers
 {
     public class ProfilesController : Controller
     {
+        private IProfilesProvider _provider = new ProvidersFactory().BuildProfilesProvider();
+
         //
         // GET: /Profile/
         [Authorize]
         public ActionResult Index()
         {
-            return View();
+            IList<Profile> model = _provider.GetAllProfiles();
+
+            return View(model);
         }
 
         //
         // GET: /Profile/Details/5
         [Authorize]
-        public ActionResult Details(int id)
+        public ActionResult Details(string id)
         {
-            return View();
+
+            Profile profile = _provider.GetProfileByID(Guid.Parse(id));
+
+            return View(profile);
         }
 
         //
@@ -37,11 +48,11 @@ namespace Babylon.Site.Controllers
 
         [HttpPost]
         [Authorize]
-        public ActionResult Create(FormCollection collection)
+        public ActionResult Create(Profile model)
         {
             try
             {
-                // TODO: Add insert logic here
+                Guid id = _provider.Add(model);
 
                 return RedirectToAction("Index");
             }
@@ -54,9 +65,11 @@ namespace Babylon.Site.Controllers
         //
         // GET: /Profile/Edit/5
         [Authorize]
-        public ActionResult Edit(int id)
+        public ActionResult Edit(string id)
         {
-            return View();
+            Profile profile = _provider.GetProfileByID(Guid.Parse(id));
+
+            return View(profile);
         }
 
         //
@@ -64,11 +77,11 @@ namespace Babylon.Site.Controllers
 
         [HttpPost]
         [Authorize]
-        public ActionResult Edit(int id, FormCollection collection)
+        public ActionResult Edit(string id, Profile profile)
         {
             try
             {
-                // TODO: Add update logic here
+                _provider.Update(profile);
  
                 return RedirectToAction("Index");
             }
@@ -81,9 +94,11 @@ namespace Babylon.Site.Controllers
         //
         // GET: /Profile/Delete/5
         [Authorize]
-        public ActionResult Delete(int id)
+        public ActionResult Delete(string id)
         {
-            return View();
+            var profile = _provider.GetProfileByID(Guid.Parse(id));
+
+            return View(profile);
         }
 
         //
@@ -91,12 +106,12 @@ namespace Babylon.Site.Controllers
 
         [HttpPost]
         [Authorize]
-        public ActionResult Delete(int id, FormCollection collection)
+        public ActionResult Delete(string id, FormCollection collection)
         {
             try
             {
-                // TODO: Add delete logic here
- 
+                _provider.Remove(Guid.Parse(id));
+
                 return RedirectToAction("Index");
             }
             catch

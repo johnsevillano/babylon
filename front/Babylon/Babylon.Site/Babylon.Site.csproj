@@ -61,6 +61,7 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Common\ViewHelpers.cs" />
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\GroupsController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
@@ -167,15 +168,15 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Views\Groups\" />
-    <Folder Include="Views\MediaItems\" />
-    <Folder Include="Views\Messages\" />
-    <Folder Include="Views\NewsItems\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Views\Groups\Index.cshtml" />
+    <Content Include="Views\MediaItems\Index.cshtml" />
+    <Content Include="Views\Messages\Index.cshtml" />
+    <Content Include="Views\NewsItems\Index.cshtml" />
     <None Include="Views\Profiles\Create.cshtml" />
     <None Include="Views\Profiles\Delete.cshtml" />
     <None Include="Views\Profiles\Details.cshtml" />
