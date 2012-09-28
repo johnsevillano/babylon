@@ -10,13 +10,16 @@ using Babylon.Site.Providers;
 
 namespace Babylon.Site.Controllers
 {
+    /// <summary>
+    /// 
+    /// </summary>
+    [Authorize]
     public class ProfilesController : Controller
     {
         private IProfilesProvider _provider = new ProvidersFactory().BuildProfilesProvider();
 
         //
         // GET: /Profile/
-        [Authorize]
         public ActionResult Index()
         {
             IList<Profile> model = _provider.GetAllProfiles();
@@ -26,7 +29,6 @@ namespace Babylon.Site.Controllers
 
         //
         // GET: /Profile/Details/5
-        [Authorize]
         public ActionResult Details(string id)
         {
 
@@ -37,7 +39,6 @@ namespace Babylon.Site.Controllers
 
         //
         // GET: /Profile/Create
-        [Authorize]
         public ActionResult Create()
         {
             return View();
@@ -47,24 +48,24 @@ namespace Babylon.Site.Controllers
         // POST: /Profile/Create
 
         [HttpPost]
-        [Authorize]
         public ActionResult Create(Profile model)
         {
             try
             {
-                Guid id = _provider.Add(model);
+                if (ModelState.IsValid)
+                {
+                    Guid id = _provider.Add(model);
 
-                return RedirectToAction("Index");
+                    return RedirectToAction("Index");
+                }
             }
-            catch
-            {
-                return View();
-            }
+            catch {}
+
+            return View();
         }
         
         //
         // GET: /Profile/Edit/5
-        [Authorize]
         public ActionResult Edit(string id)
         {
             Profile profile = _provider.GetProfileByID(Guid.Parse(id));
@@ -76,24 +77,24 @@ namespace Babylon.Site.Controllers
         // POST: /Profile/Edit/5
 
         [HttpPost]
-        [Authorize]
         public ActionResult Edit(string id, Profile profile)
         {
             try
             {
-                _provider.Update(profile);
- 
-                return RedirectToAction("Index");
+                if (ModelState.IsValid)
+                {
+                    _provider.Update(profile);
+
+                    return RedirectToAction("Index");
+                }
             }
-            catch
-            {
-                return View();
-            }
+            catch {}
+
+            return View();
         }
 
         //
         // GET: /Profile/Delete/5
-        [Authorize]
         public ActionResult Delete(string id)
         {
             var profile = _provider.GetProfileByID(Guid.Parse(id));
@@ -103,9 +104,7 @@ namespace Babylon.Site.Controllers
 
         //
         // POST: /Profile/Delete/5
-
         [HttpPost]
-        [Authorize]
         public ActionResult Delete(string id, FormCollection collection)
         {
             try

@@ -57,12 +57,10 @@ namespace Babylon.Site.Models
 
         [Display(Name = "Created On")]
         [DataType(DataType.Date)]
-        [Editable(false)]
         public DateTime CreatedOn { get; set; }
 
         [Display(Name = "Updated On")]
         [DataType(DataType.Date)]
-        [Editable(false)]
         public DateTime UpdatedOn { get; set; }
 
         public IList<Profile> Contacts { get; set; }
