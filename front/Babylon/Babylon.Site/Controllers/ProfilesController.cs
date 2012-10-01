@@ -22,7 +22,14 @@ namespace Babylon.Site.Controllers
         // GET: /Profile/
         public ActionResult Index()
         {
-            IList<Profile> model = _provider.GetAllProfiles();
+            IList<Profile> profiles = _provider.GetAllProfiles();
+
+            IList<ProfileViewModel> model = new List<ProfileViewModel>();
+
+            foreach (Profile profile in profiles)
+            {
+                model.Add(new ProfileViewModel(profile));
+            }
 
             return View(model);
         }
@@ -34,7 +41,9 @@ namespace Babylon.Site.Controllers
 
             Profile profile = _provider.GetProfileByID(Guid.Parse(id));
 
-            return View(profile);
+            ProfileViewModel model = new ProfileViewModel(profile);
+
+            return View(model);
         }
 
         //
@@ -48,13 +57,30 @@ namespace Babylon.Site.Controllers
         // POST: /Profile/Create
 
         [HttpPost]
-        public ActionResult Create(Profile model)
+        public ActionResult Create(ProfileInputModel model)
         {
             try
             {
                 if (ModelState.IsValid)
                 {
-                    Guid id = _provider.Add(model);
+                    Profile newProfile = new Profile()
+                    {
+                        ID = model.ID,
+                        Username = model.Username,
+                        Name = model.Name,
+                        Surname = model.Surname,
+                        Email = model.Email,
+                        DateOfBirth = model.DateOfBirth,
+                        Address = new Address() {
+                            Street = model.Address.Street,
+                            City = model.Address.City,
+                            PostalCode = model.Address.PostalCode
+                        },
+                        Gender = model.Gender,
+                        Description = model.Description
+                    };
+
+                    Guid id = _provider.Add(newProfile);
 
                     return RedirectToAction("Index");
                 }
@@ -70,19 +96,37 @@ namespace Babylon.Site.Controllers
         {
             Profile profile = _provider.GetProfileByID(Guid.Parse(id));
 
-            return View(profile);
+            ProfileInputModel model = new ProfileInputModel(profile);
+
+            return View(model);
         }
 
         //
         // POST: /Profile/Edit/5
 
         [HttpPost]
-        public ActionResult Edit(string id, Profile profile)
+        public ActionResult Edit(string id, ProfileInputModel model)
         {
             try
             {
                 if (ModelState.IsValid)
                 {
+                    Profile profile = _provider.GetProfileByID(Guid.Parse(id));
+
+                    profile.Username = model.Username;
+                    profile.Name = model.Name;
+                    profile.Surname = model.Surname;
+                    profile.Email = model.Email;
+                    profile.DateOfBirth = model.DateOfBirth;
+                    profile.Address = new Address()
+                    {
+                        Street = model.Address.Street,
+                        City = model.Address.City,
+                        PostalCode = model.Address.PostalCode
+                    };
+                    profile.Gender = model.Gender;
+                    profile.Description = model.Description;
+
                     _provider.Update(profile);
 
                     return RedirectToAction("Index");

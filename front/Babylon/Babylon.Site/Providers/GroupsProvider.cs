@@ -10,27 +10,27 @@ namespace Babylon.Site.Providers
 {
     public class GroupsProvider : IGroupsProvider
     {
-        public Guid Add(Babylon.Site.Models.Group group)
+        public Guid Add(Group group)
         {
             throw new NotImplementedException();
         }
 
-        public void Update(Babylon.Site.Models.Group group)
+        public void Update(Group group)
         {
             throw new NotImplementedException();
         }
 
-        public void Remove(Babylon.Site.Models.Group group)
+        public void Remove(Group group)
         {
             throw new NotImplementedException();
         }
 
-        public IList<Babylon.Site.Models.Group> GetAllGroups()
+        public IList<Group> GetAllGroups()
         {
             throw new NotImplementedException();
         }
 
-        public Babylon.Site.Models.Group GetGroupByID(Guid id)
+        public Group GetGroupByID(Guid id)
         {
             throw new NotImplementedException();
         }
@@ -47,7 +47,7 @@ namespace Babylon.Site.Providers
             throw new NotImplementedException();
         }
 
-        public IList<Babylon.Site.Models.Profile> GetMembers(Guid id)
+        public IList<Profile> GetMembers(Guid id)
         {
             throw new NotImplementedException();
         }

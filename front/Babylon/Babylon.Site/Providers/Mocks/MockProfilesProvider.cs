@@ -3,8 +3,6 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 
-using Babylon.Site.Models;
-
 
 namespace Babylon.Site.Providers.Mocks
 {
@@ -35,7 +33,7 @@ namespace Babylon.Site.Providers.Mocks
                     Contacts = new List<Profile>(),
                     CreatedOn = DateTime.Now,
                     DateOfBirth = DateTime.Now,
-                    Description = "Spiderman's profile description",
+                    Description = "Spiderman's newProfile description",
                     Email = "spiderman@gmail.com",
                     Gender = Gender.Male,
                     ID = Guid.NewGuid(),
@@ -52,7 +50,7 @@ namespace Babylon.Site.Providers.Mocks
                     Contacts = new List<Profile>(),
                     CreatedOn = DateTime.Now,
                     DateOfBirth = DateTime.Now,
-                    Description = "Batman's profile description",
+                    Description = "Batman's newProfile description",
                     Email = "batman@gmail.com",
                     Gender = Gender.Male,
                     ID = Guid.NewGuid(),
@@ -69,7 +67,7 @@ namespace Babylon.Site.Providers.Mocks
                     Contacts = new List<Profile>(),
                     CreatedOn = DateTime.Now,
                     DateOfBirth = DateTime.Now,
-                    Description = "Superman's profile description",
+                    Description = "Superman's newProfile description",
                     Email = "superman@gmail.com",
                     Gender = Gender.Male,
                     ID = Guid.NewGuid(),

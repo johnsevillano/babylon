@@ -3,13 +3,12 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 
-using Models = Babylon.Site.Models;
 using Proxies = Babylon.Services.Proxies.ProfileServiceReference;
 
 
 namespace Babylon.Site.Providers
 {
-    public class ProfilesProvider : Babylon.Site.Providers.IProfilesProvider
+    public class ProfilesProvider : IProfilesProvider
     {
         private Proxies.ProfileServiceClient _client;
 
@@ -33,13 +32,13 @@ namespace Babylon.Site.Providers
         /// <summary>
         /// 
         /// </summary>
-        /// <param name="profileModel"></param>
+        /// <param name="newProfile"></param>
         /// <returns></returns>
-        public Guid Add(Models.Profile profileModel)
+        public Guid Add(Profile profile)
         {
-            Proxies.Profile profileProxy = ProfileModelToProxy(profileModel);
+            Proxies.Profile proxy = ProfileToProxy(profile);
 
-            string guid = _client.AddProfile(profileProxy);
+            string guid = _client.AddProfile(proxy);
 
             Guid result;
             if (Guid.TryParse(guid, out result))
@@ -72,11 +71,11 @@ namespace Babylon.Site.Providers
         /// 
         /// </summary>
         /// <param name="profileModel"></param>
-        public void Update(Models.Profile profileModel)
+        public void Update(Profile profile)
         {
-            Proxies.Profile profileProxy = ProfileModelToProxy(profileModel);
+            Proxies.Profile proxy = ProfileToProxy(profile);
 
-            _client.ModifyProfile(profileProxy);
+            _client.ModifyProfile(proxy);
         }
 
         /// <summary>
@@ -92,13 +91,13 @@ namespace Babylon.Site.Providers
         /// 
         /// </summary>
         /// <returns></returns>
-        public IList<Models.Profile> GetAllProfiles()
+        public IList<Profile> GetAllProfiles()
         {
-            IList<Models.Profile> profileModels = new List<Models.Profile>();
+            IList<Profile> profileModels = new List<Profile>();
 
-            foreach (Proxies.Profile profileProxy in _client.GetAllProfiles())
+            foreach (Proxies.Profile proxy in _client.GetAllProfiles())
             {
-                profileModels.Add(ProfileProxyToModel(profileProxy));
+                profileModels.Add(ProxyToProfile(proxy));
             }
 
             return profileModels;
@@ -109,11 +108,11 @@ namespace Babylon.Site.Providers
         /// </summary>
         /// <param name="id"></param>
         /// <returns></returns>
-        public Models.Profile GetProfileByID(Guid id)
+        public Profile GetProfileByID(Guid id)
         {
-            Proxies.Profile profileProxy = _client.GetProfileByID(id.ToString());
+            Proxies.Profile proxy = _client.GetProfileByID(id.ToString());
 
-            return ProfileProxyToModel(profileProxy);
+            return ProxyToProfile(proxy);
         }
 
         /// <summary>
@@ -121,7 +120,7 @@ namespace Babylon.Site.Providers
         /// </summary>
         /// <param name="username"></param>
         /// <returns></returns>
-        public Models.Profile GetProfileByUsername(string username)
+        public Profile GetProfileByUsername(string username)
         {
             throw new NotImplementedException();
         }
@@ -132,11 +131,11 @@ namespace Babylon.Site.Providers
         /// <param name="user"></param>
         /// <param name="password"></param>
         /// <returns></returns>
-        public Models.Profile GetProfileByCredentials(string user, string password)
+        public Profile GetProfileByCredentials(string user, string password)
         {
-            Proxies.Profile profileProxy = _client.GetProfileByCredentials(user, password);
+            Proxies.Profile proxy = _client.GetProfileByCredentials(user, password);
 
-            return ProfileProxyToModel(profileProxy);
+            return ProxyToProfile(proxy);
         }
 
         /// <summary>
@@ -144,7 +143,7 @@ namespace Babylon.Site.Providers
         /// </summary>
         /// <param name="email"></param>
         /// <returns></returns>
-        public Models.Profile GetProfileByEmail(string email)
+        public Profile GetProfileByEmail(string email)
         {
             throw new NotImplementedException();
         }
@@ -183,13 +182,13 @@ namespace Babylon.Site.Providers
         /// </summary>
         /// <param name="id"></param>
         /// <returns></returns>
-        public IList<Models.Profile> GetContacts(Guid id)
+        public IList<Profile> GetContacts(Guid id)
         {
-            IList<Models.Profile> contactModels = new List<Models.Profile>();
+            IList<Profile> contactModels = new List<Profile>();
 
             foreach (Proxies.Profile contactProxy in _client.GetContacts(id.ToString()))
             {
-                contactModels.Add(ProfileProxyToModel(contactProxy));
+                contactModels.Add(ProxyToProfile(contactProxy));
             }
 
             return contactModels;
@@ -214,62 +213,62 @@ namespace Babylon.Site.Providers
             _client.RemoveAllContacts(id.ToString());
         }
 
-        private Proxies.Profile ProfileModelToProxy(Models.Profile profileModel)
+        private Proxies.Profile ProfileToProxy(Profile profile)
         {
             Proxies.Profile profileProxy =
                 new Proxies.Profile()
                 {
                     Address = new Proxies.Address()
                     {
-                        Street = profileModel.Address.Street,
-                        PostalCode = profileModel.Address.PostalCode,
-                        City = profileModel.Address.City
+                        Street = profile.Address.Street,
+                        PostalCode = profile.Address.PostalCode,
+                        City = profile.Address.City
                     },
-                    CreatedOn = profileModel.CreatedOn,
-                    DateOfBirth = profileModel.DateOfBirth,
-                    Description = profileModel.Description,
-                    Email = profileModel.Email,
-                    Gender = profileModel.Gender == Models.Gender.Male ? Proxies.Gender.Male : Proxies.Gender.Female,
-                    ID = profileModel.ID.ToString(),
-                    Name = profileModel.Name,
-                    Password = profileModel.Password,
-                    Picture = profileModel.Picture,
-                    PictureUploadedOn = profileModel.PictureUploadedOn,
-                    Surname = profileModel.Surname,
-                    UpdatedOn = profileModel.UpdatedOn,
-                    Username = profileModel.Username
+                    CreatedOn = profile.CreatedOn,
+                    DateOfBirth = profile.DateOfBirth,
+                    Description = profile.Description,
+                    Email = profile.Email,
+                    Gender = profile.Gender == Gender.Male ? Proxies.Gender.Male : Proxies.Gender.Female,
+                    ID = profile.ID.ToString(),
+                    Name = profile.Name,
+                    Password = profile.Password,
+                    Picture = profile.Picture,
+                    PictureUploadedOn = profile.PictureUploadedOn,
+                    Surname = profile.Surname,
+                    UpdatedOn = profile.UpdatedOn,
+                    Username = profile.Username
                 };
 
             return profileProxy;
         }
 
-        private Models.Profile ProfileProxyToModel(Proxies.Profile profileProxy)
+        private Profile ProxyToProfile(Proxies.Profile proxy)
         {
-            Models.Profile profileModel =
-                new Models.Profile()
+            Profile profile =
+                new Profile()
                 {
-                    Address = new Models.Address()
+                    Address = new Address()
                     {
-                        Street = profileProxy.Address.Street,
-                        PostalCode = profileProxy.Address.PostalCode,
-                        City = profileProxy.Address.City
+                        Street = proxy.Address.Street,
+                        PostalCode = proxy.Address.PostalCode,
+                        City = proxy.Address.City
                     },
-                    CreatedOn = profileProxy.CreatedOn,
-                    DateOfBirth = profileProxy.DateOfBirth,
-                    Description = profileProxy.Description,
-                    Email = profileProxy.Email,
-                    Gender = profileProxy.Gender == Proxies.Gender.Male ? Models.Gender.Male : Models.Gender.Female,
-                    ID = Guid.Parse(profileProxy.ID),
-                    Name = profileProxy.Name,
-                    Password = profileProxy.Password,
-                    Picture = profileProxy.Picture,
-                    PictureUploadedOn = profileProxy.PictureUploadedOn,
-                    Surname = profileProxy.Surname,
-                    UpdatedOn = profileProxy.UpdatedOn,
-                    Username = profileProxy.Username
+                    CreatedOn = proxy.CreatedOn,
+                    DateOfBirth = proxy.DateOfBirth,
+                    Description = proxy.Description,
+                    Email = proxy.Email,
+                    Gender = proxy.Gender == Proxies.Gender.Male ? Gender.Male : Gender.Female,
+                    ID = Guid.Parse(proxy.ID),
+                    Name = proxy.Name,
+                    Password = proxy.Password,
+                    Picture = proxy.Picture,
+                    PictureUploadedOn = proxy.PictureUploadedOn,
+                    Surname = proxy.Surname,
+                    UpdatedOn = proxy.UpdatedOn,
+                    Username = proxy.Username
                 };
 
-            return profileModel;
+            return profile;
         }
     }
 

@@ -3,9 +3,12 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 
+using Babylon.Site.Providers;
+
+
 namespace Babylon.Site.Models
 {
-    public class Group
+    public class GroupModel
     {
         public Guid ID { get; set; }
 
