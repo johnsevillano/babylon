@@ -4,12 +4,90 @@ using System.ComponentModel.DataAnnotations;
 using System.Web.Mvc;
 using System.Web.UI.WebControls;
 
+using Babylon.Site.Providers;
+
 
 namespace Babylon.Site.Models
 {
-
-    public class Profile
+    public class ProfileViewModel
     {
+        public ProfileViewModel() {}
+
+        public ProfileViewModel(Profile profile)
+        {
+            ID = profile.ID;
+            Username = profile.Username;
+            Name = profile.Name;
+            Surname = profile.Surname;
+            Email = profile.Email;
+            DateOfBirth = profile.DateOfBirth;
+            Address = new Address()
+            {
+                Street = profile.Address.Street,
+                City = profile.Address.City,
+                PostalCode = profile.Address.PostalCode
+            };
+            Gender = profile.Gender;
+            Description = profile.Description;
+            Picture = profile.Picture;
+            CreatedOn = profile.CreatedOn;
+            UpdatedOn = profile.UpdatedOn;
+        }
+
+        [Editable(false)]
+        public Guid ID { get; set; }
+
+        public string Username { get; set; }
+
+        public string Name { get; set; }
+
+        public string Surname { get; set; }
+
+        [DataType(DataType.EmailAddress)]
+        public string Email { get; set; }
+
+        [DataType(DataType.Date)]
+        public DateTime? DateOfBirth { get; set; }
+
+        public Address Address { get; set; }
+
+        public Gender? Gender { get; set; }
+
+        [DataType(DataType.MultilineText)]
+        public string Description { get; set; }
+
+        public byte[] Picture { get; set; }
+
+        public DateTime? PictureUploadedOn { get; set; }
+
+        public DateTime CreatedOn { get; set; }
+
+        public DateTime UpdatedOn { get; set; }
+    }
+
+    public class ProfileInputModel
+    {
+        public ProfileInputModel() {}
+
+        public ProfileInputModel(Profile profile)
+        {
+            ID = profile.ID;
+            Username = profile.Username;
+            Name = profile.Name;
+            Surname = profile.Surname;
+            Email = profile.Email;
+            DateOfBirth = profile.DateOfBirth;
+            Address = new Address()
+            {
+                Street = profile.Address.Street,
+                City = profile.Address.City,
+                PostalCode = profile.Address.PostalCode
+            };
+            Gender = profile.Gender;
+            Description = profile.Description;
+            Picture = profile.Picture;
+        }
+
         [Editable(false)]
         public Guid ID { get; set; }
 
@@ -44,7 +122,6 @@ namespace Babylon.Site.Models
 
         public Address Address { get; set; }
 
-
         public Gender? Gender { get; set; }
 
         [DataType(DataType.MultilineText)]
@@ -52,35 +129,8 @@ namespace Babylon.Site.Models
 
         public byte[] Picture { get; set; }
 
-        [Editable(false)]
-        public DateTime? PictureUploadedOn { get; set; }
-
-        [Display(Name = "Created On")]
-        [DataType(DataType.Date)]
-        public DateTime CreatedOn { get; set; }
-
-        [Display(Name = "Updated On")]
-        [DataType(DataType.Date)]
-        public DateTime UpdatedOn { get; set; }
-
         public IList<Profile> Contacts { get; set; }
 
-    }
-
-    public class Address
-    {
-        public string Street { get; set; }
-
-        public string City { get; set; }
-
-        [Display(Name = "Postal Code")]
-        public string PostalCode { get; set; }
-    }
-
-    public enum Gender
-    {
-        Male,
-        Female
     }
 
 }
