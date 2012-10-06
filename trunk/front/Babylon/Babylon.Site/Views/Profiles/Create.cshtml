@@ -76,7 +76,7 @@
                 @Html.LabelFor(model => model.Gender)
             </div>
             <div class="editor-field">
-                @Html.DropDownListFor(model => model.Gender, Babylon.Site.Common.ViewHelpers.GetSelectList(typeof(Babylon.Site.Models.Gender)))
+                @Html.DropDownListFor(model => model.Gender, Babylon.Site.Common.ViewHelpers.GetSelectList(typeof(Babylon.Site.Providers.Gender)))
                 @Html.ValidationMessageFor(model => model.Gender)
             </div>
 
