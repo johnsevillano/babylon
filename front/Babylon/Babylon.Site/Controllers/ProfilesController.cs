@@ -51,7 +51,7 @@ namespace Babylon.Site.Controllers
         public ActionResult Create()
         {
             return View();
-        } 
+        }
 
         //
         // POST: /Profile/Create
@@ -143,7 +143,9 @@ namespace Babylon.Site.Controllers
         {
             var profile = _provider.GetProfileByID(Guid.Parse(id));
 
-            return View(profile);
+            ProfileViewModel model = new ProfileViewModel(profile);
+
+            return View(model);
         }
 
         //
