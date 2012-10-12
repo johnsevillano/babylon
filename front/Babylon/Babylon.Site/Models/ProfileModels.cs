@@ -1,10 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.Web;
 using System.Web.Mvc;
 using System.Web.UI.WebControls;
 
 using Babylon.Site.Providers;
+using Babylon.Site.Common;
 
 
 namespace Babylon.Site.Models
@@ -29,7 +31,6 @@ namespace Babylon.Site.Models
             };
             Gender = profile.Gender;
             Description = profile.Description;
-            Picture = profile.Picture;
             CreatedOn = profile.CreatedOn;
             UpdatedOn = profile.UpdatedOn;
         }
@@ -46,6 +47,7 @@ namespace Babylon.Site.Models
         [DataType(DataType.EmailAddress)]
         public string Email { get; set; }
 
+        [Display(Name = "Date of Birth")]
         [DataType(DataType.Date)]
         public DateTime? DateOfBirth { get; set; }
 
@@ -56,12 +58,12 @@ namespace Babylon.Site.Models
         [DataType(DataType.MultilineText)]
         public string Description { get; set; }
 
-        public byte[] Picture { get; set; }
+        public string PhotoUrl { get; set; }
 
-        public DateTime? PictureUploadedOn { get; set; }
-
+        [Display(Name = "Created On")]
         public DateTime CreatedOn { get; set; }
 
+        [Display(Name = "Updated On")]
         public DateTime UpdatedOn { get; set; }
     }
 
@@ -85,7 +87,6 @@ namespace Babylon.Site.Models
             };
             Gender = profile.Gender;
             Description = profile.Description;
-            Picture = profile.Picture;
         }
 
         [Editable(false)]
@@ -93,6 +94,9 @@ namespace Babylon.Site.Models
 
         [Required(ErrorMessage = "The Username is required!")]
         public string Username { get; set; }
+
+        [Display(Name = "Change Password")]
+        public bool ChangePassword { get; set; }
 
         [Required(ErrorMessage = "The Password is required!")]
         [DataType(DataType.Password)]
@@ -127,7 +131,9 @@ namespace Babylon.Site.Models
         [DataType(DataType.MultilineText)]
         public string Description { get; set; }
 
-        public byte[] Picture { get; set; }
+        [FileSize(102400)]
+        [FileTypes("png,jpg,gif")]
+        public HttpPostedFileBase Photo { get; set; }
 
         public IList<Profile> Contacts { get; set; }
 

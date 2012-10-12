@@ -9,40 +9,95 @@
 <fieldset>
     <legend>Profile</legend>
 
-    <div class="display-label">Username</div>
-    <div class="display-field">
-        @Html.DisplayFor(model => model.Username)
+    <div class="fields-left">
+    
+        <div class="display-field">
+            <img id="" src="@Model.PhotoUrl" alt="Texto alternativo" width="150px" />
+        </div>
+
+        <div class="display-label">
+            @Html.LabelFor(model => model.Username)
+        </div>
+        <div class="display-field">
+            @Html.DisplayFor(model => model.Username)
+        </div>
+
+        <div class="display-label">
+            @Html.LabelFor(model => model.Name)
+        </div>
+        <div class="display-field">
+            @Html.DisplayFor(model => model.Name)
+        </div>
+
+        <div class="display-label">
+            @Html.LabelFor(model => model.Surname)
+        </div>
+        <div class="display-field">
+            @Html.DisplayFor(model => model.Surname)
+        </div>
+
+        <div class="display-label">
+            @Html.LabelFor(model => model.Email)
+        </div>
+        <div class="display-field">
+            @Html.DisplayFor(model => model.Email)
+        </div>
+
     </div>
 
-    <div class="display-label">Name</div>
-    <div class="display-field">
-        @Html.DisplayFor(model => model.Name)
+    <div class="fields-right">
+
+        <div class="display-label">
+            @Html.LabelFor(model => model.DateOfBirth)
+        </div>
+        <div class="display-field">
+            @Html.DisplayFor(model => model.DateOfBirth)
+        </div>
+
+        <div class="display-label">
+            @Html.LabelFor(model => model.Gender)
+        </div>
+        <div class="display-field">
+            @Html.DisplayFor(model => model.Gender)
+        </div>
+
+        <div class="display-label">
+            @Html.LabelFor(model => model.Address.Street)
+        </div>
+        <div class="display-label">
+            @Html.DisplayFor(model => model.Address.Street)
+        </div>
+
+        <div class="display-label">
+            @Html.LabelFor(model => model.Address.City)
+        </div>
+        <div class="display-label">
+            @Html.DisplayFor(model => model.Address.City)
+        </div>
+
+        <div class="display-label">
+            @Html.LabelFor(model => model.Address.PostalCode)
+        </div>
+        <div class="display-label">
+            @Html.DisplayFor(model => model.Address.PostalCode)
+        </div>
+
+        <div class="display-label">
+            @Html.LabelFor(model => model.CreatedOn)
+        </div>
+        <div class="display-field">
+            @Html.DisplayFor(model => model.CreatedOn)
+        </div>
+
+        <div class="display-label">
+            @Html.LabelFor(model => model.UpdatedOn)
+        </div>
+        <div class="display-field">
+            @Html.DisplayFor(model => model.UpdatedOn)
+        </div>
+
     </div>
 
-    <div class="display-label">Surname</div>
-    <div class="display-field">
-        @Html.DisplayFor(model => model.Surname)
-    </div>
-
-    <div class="display-label">Email</div>
-    <div class="display-field">
-        @Html.DisplayFor(model => model.Email)
-    </div>
-
-    <div class="display-label">DateOfBirth</div>
-    <div class="display-field">
-        @Html.DisplayFor(model => model.DateOfBirth)
-    </div>
-
-    <div class="display-label">CreatedOn</div>
-    <div class="display-field">
-        @Html.DisplayFor(model => model.CreatedOn)
-    </div>
-
-    <div class="display-label">UpdatedOn</div>
-    <div class="display-field">
-        @Html.DisplayFor(model => model.UpdatedOn)
-    </div>
 </fieldset>
 <p>
     @Html.ActionLink("Edit", "Edit", new { id=Model.ID }) |

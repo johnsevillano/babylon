@@ -39,8 +39,8 @@ namespace Babylon.Site.Providers.Mocks
                     ID = Guid.NewGuid(),
                     Name = "Peter",
                     Password = "morpheus",
-                    Picture = null,
-                    PictureUploadedOn = DateTime.MinValue,
+                    Photo = null,
+                    PhotoUploadedOn = DateTime.MinValue,
                     Surname = "Parker",
                     UpdatedOn = DateTime.Now,
                     Username = "spiderman"
@@ -56,8 +56,8 @@ namespace Babylon.Site.Providers.Mocks
                     ID = Guid.NewGuid(),
                     Name = "Bruce",
                     Password = "morpheus",
-                    Picture = null,
-                    PictureUploadedOn = DateTime.MinValue,
+                    Photo = null,
+                    PhotoUploadedOn = DateTime.MinValue,
                     Surname = "Wayne",
                     UpdatedOn = DateTime.Now,
                     Username = "batman"
@@ -73,8 +73,8 @@ namespace Babylon.Site.Providers.Mocks
                     ID = Guid.NewGuid(),
                     Name = "Clark",
                     Password = "morpheus",
-                    Picture = null,
-                    PictureUploadedOn = DateTime.MinValue,
+                    Photo = null,
+                    PhotoUploadedOn = DateTime.MinValue,
                     Surname = "Kent",
                     UpdatedOn = DateTime.Now,
                     Username = "superman"
