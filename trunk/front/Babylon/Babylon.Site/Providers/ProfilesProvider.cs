@@ -232,8 +232,8 @@ namespace Babylon.Site.Providers
                     ID = profile.ID.ToString(),
                     Name = profile.Name,
                     Password = profile.Password,
-                    Picture = profile.Picture,
-                    PictureUploadedOn = profile.PictureUploadedOn,
+                    Picture = profile.Photo,
+                    PictureUploadedOn = profile.PhotoUploadedOn,
                     Surname = profile.Surname,
                     UpdatedOn = profile.UpdatedOn,
                     Username = profile.Username
@@ -261,8 +261,8 @@ namespace Babylon.Site.Providers
                     ID = Guid.Parse(proxy.ID),
                     Name = proxy.Name,
                     Password = proxy.Password,
-                    Picture = proxy.Picture,
-                    PictureUploadedOn = proxy.PictureUploadedOn,
+                    Photo = proxy.Picture,
+                    PhotoUploadedOn = proxy.PictureUploadedOn,
                     Surname = proxy.Surname,
                     UpdatedOn = proxy.UpdatedOn,
                     Username = proxy.Username

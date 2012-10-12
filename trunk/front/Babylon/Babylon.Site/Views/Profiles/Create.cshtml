@@ -17,12 +17,21 @@
 
 </script>
 
-@using (Html.BeginForm()) {
+@using (Html.BeginForm("Create", "Profiles", FormMethod.Post, new { enctype = "multipart/form-data" }))
+{
     @Html.ValidationSummary(true)
     <fieldset>
         <legend>Profile properties</legend>
 
         <div class="fields-left">
+
+            <div class="editor-label">
+                @Html.LabelFor(model => model.Photo)
+            </div>
+            <div class="editor-field">
+                <input type="file" id="photo" name="photo" />
+                @Html.ValidationMessageFor(model => model.Photo)
+            </div>
 
             <div class="editor-label">
                 @Html.LabelFor(model => model.Username)
@@ -109,7 +118,7 @@
                 @Html.LabelFor(model => model.DateOfBirth)
             </div>
             <div class="editor-field">
-                @Html.TextBoxFor(model => model.DateOfBirth, new { @class = "date" } )
+                @Html.TextBoxFor(model => model.DateOfBirth, new { @class = "date" })
                 @Html.ValidationMessageFor(model => model.DateOfBirth)
             </div>
 

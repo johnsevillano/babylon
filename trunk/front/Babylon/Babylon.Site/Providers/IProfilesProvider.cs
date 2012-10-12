@@ -27,7 +27,7 @@ namespace Babylon.Site.Providers
         public Guid ID { get; set; }
         public string Username { get; set; }
         public string Password { get; set; }
-        public string PasswordConfirmation { get; set; }
+        //public string PasswordConfirmation { get; set; }
         public string Name { get; set; }
         public string Surname { get; set; }
         public string Email { get; set; }
@@ -35,8 +35,11 @@ namespace Babylon.Site.Providers
         public Address Address { get; set; }
         public Gender? Gender { get; set; }
         public string Description { get; set; }
-        public byte[] Picture { get; set; }
-        public DateTime? PictureUploadedOn { get; set; }
+        public byte[] Photo { get; set; }
+        public string PhotoFilename { get; set; }
+        public int PhotoSize { get; set; }
+        public string PhotoMimeType { get; set; }
+        public DateTime? PhotoUploadedOn { get; set; }
         public DateTime CreatedOn { get; set; }
         public DateTime UpdatedOn { get; set; }
         public IList<Profile> Contacts { get; set; }

@@ -43,6 +43,41 @@ namespace Babylon.Site.Controllers
 
             ProfileViewModel model = new ProfileViewModel(profile);
 
+            if (profile.Photo != null && profile.Photo.Length > 0)
+            {
+
+                // Write photo to disk and set relative path to filename in a property within ProfileViewModel
+                string path = Server.MapPath("~/Content/images");
+                string filename = profile.ID.ToString();
+                string extension = profile.PhotoMimeType;
+                string fullFilename = string.Format(@"{0}\{1}.{2}", path, filename, "jpg");
+
+                System.IO.FileStream fs = null;
+                System.IO.BinaryWriter bw = null;
+
+                try
+                {
+                    fs = new System.IO.FileStream(fullFilename, System.IO.FileMode.Create);
+                    bw = new System.IO.BinaryWriter(fs);
+                    bw.Write(profile.Photo);
+                    bw.Flush();
+                }
+                catch
+                {
+                }
+                finally
+                {
+                    if (bw != null) bw.Close();
+                    if (fs != null) fs.Close();
+                }
+
+                model.PhotoUrl = "/Babylon.Site/Content/images/" + filename + ".jpg";
+            }
+            else
+            {
+                model.PhotoUrl = "/Babylon.Site/Content/images/blank_profile.jpg";
+            }
+
             return View(model);
         }
 
@@ -79,6 +114,20 @@ namespace Babylon.Site.Controllers
                         Gender = model.Gender,
                         Description = model.Description
                     };
+
+                    if (model.Photo != null)
+                    {
+                        int fileLength = model.Photo.ContentLength;
+                        byte[] fileData = new byte[fileLength];
+                        System.IO.Stream fileStream = model.Photo.InputStream;
+                        fileStream.Read(fileData, 0, fileLength);
+
+                        newProfile.Photo = fileData;
+                        newProfile.PhotoMimeType = model.Photo.ContentType;
+                        newProfile.PhotoSize = model.Photo.ContentLength;
+                        newProfile.PhotoFilename = model.Photo.FileName;
+                        newProfile.PhotoUploadedOn = DateTime.Now;
+                    }
 
                     Guid id = _provider.Add(newProfile);
 
@@ -126,6 +175,12 @@ namespace Babylon.Site.Controllers
                     };
                     profile.Gender = model.Gender;
                     profile.Description = model.Description;
+
+                    if (model.ChangePassword)
+                    {
+                        profile.Password = model.Password;
+                        //profile.PasswordConfirmation = model.PasswordConfirmation;
+                    }
 
                     _provider.Update(profile);
 

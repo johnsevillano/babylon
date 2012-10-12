@@ -33,6 +33,14 @@
             </div>
 
             <div class="editor-label">
+                @Html.LabelFor(model => model.ChangePassword)
+            </div>
+            <div class="editor-field">
+                @Html.EditorFor(model => model.ChangePassword)
+                @Html.ValidationMessageFor(model => model.ChangePassword)
+            </div>
+
+            <div class="editor-label">
                 @Html.LabelFor(model => model.Password)
             </div>
             <div class="editor-field">
