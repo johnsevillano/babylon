@@ -80,6 +80,8 @@ namespace Babylon.Site.Providers.Mocks
                     Username = "superman"
                 }
             };
+
+            LoadPhoto(_profilesCache[0], @"C:\Tmp\gschlereth.jpg", "image/jpeg");
         }
 
         public Guid Add(Profile profileModel)
@@ -281,6 +283,44 @@ namespace Babylon.Site.Providers.Mocks
 
             _profilesCache.RemoveAt(index);
             _profilesCache.Insert(index, profileModel);
+        }
+
+        private void LoadPhoto(Profile profile, string path, string type)
+        {
+            if (!System.IO.File.Exists(path))
+            {
+                return;
+            }
+
+            System.IO.FileStream fs = null;
+            System.IO.BinaryReader br = null;
+
+            try
+            {
+                fs = new System.IO.FileStream(path, System.IO.FileMode.Open, System.IO.FileAccess.Read);
+                br = new System.IO.BinaryReader(fs);
+
+                long fileSize = fs.Length;
+                byte[] buffer = new byte[fileSize];
+                br.Read(buffer, 0, (int)buffer.Length);
+
+                br.Close();
+                fs.Close();
+
+                profile.Photo = buffer;
+                profile.PhotoFilename = path;
+                profile.PhotoMimeType = type;
+                profile.PhotoSize = buffer.Length;
+                profile.PhotoUploadedOn = DateTime.Now;
+            }
+            catch
+            { }
+            finally
+            {
+                if (br != null) br.Close();
+                if (fs != null) fs.Close();
+            }
+
         }
 
     }

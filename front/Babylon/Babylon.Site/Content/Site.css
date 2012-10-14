@@ -335,3 +335,25 @@ div#title {
     float:right;
     width:500px
 }
+
+#profile-photo {
+    width:150px;
+    border:0px;
+    box-shadow:2px 2px 3px #555562;
+}
+
+#profile-photo:hover {
+    cursor:progress;
+}
+
+#preview 
+{
+    position:absolute;
+}
+
+#preview img 
+{
+    width:250px;
+    border:0px;
+    box-shadow:2px 2px 3px #555562;
+}
