@@ -17,12 +17,21 @@
 
 </script>
 
-@using (Html.BeginForm()) {
+@using (Html.BeginForm("Edit", "Profiles", FormMethod.Post, new { enctype = "multipart/form-data" }))
+{
     @Html.ValidationSummary(true)
     <fieldset>
-        <legend>Profile properties</legend>
+        <legend>Profile Properties</legend>
 
         <div class="fields-left">
+
+            <div class="editor-label">
+                @Html.LabelFor(model => model.Photo)
+            </div>
+            <div class="editor-field">
+                <input type="file" id="photo" name="photo" />
+                @Html.ValidationMessageFor(model => model.Photo)
+            </div>
 
             <div class="editor-label">
                 @Html.LabelFor(model => model.Username)
@@ -32,10 +41,10 @@
                 @Html.ValidationMessageFor(model => model.Username)
             </div>
 
-            <div class="editor-label">
-                @Html.LabelFor(model => model.ChangePassword)
+            <div class="editor-label">                
             </div>
             <div class="editor-field">
+                @Html.LabelFor(model => model.ChangePassword)
                 @Html.EditorFor(model => model.ChangePassword)
                 @Html.ValidationMessageFor(model => model.ChangePassword)
             </div>
@@ -117,7 +126,7 @@
                 @Html.LabelFor(model => model.DateOfBirth)
             </div>
             <div class="editor-field">
-                @Html.TextBoxFor(model => model.DateOfBirth, new { @class = "date" } )
+                @Html.TextBoxFor(model => model.DateOfBirth, new { @class = "date" })
                 @Html.ValidationMessageFor(model => model.DateOfBirth)
             </div>
 
@@ -138,6 +147,6 @@
     </fieldset>
 }
 
-<div>
+<p>
     @Html.ActionLink("Back to Profiles", "Index")
-</div>
+</p>

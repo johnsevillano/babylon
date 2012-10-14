@@ -98,12 +98,12 @@ namespace Babylon.Site.Models
         [Display(Name = "Change Password")]
         public bool ChangePassword { get; set; }
 
-        [Required(ErrorMessage = "The Password is required!")]
+        //[Required(ErrorMessage = "The Password is required!")]
         [DataType(DataType.Password)]
         public string Password { get; set; }
 
         [Display(Name = "Password confirmation")]
-        [Required(ErrorMessage = "The Password confirmation is required!")]
+        //[Required(ErrorMessage = "The Password confirmation is required!")]
         [DataType(DataType.Password)]
         [Compare("Password", ErrorMessage = "Password and confirmation are different!")]
         public string PasswordConfirmation { get; set; }

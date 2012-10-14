@@ -182,6 +182,20 @@ namespace Babylon.Site.Controllers
                         //profile.PasswordConfirmation = model.PasswordConfirmation;
                     }
 
+                    if (model.Photo != null)
+                    {
+                        int fileLength = model.Photo.ContentLength;
+                        byte[] fileData = new byte[fileLength];
+                        System.IO.Stream fileStream = model.Photo.InputStream;
+                        fileStream.Read(fileData, 0, fileLength);
+
+                        profile.Photo = fileData;
+                        profile.PhotoMimeType = model.Photo.ContentType;
+                        profile.PhotoSize = model.Photo.ContentLength;
+                        profile.PhotoFilename = model.Photo.FileName;
+                        profile.PhotoUploadedOn = DateTime.Now;
+                    }
+
                     _provider.Update(profile);
 
                     return RedirectToAction("Index");
